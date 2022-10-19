@@ -14,6 +14,10 @@ public class GameHandler : MonoBehaviour {
 	public static float volumeLevel = 1.0f;
 	private Slider sliderVolumeCtrl;
 
+	public static bool hasComm = false;
+	public static bool hasProof = false;
+	public static bool hasAi = false;
+
 	void Awake (){
 		SetLevel (volumeLevel);
 		GameObject sliderTemp = GameObject.FindWithTag("PauseMenuSlider");
@@ -26,6 +30,8 @@ public class GameHandler : MonoBehaviour {
 	void Start (){
 		pauseMenuUI.SetActive(false);
 		GameisPaused = false;
+	
+		CheckPlayerStat();
 	}
 
 	void Update (){
@@ -61,9 +67,11 @@ public class GameHandler : MonoBehaviour {
 		Debug.Log("Current Player Stat = " + playerStat);
 	}
 
-	public int CheckPlayerStat(){
-		return playerStat;
+	public void CheckPlayerStat(){
+		//return playerStat;
+		Debug.Log("[hasComm = " + hasComm + "] - [hasProof = " + hasProof + "] - [hasAi = " + hasAi + "]");
 	}
+
 
 	public void StartGame(){
 		SceneManager.LoadScene("Scene1");
@@ -85,4 +93,5 @@ public class GameHandler : MonoBehaviour {
 		Application.Quit();
 		#endif
 	}
+	
 }
