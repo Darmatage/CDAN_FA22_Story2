@@ -54,10 +54,10 @@ public void talking(){         // main story function. Players hit next to progr
         else if (primeInt == 2){
                ArtChar1.SetActive(true);
                 DialogueDisplay.SetActive(true);
-                Char1name.text = "Jeda";
-                Char1speech.text = "Wakey wakey, human.";
-                Char2name.text = "";
-                Char2speech.text = "";
+                Char1name.text = "Police";
+                Char1speech.text = "I don't know what in the talking dog you are but you are being arrested this instant!";
+                Char2name.text = "YOU";
+                Char2speech.text = "Listen to me. I'm not a harm to humans. I'm here to see the leader of this planet!";
         }
        else if (primeInt ==3){
                 Char1name.text = "";
