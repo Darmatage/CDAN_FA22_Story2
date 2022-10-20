@@ -292,7 +292,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -0.000030517578, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &198134963
@@ -317,10 +317,10 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 40
+    m_FontSize: 35
     m_FontStyle: 1
     m_BestFit: 0
-    m_MinSize: 4
+    m_MinSize: 3
     m_MaxSize: 40
     m_Alignment: 4
     m_AlignByGeometry: 0
@@ -328,7 +328,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: CHOICE2
+  m_Text: Enter the Suburbs
 --- !u!222 &198134964
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1215,7 +1215,9 @@ MonoBehaviour:
   Char2name: {fileID: 2202874877094450637}
   Char2speech: {fileID: 2202874877094450636}
   DialogueDisplay: {fileID: 1194211659}
-  ArtChar1: {fileID: 750828626}
+  ArtChar1a: {fileID: 750828626}
+  ArtChar1b: {fileID: 750828626}
+  ArtChar1c: {fileID: 750828626}
   ArtBG1: {fileID: 1618883222}
   Choice1a: {fileID: 1688778716}
   Choice1b: {fileID: 150069303}
@@ -1280,7 +1282,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 09b2a70ab2b4547208ad7cc50b11e8d4, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 597d79ce22011439ab247bc7b25a6201, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1445,7 +1447,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: CHOICE1
+  m_Text: Enter the City
 --- !u!222 &1658842089
 CanvasRenderer:
   m_ObjectHideFlags: 0

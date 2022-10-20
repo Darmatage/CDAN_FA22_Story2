@@ -60,7 +60,7 @@ public void talking(){         // main story function. Players hit next to progr
                 // AudioSource.Play();
         }
         else if (primeInt == 2){
-               ArtChar1.SetActive(true);
+          ArtChar1.SetActive(true);
                 DialogueDisplay.SetActive(true);
                 Char1name.text = "";
                 Char1speech.text = "";
@@ -99,7 +99,7 @@ public void talking(){         // main story function. Players hit next to progr
                 Char2name.text = "";
                 Char2speech.text = "";
         }
-		
+
 		else if (primeInt == 8){
                 Char1name.text = "";
                 Char1speech.text = "";
@@ -112,7 +112,7 @@ public void talking(){         // main story function. Players hit next to progr
                 Char2name.text = "";
                 Char2speech.text = "";
         }
-		
+
 		else if (primeInt == 10){
                 Char1name.text = "";
                 Char1speech.text = "";
@@ -120,9 +120,9 @@ public void talking(){         // main story function. Players hit next to progr
                 Char2speech.text = "Pl-plLeasE T-aK-e CA-";
         }
        else if (primeInt ==11){
-		   ArtChar1.SetActive(false);
+         ArtChar1.SetActive(false);
                 Char1name.text = "YOU";
-                Char1speech.text = "(Guess the crash busted her.)";
+                Char1speech.text = "(... \n Guess the crash busted her.)";
                 Char2name.text = "";
                 Char2speech.text = "";
         }
@@ -137,23 +137,23 @@ public void talking(){         // main story function. Players hit next to progr
                 Char1speech.text = "(I can’t believe it. I’m really here.)";
                 Char2name.text = "";
                 Char2speech.text = "";
-        }	
+        }
 		else if (primeInt ==14){
 			ArtChar2.SetActive(true);
                 Char1name.text = "YOU";
                 Char1speech.text = "(Ah, a canine. \n I’ve heard humans find these creatures endearing. \nPerhaps I will take on its form!)";
                 Char2name.text = "";
                 Char2speech.text = "";
-        }	
-		
+        }
+
 		else if (primeInt ==15){
 			ArtChar2.SetActive(false);
                 Char1name.text = "YOU";
                 Char1speech.text = "(I have a mission to fulfill. \n But first, .. what should I do first? \n The ship is in bad shape, and I don’t have a lot of time.)";
                 Char2name.text = "";
                 Char2speech.text = "";
-        }	
-		
+        }
+
 		else if (primeInt ==16){
 			ArtChar2.SetActive(false);
                 Char1name.text = "YOU";
@@ -161,8 +161,8 @@ public void talking(){         // main story function. Players hit next to progr
                 Char2name.text = "";
                 Char2speech.text = "";
         }
-		
-		
+
+
        else if (primeInt == 17){
                 Char1name.text = "YOU";
                 Char1speech.text = "What do I do?";
@@ -207,7 +207,7 @@ public void talking(){         // main story function. Players hit next to progr
                 allowSpace = false;
                 NextScene1Button.SetActive(true); // scene 2
         }
-		
+
 		else if (primeInt == 300){
                 Char1name.text = "YOU";
                 Char1speech.text = "OK, I have extracted as much of Pixeli as I could from the ships computer. \n Pixeli, Come Online!";
@@ -220,7 +220,7 @@ public void talking(){         // main story function. Players hit next to progr
                 Char2name.text = "";
                 Char2speech.text = "";
         }
-		
+
 		else if (primeInt == 302){
 			ArtChar1b.SetActive(true);
                 Char1name.text = "";
@@ -233,7 +233,7 @@ public void talking(){         // main story function. Players hit next to progr
                 Char1speech.text = "“I found an organism to mimic already.\n A part of me was worried you wouldn’t activate. \n I’m glad you’re still .. relatively stable. For the most part.";
                 Char2name.text = "";
                 Char2speech.text = "";
-        }	
+        }
 		else if (primeInt == 304){
                 Char1name.text = "";
                 Char1speech.text = "";
@@ -245,7 +245,7 @@ public void talking(){         // main story function. Players hit next to progr
                 Char1speech.text = "You’ll be alright. \n I’ll have my charger on me at all times.";
                 Char2name.text = "";
                 Char2speech.text = "";
-        }	
+        }
 		else if (primeInt == 306){
                 Char1name.text = "";
                 Char1speech.text = "";
@@ -255,7 +255,7 @@ public void talking(){         // main story function. Players hit next to progr
                 allowSpace = false;
                 NextScene1Button.SetActive(true); //scene 2
         }
-		
+
      }
 
 // FUNCTIONS FOR BUTTONS TO ACCESS (Choice #1 and switch scenes)
@@ -287,7 +287,7 @@ public void talking(){         // main story function. Players hit next to progr
 				//GameObject.FindWithTag("GameHandler").GetComponent<GameHandler>().hasProof = true;
 				GameHandler.hasProof = true;
         }
-		
+
 		public void Choice1cFunct(){
                 Char1name.text = "YOU";
                 Char1speech.text = "I can't imagine doing this mission witghout Pixeli.";

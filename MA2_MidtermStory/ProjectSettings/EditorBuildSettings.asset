@@ -12,10 +12,10 @@ EditorBuildSettings:
     path: Assets/Scenes/Credits.unity
     guid: d7127b684df614ca58961e9c3a41e1c9
   - enabled: 1
-    path: Assets/Scenes/End_Win.unity
+    path: Assets/Scenes/End_GoodEnd.unity
     guid: 9cb8642bf061446d0be7a1455b7794b3
   - enabled: 1
-    path: Assets/Scenes/End_Lose.unity
+    path: Assets/Scenes/End_BadEnd1.unity
     guid: 2b7f0b78915ef3d4096a75682a0564a7
   - enabled: 1
     path: Assets/Scenes/Scene1.unity
@@ -29,4 +29,19 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Scene3b.unity
     guid: b76c425448a194b4490d2756bf8ab32e
+  - enabled: 1
+    path: Assets/Scenes/Scene4.unity
+    guid: d341f8c7d29254d73845198db0484ba4
+  - enabled: 1
+    path: Assets/Scenes/Scene5.unity
+    guid: 6c1ac969c7ee743c898f9b5ca1c94cd8
+  - enabled: 1
+    path: Assets/Scenes/Scene6a.unity
+    guid: 91c3c0a8733994b36bc7e437737a3e23
+  - enabled: 1
+    path: Assets/Scenes/Scene6b.unity
+    guid: 2eeac6f0c134d46979cbdfc56185df10
+  - enabled: 1
+    path: Assets/Scenes/Scene6c.unity
+    guid: 22ac9c773d32148f99e831be44254ad4
   m_configObjects: {}
