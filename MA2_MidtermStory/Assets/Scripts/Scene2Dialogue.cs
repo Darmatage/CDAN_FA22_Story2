@@ -57,13 +57,13 @@ public void talking(){  // main story function. Players hit next to progress to 
         else if (primeInt == 2){
                 DialogueDisplay.SetActive(true);
                 Char1name.text = "You";
-                Char1speech.text = "Those buildings .. \nThey look like human capacity units.";
+                Char1speech.text = "(Those buildings .. \nThey look like human capacity units.)";
                 Char2name.text = "";
                 Char2speech.text = "";
         }
        else if (primeInt ==3){
                 Char1name.text = "You";
-                Char1speech.text = "Wait .. is that another quadruped?";
+                Char1speech.text = "(Wait .. is that another quadruped?)";
                 Char2name.text = "";
                 Char2speech.text = "";
                 //gameHandler.AddPlayerStat(1);
@@ -85,16 +85,16 @@ public void talking(){  // main story function. Players hit next to progress to 
                 //gameHandler.AddPlayerStat(1);
         }
        else if (primeInt == 6){
-                Char1name.text = "Jeda";
-                Char1speech.text = "I am searching for a fugitive. Ragu Fahn.";
+                Char1name.text = "You";
+                Char1speech.text = "(Ah! It speaks.)";
                 Char2name.text = "";
                 Char2speech.text = "";
         }
        else if (primeInt ==7){
-                Char1name.text = "";
-                Char1speech.text = "";
-                Char2name.text = "You";
-                Char2speech.text = "Why do you think I know anything?";
+                Char1name.text = "You";
+                Char1speech.text = "(...)";
+                Char2name.text = "";
+                Char2speech.text = "";
         }
        else if (primeInt == 8){
                 Char1name.text = "Jeda";
