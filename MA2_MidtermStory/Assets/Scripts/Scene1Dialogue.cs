@@ -267,7 +267,7 @@ public void talking(){         // main story function. Players hit next to progr
                 primeInt = 99;
                 Choice1a.SetActive(false);
                 Choice1b.SetActive(false);
-				Choice1c.SetActive(false);
+				        Choice1c.SetActive(false);
                 nextButton.SetActive(true);
                 allowSpace = true;
 				//GameObject.FindWithTag("GameHandler").GetComponent<GameHandler>().hasComm = true;
@@ -281,7 +281,7 @@ public void talking(){         // main story function. Players hit next to progr
                 primeInt = 199;
                 Choice1a.SetActive(false);
                 Choice1b.SetActive(false);
-				Choice1c.SetActive(false);
+				        Choice1c.SetActive(false);
                 nextButton.SetActive(true);
                 allowSpace = true;
 				//GameObject.FindWithTag("GameHandler").GetComponent<GameHandler>().hasProof = true;
@@ -296,7 +296,7 @@ public void talking(){         // main story function. Players hit next to progr
                 primeInt = 299;
                 Choice1a.SetActive(false);
                 Choice1b.SetActive(false);
-				Choice1c.SetActive(false);
+				        Choice1c.SetActive(false);
                 nextButton.SetActive(true);
                 allowSpace = true;
 				//GameObject.FindWithTag("GameHandler").GetComponent<GameHandler>().hasAi = true;

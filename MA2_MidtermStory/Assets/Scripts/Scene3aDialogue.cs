@@ -55,24 +55,24 @@ public void talking(){         // main story function. Players hit next to progr
                ArtChar1.SetActive(true);
                 DialogueDisplay.SetActive(true);
                 Char1name.text = "YOU";
-                Char1speech.text = "The amount of humans here..is overwhelming./n...The more the better I suppose.";
+                Char1speech.text = "(The amount of humans here..is overwhelming.\n(...)\n(The more the better I suppose.)";
                 Char2name.text = "";
                 Char2speech.text = "";
         }
        else if (primeInt ==3){
-                Char1name.text = "";
-                Char1speech.text ="Pixeli, do you have any information pertaining to this space? Have you surveyed the area?";
-                Char1speech.text ="Pixeli";
-                Char2speech.text = "Yes. This area is urban and metropolitan in nature. Humans colloquially refer to this as a city.";
+                Char1name.text = "YOU";
+                Char1speech.text ="(Wait, is that .. a little human?)";
+                Char1speech.text ="";
+                Char2speech.text = "";
 
                 //gameHandler.AddPlayerStat(1);
               }
 
        else if (primeInt == 4){
                          Char1name.text = "YOU";
-                         Char1speech.text = "(The 'city' definately will find me a human I can trust!)";
-                         Char2name.text = "Pixeli";
-                         Char2speech.text = "Sir, you have little to no time to warn humanity of the on coming external raid";
+                         Char1speech.text = "(It's coming toward me!)";
+                         Char2name.text = "";
+                         Char2speech.text = "";
                  }
        else if (primeInt == 5){
                          Char1name.text = "YOU";
@@ -92,7 +92,6 @@ public void talking(){         // main story function. Players hit next to progr
                          allowSpace = false;
                          Choice1a.SetActive(true); // function Choice1aFunct()
                          Choice1b.SetActive(true); // function Choice1bFunct()
-                 Choice1c.SetActive(true); // function Choice1bFunct()
                  }
 
 // ENCOUNTER AFTER CHOICE #1
@@ -112,12 +111,6 @@ public void talking(){         // main story function. Players hit next to progr
                          NextScene1Button.SetActive(true); //scene 2
                          }
                 else if (primeInt == 102){
-                                  Char1name.text = "YOU";
-                                  Char1speech.text = "It is pleasure to meet you, Matilda but time is of the essence. Please take me to your leader";
-                                  Char2name.text = "Matilda";
-                                  Char2speech.text = "You want to meet my dads? They're pretty rad.";
-                          }
-                else if (primeInt == 103){
                                   Char1name.text = "";
                                   Char1speech.text = "";
                                   Char2name.text = "Matilda";
@@ -127,13 +120,13 @@ public void talking(){         // main story function. Players hit next to progr
                                   NextScene1Button.SetActive(true); //scene 2
 
                                   }
-                else if (primeInt == 104){
+                else if (primeInt == 103){
                                   Char1name.text = "";
                                   Char1speech.text = "";
                                   Char2name.text = "Matilda";
                                   Char2speech.text = "Do you want a jelly sandwich, it's my favorite!";
                                    }
-                else if (primeInt == 105){
+                else if (primeInt == 104){
                                   Char1name.text = "YOU";
                                   Char1speech.text = "Your reply is astonishingly unhelpful. What's this sand-wich you are shubbing into your mouth?";
                                   Char2name.text = "Matilda";
@@ -143,13 +136,13 @@ public void talking(){         // main story function. Players hit next to progr
                                   NextScene1Button.SetActive(true); //scene 2
                                            }
 
-                else if (primeInt == 106){
+                else if (primeInt == 105){
                                   Char1name.text = "";
                                   Char1speech.text = " ";
                                   Char2name.text = "Matilda";
                                   Char2speech.text = "Do they not have sandwiches on Gi-niper-a?";
                                                               }
-                 else if (primeInt == 107){
+                 else if (primeInt == 106){
                                   Char1name.text = "YOU";
                                   Char1speech.text = "How..just how do you know that? Have humans discovered my planet already?";
                                   Char2name.text = "Matilda";
@@ -158,13 +151,13 @@ public void talking(){         // main story function. Players hit next to progr
                                   allowSpace = false;
                                   NextScene1Button.SetActive(true); //scene 2
                                 }
-                 else if (primeInt == 108){
+                  else if (primeInt == 107){
                                     Char1name.text = "YOU";
                                                   Char1speech.text = "But I haven't said anything about my home planet. How could you know?";
                                                   Char2name.text = "Matilda";
                                                   Char2speech.text = "I didn't hear your mouth saying it. I heard from your head.";
                                                                                          }
-                  else if (primeInt == 109){
+                  else if (primeInt == 108){
                                                   Char1name.text = "YOU";
                                                   Char1speech.text = "A psychic? I've never heard of it. Your human species shouldn't have developed enough to possess that ability.";
                                                   Char2name.text = "Matilda";
@@ -173,13 +166,13 @@ public void talking(){         // main story function. Players hit next to progr
                                                   allowSpace = false;
                                                   NextScene1Button.SetActive(true); //scene 2
                                                                                                  }
-                  else if (primeInt == 110){
+                  else if (primeInt == 109){
                                                   Char1name.text = "YOU";
                                                   Char1speech.text = "Right! Your planet is in danger. I need to talk to the leader of this planet.";
                                                   Char2name.text = "Matilda";
                                                   Char2speech.text = "Off to go see Dad and Dad then!";
                                             }
-                  else if (primeInt == 111){
+                  else if (primeInt == 110){
                                                     Char1name.text = "";
                                                     Char1speech.text = "";
                                                     Char2name.text = "";
@@ -189,13 +182,14 @@ public void talking(){         // main story function. Players hit next to progr
                                                     NextScene1Button.SetActive(true); //scene 2
 
                                 }
-                                                                                                                            }
-               else if (primeInt == 200){
+    // Encounter after Choice 1b                                                                                                                     }
+                else if (primeInt == 200){
                          Char1name.text = "";
                          Char1speech.text = "<YOU approaches a group of humans>";
                          Char2name.text = "";
                          Char2speech.text = "";
-                 }
+                         }
+
                 else if (primeInt == 201){
                          Char1name.text = "YOU";
                          Char1speech.text = "Hello, fellow citizens of Earth! I came from a planet that's far away to tell you're in danger-";
@@ -223,7 +217,7 @@ public void talking(){         // main story function. Players hit next to progr
                           }
                  }
 // FUNCTIONS FOR BUTTONS TO ACCESS (Choice #1 and switch scenes)
-                         public void Choice1aFunct(){
+                        public void Choice1aFunct(){
                                  Char1name.text = "YOU";
                                  Char1speech.text = "(This small human has some comforting ambience.. I wonder what?)";
                                  Char2name.text = "";
@@ -231,7 +225,6 @@ public void talking(){         // main story function. Players hit next to progr
                                  primeInt = 99;
                                  Choice1a.SetActive(false);
                                  Choice1b.SetActive(false);
-                 				Choice1c.SetActive(false);
                                  nextButton.SetActive(true);
                                  allowSpace = true;
                  				//GameObject.FindWithTag("GameHandler").GetComponent<GameHandler>().hasComm = true;
@@ -245,7 +238,6 @@ public void talking(){         // main story function. Players hit next to progr
                                  primeInt = 199;
                                  Choice1a.SetActive(false);
                                  Choice1b.SetActive(false);
-                 				Choice1c.SetActive(false);
                                  nextButton.SetActive(true);
                                  allowSpace = true;
                  				//GameObject.FindWithTag("GameHandler").GetComponent<GameHandler>().hasProof = true;

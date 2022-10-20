@@ -57,7 +57,7 @@ public void talking(){  // main story function. Players hit next to progress to 
         else if (primeInt == 2){
                 DialogueDisplay.SetActive(true);
                 Char1name.text = "You";
-                Char1speech.text = "(Those buildings .. \nThey look like human capacity units.)";
+                Char1speech.text = "(Those buildings .. )\n(They look like human capacity units.)";
                 Char2name.text = "";
                 Char2speech.text = "";
         }
