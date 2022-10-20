@@ -56,7 +56,7 @@ public void talking(){  // main story function. Players hit next to progress to 
         }
         else if (primeInt == 2){
                 DialogueDisplay.SetActive(true);
-                Char1name.text = "You";
+                Char1name.text = "YOU";
                 Char1speech.text = "(Those buildings .. )\n(They look like human capacity units.)";
                 Char2name.text = "";
                 Char2speech.text = "";
@@ -85,19 +85,23 @@ public void talking(){  // main story function. Players hit next to progress to 
                 //gameHandler.AddPlayerStat(1);
         }
        else if (primeInt == 6){
-                Char1name.text = "You";
+                Char1name.text = "YOU";
                 Char1speech.text = "(Ah! It speaks.)";
                 Char2name.text = "";
                 Char2speech.text = "";
         }
        else if (primeInt ==7){
-                Char1name.text = "You";
+                Char1name.text = "YOU";
                 Char1speech.text = "(...)";
                 Char2name.text = "";
                 Char2speech.text = "";
+                nextButton.SetActive(false);
+                allowSpace = false;
+                Choice1a.SetActive(true); // function Choice1aFunct()
+                Choice1b.SetActive(true); // function Choice1bFunct()
         }
        else if (primeInt == 8){
-                Char1name.text = "Jeda";
+                Char1name.text = "YOU";
                 Char1speech.text = "Do not play the stupid. You will take me to him.";
                 Char2name.text = "";
                 Char2speech.text = "";
