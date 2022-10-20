@@ -511,7 +511,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Cute Furry In Trouble
+  m_Text: 'Matilda''s Wierd Day '
 --- !u!222 &647009217
 CanvasRenderer:
   m_ObjectHideFlags: 0
