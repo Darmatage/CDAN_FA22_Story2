@@ -54,116 +54,207 @@ public void talking(){         // main story function. Players hit next to progr
         else if (primeInt == 2){
                ArtChar1.SetActive(true);
                 DialogueDisplay.SetActive(true);
-                Char1name.text = "Jeda";
-                Char1speech.text = "Wakey wakey, human.";
+                Char1name.text = "YOU";
+                Char1speech.text = "The amount of humans here..is overwhelming./n...The more the better I suppose.";
                 Char2name.text = "";
                 Char2speech.text = "";
         }
        else if (primeInt ==3){
                 Char1name.text = "";
-                Char1speech.text = "";
-                Char2name.text = "You";
-                Char2speech.text = "Wuh..? What happened?";
+                Char1speech.text ="Pixeli, do you have any information pertaining to this space? Have you surveyed the area?";
+                Char1speech.text ="Pixeli";
+                Char2speech.text = "Yes. This area is urban and metropolitan in nature. Humans colloquially refer to this as a city.";
+
                 //gameHandler.AddPlayerStat(1);
-        }
+              }
+
        else if (primeInt == 4){
-                Char1name.text = "Jeda";
-                Char1speech.text = "I know I did not hit you that hard.";
-                Char2name.text = "";
-                Char2speech.text = "";
-        }
+                         Char1name.text = "YOU";
+                         Char1speech.text = "(The 'city' definately will find me a human I can trust!)";
+                         Char2name.text = "Pixeli";
+                         Char2speech.text = "Sir, you have little to no time to warn humanity of the on coming external raid";
+                 }
        else if (primeInt == 5){
-                Char1name.text = "";
-                Char1speech.text = "";
-                Char2name.text = "You";
-                Char2speech.text = "Hit me? Why?";
-                //gameHandler.AddPlayerStat(1);
-        }
+                         Char1name.text = "YOU";
+                         Char1speech.text = "Pixeli, I already know./n(I must decide)";
+                         Char2name.text = "";
+                         Char2speech.text = "";
+                         //gameHandler.AddPlayerStat(1);
+                  }
+
        else if (primeInt == 6){
-                Char1name.text = "Jeda";
-                Char1speech.text = "I am searching for a fugitive. Ragu Fahn.";
-                Char2name.text = "";
-                Char2speech.text = "";
-        }
-       else if (primeInt ==7){
-                Char1name.text = "";
-                Char1speech.text = "";
-                Char2name.text = "You";
-                Char2speech.text = "Why do you think I know anything?";
-        }
-       else if (primeInt == 8){
-                Char1name.text = "Jeda";
-                Char1speech.text = "Do not play the stupid. You will take me to him.";
-                Char2name.text = "";
-                Char2speech.text = "";
-                // Turn off "Next" button, turn on "Choice" buttons
-                nextButton.SetActive(false);
-                allowSpace = false;
-                Choice1a.SetActive(true); // function Choice1aFunct()
-                Choice1b.SetActive(true); // function Choice1bFunct()
-        }
+                         Char1name.text = "YOU";
+                         Char1speech.text = "Going to a crowded spot have pros and cons-it might scare humans off but it will definately grab their attention /n I could pick one human to talk to- for example the little human over there. ";
+                         Char2name.text = "Pixeli";
+                         Char2speech.text = "";
+                         // Turn off "Next" button, turn on "Choice" buttons
+                         nextButton.SetActive(false);
+                         allowSpace = false;
+                         Choice1a.SetActive(true); // function Choice1aFunct()
+                         Choice1b.SetActive(true); // function Choice1bFunct()
+                 Choice1c.SetActive(true); // function Choice1bFunct()
+                 }
+
 // ENCOUNTER AFTER CHOICE #1
-       else if (primeInt == 100){
-                Char1name.text = "Jeda";
-                Char1speech.text = "Then you are no use to me, and must be silenced.";
-                Char2name.text = "";
-                Char2speech.text = "";
-        }
-       else if (primeInt == 101){
-                Char1name.text = "Jeda";
-                Char1speech.text = "Come back here! Do not think you can hide from me!";
-                Char2name.text = "";
-                Char2speech.text = "";
-                nextButton.SetActive(false);
-                allowSpace = false;
-                NextScene1Button.SetActive(true);
-        }
+                else if (primeInt == 100){
+                         Char1name.text = "YOU";
+                         Char1speech.text = "Hello, underdeveloped female human. I need your help.";
+                         Char2name.text = "Matilda";
+                         Char2speech.text = "Woah, a talking dog?/nHere, doggy doggy!";
+                 }
+                else if (primeInt == 101){
+                         Char1name.text = "YOU";
+                         Char1speech.text = "(This must be a common gesture among humans. I should cooperate with this specimen so things go smoothly)";
+                         Char2name.text = "";
+                         Char2speech.text = "My name is Matilda! How can I help?";
+                         nextButton.SetActive(false);
+                         allowSpace = false;
+                         NextScene1Button.SetActive(true); //scene 2
+                         }
+                else if (primeInt == 102){
+                                  Char1name.text = "YOU";
+                                  Char1speech.text = "It is pleasure to meet you, Matilda but time is of the essence. Please take me to your leader";
+                                  Char2name.text = "Matilda";
+                                  Char2speech.text = "You want to meet my dads? They're pretty rad.";
+                          }
+                else if (primeInt == 103){
+                                  Char1name.text = "";
+                                  Char1speech.text = "";
+                                  Char2name.text = "Matilda";
+                                  Char2speech.text ="They work in a big office where they beat bad guys and talk to people in neat suits always. They're the coolest!";
+                                  nextButton.SetActive(false);
+                                  allowSpace = false;
+                                  NextScene1Button.SetActive(true); //scene 2
 
-       else if (primeInt == 200){
-                Char1name.text = "Jeda";
-                Char1speech.text = "Do not think you can fool me, human. Where will we find him?";
-                Char2name.text = "";
-                Char2speech.text = "";
-        }
-       else if (primeInt == 201){
-                Char1name.text = "";
-                Char1speech.text = "";
-                Char2name.text = "You";
-                Char2speech.text = "Ragu hangs out in a rough part of town. I'll take you now.";
-                nextButton.SetActive(false);
-                allowSpace = false;
-                NextScene2Button.SetActive(true);
-        }
-     }
+                                  }
+                else if (primeInt == 104){
+                                  Char1name.text = "";
+                                  Char1speech.text = "";
+                                  Char2name.text = "Matilda";
+                                  Char2speech.text = "Do you want a jelly sandwich, it's my favorite!";
+                                   }
+                else if (primeInt == 105){
+                                  Char1name.text = "YOU";
+                                  Char1speech.text = "Your reply is astonishingly unhelpful. What's this sand-wich you are shubbing into your mouth?";
+                                  Char2name.text = "Matilda";
+                                  Char2speech.text = "No, you nincompoop. Sandwich is a sandwich. Here. Try some.";
+                                  nextButton.SetActive(false);
+                                  allowSpace = false;
+                                  NextScene1Button.SetActive(true); //scene 2
+                                           }
 
+                else if (primeInt == 106){
+                                  Char1name.text = "";
+                                  Char1speech.text = " ";
+                                  Char2name.text = "Matilda";
+                                  Char2speech.text = "Do they not have sandwiches on Gi-niper-a?";
+                                                              }
+                 else if (primeInt == 107){
+                                  Char1name.text = "YOU";
+                                  Char1speech.text = "How..just how do you know that? Have humans discovered my planet already?";
+                                  Char2name.text = "Matilda";
+                                  Char2speech.text = "I don't know. I just heard it from your brain.";
+                                  nextButton.SetActive(false);
+                                  allowSpace = false;
+                                  NextScene1Button.SetActive(true); //scene 2
+                                }
+                 else if (primeInt == 108){
+                                    Char1name.text = "YOU";
+                                                  Char1speech.text = "But I haven't said anything about my home planet. How could you know?";
+                                                  Char2name.text = "Matilda";
+                                                  Char2speech.text = "I didn't hear your mouth saying it. I heard from your head.";
+                                                                                         }
+                  else if (primeInt == 109){
+                                                  Char1name.text = "YOU";
+                                                  Char1speech.text = "A psychic? I've never heard of it. Your human species shouldn't have developed enough to possess that ability.";
+                                                  Char2name.text = "Matilda";
+                                                  Char2speech.text = "People's heads have always talked to me so your friends are coming too? But they're coming....to fight?";
+                                                  nextButton.SetActive(false);
+                                                  allowSpace = false;
+                                                  NextScene1Button.SetActive(true); //scene 2
+                                                                                                 }
+                  else if (primeInt == 110){
+                                                  Char1name.text = "YOU";
+                                                  Char1speech.text = "Right! Your planet is in danger. I need to talk to the leader of this planet.";
+                                                  Char2name.text = "Matilda";
+                                                  Char2speech.text = "Off to go see Dad and Dad then!";
+                                            }
+                  else if (primeInt == 111){
+                                                    Char1name.text = "";
+                                                    Char1speech.text = "";
+                                                    Char2name.text = "";
+                                                    Char2speech.text = "";
+                                                    nextButton.SetActive(false);
+                                                    allowSpace = false;
+                                                    NextScene1Button.SetActive(true); //scene 2
+
+                                }
+                                                                                                                            }
+               else if (primeInt == 200){
+                         Char1name.text = "";
+                         Char1speech.text = "<YOU approaches a group of humans>";
+                         Char2name.text = "";
+                         Char2speech.text = "";
+                 }
+                else if (primeInt == 201){
+                         Char1name.text = "YOU";
+                         Char1speech.text = "Hello, fellow citizens of Earth! I came from a planet that's far away to tell you're in danger-";
+                         Char2name.text = "Human1";
+                         Char2speech.text = "G.e.t. o.u.t! It's a talking dog!";
+                         nextButton.SetActive(false);
+                         allowSpace = false;
+                         NextScene1Button.SetActive(true); //scene 2
+                         }
+
+                else if (primeInt == 202){
+                                  Char1name.text = "Human2";
+                                  Char1speech.text = "What the hell!";
+                                  Char2name.text = "Human3";
+                                  Char2speech.text = "I'm calling the freaking police!";
+                          }
+                else if (primeInt == 203){
+                                  Char1name.text = "YOU";
+                                  Char1speech.text = "(The Police? Are those the authority figures in this world? Or could they be dangerous?)";
+                                  Char2name.text = "";
+                                  Char2speech.text = "";
+                                  nextButton.SetActive(false);
+                                  allowSpace = false;
+                                  NextScene1Button.SetActive(true); // scene 2
+                          }
+                 }
 // FUNCTIONS FOR BUTTONS TO ACCESS (Choice #1 and switch scenes)
-        public void Choice1aFunct(){
-                Char1name.text = "";
-                Char1speech.text = "";
-                Char2name.text = "You";
-                Char2speech.text = "I don't know what you're talking about!";
-                primeInt = 99;
-                Choice1a.SetActive(false);
-                Choice1b.SetActive(false);
-                nextButton.SetActive(true);
-                allowSpace = true;
-        }
-        public void Choice1bFunct(){
-                Char1name.text = "";
-                Char1speech.text = "";
-                Char2name.text = "You";
-                Char2speech.text = "Sure, anything you want... just lay off the club.";
-                primeInt = 199;
-                Choice1a.SetActive(false);
-                Choice1b.SetActive(false);
-                nextButton.SetActive(true);
-                allowSpace = true;
-        }
-
-        public void SceneChange1(){
-               SceneManager.LoadScene("Scene2a");
-        }
-        public void SceneChange2(){
-                SceneManager.LoadScene("Scene2b");
-        }
-}
+                         public void Choice1aFunct(){
+                                 Char1name.text = "YOU";
+                                 Char1speech.text = "(This small human has some comforting ambience.. I wonder what?)";
+                                 Char2name.text = "";
+                                 Char2speech.text = "";
+                                 primeInt = 99;
+                                 Choice1a.SetActive(false);
+                                 Choice1b.SetActive(false);
+                 				Choice1c.SetActive(false);
+                                 nextButton.SetActive(true);
+                                 allowSpace = true;
+                 				//GameObject.FindWithTag("GameHandler").GetComponent<GameHandler>().hasComm = true;
+                 				GameHandler.hasComm = true;
+                         }
+                         public void Choice1bFunct(){
+                                 Char1name.text = "YOU";
+                                 Char1speech.text = "The more the better. At least one of them has to believe me!";
+                                 Char2name.text = "";
+                                 Char2speech.text = "";
+                                 primeInt = 199;
+                                 Choice1a.SetActive(false);
+                                 Choice1b.SetActive(false);
+                 				Choice1c.SetActive(false);
+                                 nextButton.SetActive(true);
+                                 allowSpace = true;
+                 				//GameObject.FindWithTag("GameHandler").GetComponent<GameHandler>().hasProof = true;
+                 				GameHandler.hasProof = true;
+                         }
+                         public void SceneChange1(){
+                                SceneManager.LoadScene("Scene3b");
+                         }
+                         //public void SceneChange2(){
+                         //        SceneManager.LoadScene("Scene2b");
+                         //}
+                 }
