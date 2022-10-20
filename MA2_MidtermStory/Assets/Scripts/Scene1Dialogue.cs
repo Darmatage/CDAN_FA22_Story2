@@ -21,6 +21,7 @@ public class Scene1Dialogue : MonoBehaviour {
 	   //public GameObject ArtChar2b;
 	   //public GameObject ArtChar2c;
         public GameObject ArtBG1;
+		public GameObject ArtBG_black;
         public GameObject Choice1a;
         public GameObject Choice1b;
 		public GameObject Choice1c;
@@ -37,6 +38,7 @@ void Start(){         // initial visibility settings
 		ArtChar1b.SetActive(false); // pixeli  collar form
 		ArtChar2.SetActive(false); // stray dog
         ArtBG1.SetActive(true);
+		ArtBG_black.SetActive(true);
         Choice1a.SetActive(false);
         Choice1b.SetActive(false);
 		Choice1c.SetActive(false);
@@ -65,7 +67,7 @@ public void talking(){         // main story function. Players hit next to progr
                 Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "Pixeli";
-                Char2speech.text = "Sir? We've landed.";
+				StartCoroutine(TypeText(Char2speech, "Sir? We've landed."));
         }
        else if (primeInt ==3){
                 Char1name.text = "YOU";
@@ -78,7 +80,7 @@ public void talking(){         // main story function. Players hit next to progr
                 Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "Pixeli";
-                Char2speech.text = "Indeed, Sir. Are you OK?";
+				StartCoroutine(TypeText(Char2speech, "Indeed, Sir. Are you OK?"));
         }
        else if (primeInt == 5){
                 Char1name.text = "YOU";
@@ -91,7 +93,7 @@ public void talking(){         // main story function. Players hit next to progr
                 Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "Pixeli";
-                Char2speech.text = "Scans show human settlements within 2 clicks.";
+				StartCoroutine(TypeText(Char2speech, "Scans show human settlements within 2 clicks."));
         }
        else if (primeInt ==7){
                 Char1name.text = "YOU";
@@ -104,7 +106,7 @@ public void talking(){         // main story function. Players hit next to progr
                 Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "Pixeli";
-                Char2speech.text = "Not m-m-m-much sir...";
+				StartCoroutine(TypeText(Char2speech, "Not m-m-m-much sir..."));
         }
        else if (primeInt ==9){
                 Char1name.text = "YOU";
@@ -117,7 +119,7 @@ public void talking(){         // main story function. Players hit next to progr
                 Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "Pixeli";
-                Char2speech.text = "Pl-plLeasE T-aK-e CA-";
+				StartCoroutine(TypeText(Char2speech, "Pl-plLeasE T-aK-e CA-"));
         }
        else if (primeInt ==11){
          ArtChar1.SetActive(false);
@@ -133,6 +135,8 @@ public void talking(){         // main story function. Players hit next to progr
                 Char2speech.text = "";
         }
 		else if (primeInt ==13){
+			StartCoroutine(FadeOut(ArtBG_black));
+			
                 Char1name.text = "YOU";
                 Char1speech.text = "(I can’t believe it. I’m really here.)";
                 Char2name.text = "";
@@ -309,4 +313,41 @@ public void talking(){         // main story function. Players hit next to progr
         //public void SceneChange2(){
         //        SceneManager.LoadScene("Scene2b");
         //}
+		
+		//FADE IN AND FADE OUT EFFECTS
+		IEnumerator FadeIn(GameObject fadeImage){
+                float alphaLevel = 0;
+                fadeImage.GetComponent<Image>().color = new Color(1, 1, 1, alphaLevel);
+                for(int i = 0; i < 100; i++){
+                        alphaLevel += 0.01f;
+                        yield return null;
+                        fadeImage.GetComponent<Image>().color = new Color(1, 1, 1, alphaLevel);
+                        Debug.Log("Alpha is: " + alphaLevel);
+                }
+        }
+
+        IEnumerator FadeOut(GameObject fadeImage){
+                float alphaLevel = 1;
+                fadeImage.GetComponent<Image>().color = new Color(1, 1, 1, alphaLevel);
+                for(int i = 0; i < 100; i++){
+                        alphaLevel -= 0.01f;
+                        yield return null;
+                        fadeImage.GetComponent<Image>().color = new Color(1, 1, 1, alphaLevel);
+                        Debug.Log("Alpha is: " + alphaLevel);
+                }
+        } 
+		
+		//TYPE ON EFFECT
+		 IEnumerator TypeText(Text target, string fullText){
+                float delay = 0.01f;
+                nextButton.SetActive(false);
+                allowSpace = false;
+                for (int i = 0; i < fullText.Length; i++){
+                        string currentText = fullText.Substring(0,i);
+                        target.text = currentText;
+                        yield return new WaitForSeconds(delay);
+                }
+                nextButton.SetActive(true);
+                allowSpace = true;
+        } 
 }
