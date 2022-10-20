@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine.Audio;
 
 public class Scene2Dialogue : MonoBehaviour {
-        public int primeInt = 1;         // This integer drives game progress!
+        public int primeInt = 1;  // This integer drives game progress!
         public Text Char1name;
         public Text Char1speech;
         public Text Char2name;
@@ -14,8 +14,9 @@ public class Scene2Dialogue : MonoBehaviour {
        //public Text Char3name;
        //public Text Char3speech;
         public GameObject DialogueDisplay;
-        public GameObject ArtChar1;
-       //public GameObject ArtChar2;
+        public GameObject ArtChar1a; // cat off in distance, appearing on screen
+        public GameObject ArtChar1b; // cat looking up
+        public GameObject ArtChar1c; // closeup of cat, (alien approaches)
         public GameObject ArtBG1;
         public GameObject Choice1a;
         public GameObject Choice1b;
@@ -28,7 +29,9 @@ public class Scene2Dialogue : MonoBehaviour {
 
 void Start(){         // initial visibility settings
         DialogueDisplay.SetActive(false);
-        ArtChar1.SetActive(false);
+        ArtChar1a.SetActive(false);
+        ArtChar1b.SetActive(false);
+        ArtChar1c.SetActive(false);
         ArtBG1.SetActive(true);
         Choice1a.SetActive(false);
         Choice1b.SetActive(false);
@@ -46,37 +49,39 @@ void Update(){         // use spacebar as Next button
    }
 
 //Story Units:
-public void talking(){         // main story function. Players hit next to progress to next int
+public void talking(){  // main story function. Players hit next to progress to next int
         primeInt = primeInt + 1;
         if (primeInt == 1){
                 // AudioSource.Play();
         }
         else if (primeInt == 2){
-               ArtChar1.SetActive(true);
                 DialogueDisplay.SetActive(true);
-                Char1name.text = "Jeda";
-                Char1speech.text = "Wakey wakey, human.";
+                Char1name.text = "You";
+                Char1speech.text = "Those buildings .. \nThey look like human capacity units.";
                 Char2name.text = "";
                 Char2speech.text = "";
         }
        else if (primeInt ==3){
-                Char1name.text = "";
-                Char1speech.text = "";
-                Char2name.text = "You";
-                Char2speech.text = "Wuh..? What happened?";
+                Char1name.text = "You";
+                Char1speech.text = "Wait .. is that another quadruped?";
+                Char2name.text = "";
+                Char2speech.text = "";
                 //gameHandler.AddPlayerStat(1);
         }
        else if (primeInt == 4){
-                Char1name.text = "Jeda";
-                Char1speech.text = "I know I did not hit you that hard.";
+         DialogueDisplay.SetActive(false);
+         ArtChar1a.SetActive(true);
+                Char1name.text = "";
+                Char1speech.text = "";
                 Char2name.text = "";
                 Char2speech.text = "";
         }
        else if (primeInt == 5){
+         DialogueDisplay.SetActive(true);
                 Char1name.text = "";
                 Char1speech.text = "";
-                Char2name.text = "You";
-                Char2speech.text = "Hit me? Why?";
+                Char2name.text = "Cat";
+                Char2speech.text = "(Meow.)";
                 //gameHandler.AddPlayerStat(1);
         }
        else if (primeInt == 6){
