@@ -28,9 +28,12 @@ public class Scene1Dialogue : MonoBehaviour {
         public GameObject NextScene1Button;
         //public GameObject NextScene2Button;
         public GameObject nextButton;
-       //public GameHandler gameHandler;
+        public GameHandler gameHandler;
        //public AudioSource audioSource;
         private bool allowSpace = true;
+        public static bool hasComm=false;
+        public static bool hasProof=false;
+        public static bool hasAi=false;
 
 void Start(){         // initial visibility settings
         DialogueDisplay.SetActive(false);
@@ -136,7 +139,7 @@ public void talking(){         // main story function. Players hit next to progr
         }
 		else if (primeInt ==13){
 			StartCoroutine(FadeOut(ArtBG_black));
-			
+
                 Char1name.text = "YOU";
                 Char1speech.text = "(I can’t believe it. I’m really here.)";
                 Char2name.text = "";
@@ -230,31 +233,38 @@ public void talking(){         // main story function. Players hit next to progr
                 Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "Pixeli";
-                Char2speech.text = "Sir! You're OK! \n You look .. different, though.";
+              StartCoroutine(TypeText(Char2speech, "Sir! You're OK! \nYou look .. different, though."));
         }
        else if (primeInt == 303){
                 Char1name.text = "YOU";
-                Char1speech.text = "“I found an organism to mimic already.\n A part of me was worried you wouldn’t activate. \n I’m glad you’re still .. relatively stable. For the most part.";
+                Char1speech.text = "I found an organism to mimic already.\nA part of me was worried you wouldn’t activate.";
                 Char2name.text = "";
                 Char2speech.text = "";
         }
-		else if (primeInt == 304){
+        else if (primeInt == 304){
+                 Char1name.text = "YOU";
+                 Char1speech.text = "You seem to be in stable coniditon \nFor the most part anyway.";
+                 Char2name.text = "";
+                 Char2speech.text = "";
+        }
+
+		else if (primeInt == 305){
                 Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "Pixeli";
-                Char2speech.text = "Am I on your collar computer? \n I’ve never been unplugged from the motherboard before.";
+              StartCoroutine(TypeText(Char2speech,"Am I on your collar computer? \nI’ve never been unplugged from the motherboard before."));
         }
-       else if (primeInt == 305){
+       else if (primeInt == 306){
                 Char1name.text = "YOU";
-                Char1speech.text = "You’ll be alright. \n I’ll have my charger on me at all times.";
+                Char1speech.text = "You’ll be alright. \nI’ll have my charger on me at all times.";
                 Char2name.text = "";
                 Char2speech.text = "";
         }
-		else if (primeInt == 306){
+		else if (primeInt == 307){
                 Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "Pixeli";
-                Char2speech.text = "Always so prepared. \n Let’s be off then.";
+              StartCoroutine(TypeText(Char2speech,"Always so prepared. \nLet’s be off then."));
                 nextButton.SetActive(false);
                 allowSpace = false;
                 NextScene1Button.SetActive(true); //scene 2
@@ -313,7 +323,7 @@ public void talking(){         // main story function. Players hit next to progr
         //public void SceneChange2(){
         //        SceneManager.LoadScene("Scene2b");
         //}
-		
+
 		//FADE IN AND FADE OUT EFFECTS
 		IEnumerator FadeIn(GameObject fadeImage){
                 float alphaLevel = 0;
@@ -335,8 +345,8 @@ public void talking(){         // main story function. Players hit next to progr
                         fadeImage.GetComponent<Image>().color = new Color(1, 1, 1, alphaLevel);
                         Debug.Log("Alpha is: " + alphaLevel);
                 }
-        } 
-		
+        }
+
 		//TYPE ON EFFECT
 		 IEnumerator TypeText(Text target, string fullText){
                 float delay = 0.01f;
@@ -349,5 +359,5 @@ public void talking(){         // main story function. Players hit next to progr
                 }
                 nextButton.SetActive(true);
                 allowSpace = true;
-        } 
+        }
 }

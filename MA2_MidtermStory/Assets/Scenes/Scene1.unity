@@ -1537,6 +1537,7 @@ MonoBehaviour:
   Choice1c: {fileID: 2056939017}
   NextScene1Button: {fileID: 1805861599}
   nextButton: {fileID: 955425737}
+  gameHandler: {fileID: 1652130664}
 --- !u!1 &1618883222
 GameObject:
   m_ObjectHideFlags: 0
