@@ -48,9 +48,9 @@ void Update(){         // use spacebar as Next button
 //Story Units:
 public void talking(){         // main story function. Players hit next to progress to next int
         primeInt = primeInt + 1;
-        if (primeInt == 1)
-        if (GameHandler.hasProof(true))
-        if (GameHandler.hasComm(true)){
+        if (primeInt == 1){
+        //if (GameHandler.hasProof==true)
+        //if (GameHandler.hasComm==true){
                 // AudioSource.Play();
         }
         else if (primeInt == 2){
@@ -74,11 +74,11 @@ public void talking(){         // main story function. Players hit next to progr
                          Char2name.text = "";
                          Char2speech.text = "";
                          nextButton.SetActive(false);
-                         Choice1a.SetAvtive(true);
-                         Choice1b.SetAvtive(true);
+                         Choice1a.SetActive(true);
+                         Choice1b.SetActive(true);
                  }
   if (primeInt == 99)
-  if (GameHandler.hasAi(true)){
+  if (GameHandler.hasAi==true){
 
   }
 

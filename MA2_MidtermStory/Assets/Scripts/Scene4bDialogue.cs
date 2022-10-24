@@ -1,11 +1,11 @@
-uusing UnityEngine;
+using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using UnityEngine.Audio;
 
-public class Scene1Dialogue : MonoBehaviour {
+public class Scene4bDialogue : MonoBehaviour {
         public int primeInt = 1;         // This integer drives game progress!
         public Text Char1name;
         public Text Char1speech;
@@ -70,7 +70,7 @@ public void talking(){         // main story function. Players hit next to progr
                 Char1name.text = "YOU";
                 Char1speech.text = "Woof! Woof, woof.";
                 Char2name.text = "";
-				StartCoroutine(TypeText(Char2speech, "";
+				StartCoroutine(TypeText(Char2speech, ""));
         }
        else if (primeInt ==3){
                 Char1name.text = "";
@@ -145,7 +145,7 @@ public void talking(){         // main story function. Players hit next to progr
                 Char2name.text = "";
                 Char2speech.text = "";
         }
-
+	}
 
      
 
