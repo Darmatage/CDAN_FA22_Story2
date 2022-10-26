@@ -201,12 +201,7 @@ public void talking(){  // main story function. Players hit next to progress to 
                 Char2name.text = "";
                 Char2speech.text = "";
         }
-        else if (primeInt == 207){
-                Char1name.text = "YOU";
-                Char1speech.text = "(Is this how humans react to dire situationss?) \n (By running away..?)";
-                Char2name.text = "";
-                Char2speech.text = "";
-        }
+
         else if (primeInt == 207){
                   Char1name.text = "YOU";
                   Char1speech.text = "(That won't solve anything. \nI'll find a way.)";
@@ -261,36 +256,36 @@ public void talking(){  // main story function. Players hit next to progress to 
      }
 
 // FUNCTIONS FOR BUTTONS TO ACCESS (Choice #1 and switch scenes)
-        public void Choice1aFunct(){
-          if (GameHandler.hasAi==true){
-             Choice1a.SetActive(false);
-          if (GameHandler.hasComm==true){
-             Choice1a.SetActive(false);
-                primeInt = 99;
-                Choice1a.SetActive(false);
-                Choice1b.SetActive(false);
-                nextButton.SetActive(true);
-                allowSpace = true;
-          }
-        }
-      }
+// Let's assume that GameHandler.hasProof has the value we set it to at the end of scene 1
+  public void scenefunc(){
 
-        public void Choice1bFunct(){
-          if (GameHandler.hasProof==true){
-             Choice1b.SetActive(false);
-                primeInt = 199;
-                Choice1a.SetActive(false);
-                Choice1b.SetActive(false);
-                nextButton.SetActive(true);
-                allowSpace = true;
-            if (hasComm==true){
-                primeInt = 199;
-            if (hasAi==true){
-                primeInt=299;
-          }
-        }
+    // Direct the player to the line 199 as default
+    primeInt = 199;
+
+
+    // if the player does not have proof (aka either has Comm or has AI)
+    if (!(GameHandler.hasProof)){
+
+      /* show option b */
+
+      if (GameHandler.hasAI){
+        // Direct the player to line 299l if hasAI = false then primeInt stays 299
+        primeInt=299;
       }
     }
+
+    /* show option a */
+
+    // Other vars
+    Choice1a.SetActive(false);
+    Choice1b.SetActive(false);
+    nextButton.SetActive(true);
+    allowSpace = true;
+
+  }
+
+
+
 
         public void SceneChange1(){
                SceneManager.LoadScene("Scene3a");
