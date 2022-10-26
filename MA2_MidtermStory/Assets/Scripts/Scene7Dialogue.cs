@@ -5,7 +5,7 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using UnityEngine.Audio;
 
-public class Scene1Dialogue : MonoBehaviour {
+public class Scene7Dialogue : MonoBehaviour {
         public int primeInt = 1;         // This integer drives game progress!
         public Text Char1name;
         public Text Char1speech;
@@ -15,17 +15,17 @@ public class Scene1Dialogue : MonoBehaviour {
        //public Text Char3speech;
         public GameObject DialogueDisplay;
         public GameObject ArtChar1;
-		public GameObject ArtChar1b;
+		    public GameObject ArtChar1b;
 		//public GameObject ArtChar1c;
        public GameObject ArtChar2;
 	   //public GameObject ArtChar2b;
 	   //public GameObject ArtChar2c;
         public GameObject ArtBG1;
         public GameObject ArtBG2;
-		public GameObject ArtBG_black;
+		    public GameObject ArtBG_black;
         public GameObject Choice1a;
         public GameObject Choice1b;
-		public GameObject Choice1c;
+		    public GameObject Choice1c;
         public GameObject NextScene1Button;
         //public GameObject NextScene2Button;
         public GameObject nextButton;
@@ -38,14 +38,14 @@ public class Scene1Dialogue : MonoBehaviour {
 
 void Start(){         // initial visibility settings
         DialogueDisplay.SetActive(false);
-        ArtChar1.SetActive(false); // pixeli motherboard form
-		ArtChar1b.SetActive(false); // pixeli  collar form
-		ArtChar2.SetActive(false); // stray dog
+        ArtChar1.SetActive(false);
+		    ArtChar1b.SetActive(false);
+		    ArtChar2.SetActive(false);
         ArtBG1.SetActive(true);
-		ArtBG_black.SetActive(true);
+	    	ArtBG_black.SetActive(true);
         Choice1a.SetActive(false);
         Choice1b.SetActive(false);
-		Choice1c.SetActive(false);
+		    Choice1c.SetActive(false);
         NextScene1Button.SetActive(false);
         //NextScene2Button.SetActive(false);
         nextButton.SetActive(true);
@@ -64,28 +64,28 @@ public void talking(){         // main story function. Players hit next to progr
         primeInt = primeInt + 1;
         if (primeInt == 1){
                 // AudioSource.Play();
-        }
+    }
         else if (primeInt == 2){
           ArtChar1.SetActive(true);
                 DialogueDisplay.SetActive(true);
                 Char1name.text = "";
                 Char1speech.text = "<Amazing smell leads you to Chris's kitchen when Christ notices you>";
                 Char2name.text = "";
-        StartCoroutine(TypeText(Char2speech, ""));
-        }
+                Char2speech.text = "";
+    }
        else if (primeInt ==3){
                 Char1name.text = "YOU";
                 Char1speech.text = "(This is one of the two tall humans that welcomed me in. Let's try to have a conversation.)";
                 Char2name.text = "";
                 Char2speech.text = "";
                 //gameHandler.AddPlayerStat(1);
-        }
+    }
         //scene 7a: with communication device
-       else if (primeInt == 100){
+       else if (primeInt == 4){
                 Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "Chris";
-        StartCoroutine(TypeText(Char2speech, "Hi doggy! You must be hungry. Aren't you?"));
+                Char2speech.text = "Hi doggy! You must be hungry, aren't you?";
         }
        else if (primeInt == 5){
                 Char1name.text = "YOU";
@@ -94,19 +94,14 @@ public void talking(){         // main story function. Players hit next to progr
                 Char2speech.text = "";
                 //gameHandler.AddPlayerStat(1);
         }
-        else if (primeInt == 2){
-          ArtChar1.SetActive(true);
-                DialogueDisplay.SetActive(true);
+        else if (primeInt == 6){
                 Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "Chris";
-        StartCoroutine(TypeText(Char2speech, "You shouldn't be too picky about food! Perhaps some meatballs? It's a new recipe so try it and tell me what you think!"));
+                Char2speech.text = "You shouldn't be too picky about food! Perhaps some meatballs? \nIt's a new recipe so try it and tell me what you think!";
         }
 
-
-
-
-       else if (primeInt == 17){
+       else if (primeInt == 7){
                 Char1name.text = "YOU";
                 Char1speech.text = "(I don't feel any harm in this 'mealballs'.. perhaps I can try it? / I'm not used to human food- let's avoid getting into trouble.)";
                 Char2name.text = "";
@@ -116,7 +111,7 @@ public void talking(){         // main story function. Players hit next to progr
                 allowSpace = false;
                 Choice1a.SetActive(true); // function Choice1aFunct()
                 Choice1b.SetActive(true); // function Choice1bFunct()
-				Choice1c.SetActive(true); // function Choice1bFunct()
+			        	Choice1c.SetActive(true); // function Choice1bFunct()
         }
 // ENCOUNTER AFTER CHOICE #1
        else if (primeInt == 100){
@@ -135,19 +130,26 @@ public void talking(){         // main story function. Players hit next to progr
                 NextScene1Button.SetActive(true); //scene 2
         }
 
-       else if (primeInt == 200){
+       else if (primeInt == 102){
                 Char1name.text = "";
                 Char1speech.text = "<A passes out before finishing the rest of its sentence and time passes..";
                 Char2name.text = "";
                 Char2speech.text = "";
         }
 
-        else if (primeInt ==13){
+        else if (primeInt ==103){
+          DialogueDisplay.SetActive(false);
+          Char1name.text = "";
+          Char1speech.text = "";
+          Char2name.text = "";
+          Char2speech.text = "";
           StartCoroutine(FadeOut(ArtBG2));
+
+        }
 
 
       //Encounter after choice2 to reject:
-       else if (primeInt == 201){
+       else if (primeInt == 200){
                 Char1name.text = "YOU";
                 Char1speech.text = "First of all, aren't you surprised that I can talk?";
                 Char2name.text = "";
@@ -157,88 +159,94 @@ public void talking(){         // main story function. Players hit next to progr
                 NextScene1Button.SetActive(true); // scene 2
         }
 
-		else if (primeInt == 300){
+		    else if (primeInt == 201){
                 Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "Chris";
                 Char2speech.text = "Oh- wait, you ARE talking! B-but how? ";
         }
-       else if (primeInt == 301){
+       else if (primeInt == 202){
                 Char1name.text = "YOU";
                 Char1speech.text = "I'm only borrowing a form of an organism. The truth is that I'm from a different planet to warn you about the upcoming invasion.";
                 Char2name.text = "";
                 Char2speech.text = "";
         }
 
-		else if (primeInt == 302){
+		   else if (primeInt == 203){
                 Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "Chris";
-              StartCoroutine(TypeText(Char2speech, "ok..ok..Ok! so you are like an alien or something..? You are here to... save us?"));
+                Char2speech.text = "Oh .. I see! So you are like an alien or something..? \nYou are here to... save us?";
         }
-       else if (primeInt == 303){
+       else if (primeInt == 204){
                 Char1name.text = "YOU";
-                Char1speech.text = "I don't understand. You are just repeating over everything I said. You are also stuttering as well. If you are sick, I'll find a new human to initiate help.";
+                Char1speech.text = "I don't understand. You are just repeating over everything I said. \nYou are also stuttering as well.";
                 Char2name.text = "";
                 Char2speech.text = "";
         }
-        else if (primeInt == 304){
-                 Char1name.text = "";
-                 Char1speech.text = "No, it's ok. I'm just shocked.";
+        else if (primeInt == 205){
+                 Char1name.text = "YOU";
+                 Char1speech.text = "If you are sick, I'll find a new human for help.";
                  Char2name.text = "";
                  Char2speech.text = "";
+         }
+        else if (primeInt == 206){
+                 Char1name.text = "";
+                 Char1speech.text = "";
+                 Char2name.text = "Chris";
+                 Char2speech.text = "No, it's ok. I'm just shocked.";
         }
 
-		else if (primeInt == 305){
+		    else if (primeInt == 207){
                 Char1name.text = "YOU";
-                Char1speech.text = "Please, help me. We have no time. Please find the leader of this planet";
+                Char1speech.text = "Please, help me. We have no time. \nPlease find the leader of this planet";
                 Char2name.text = "";
-              StartCoroutine(TypeText(Char2speech,""));
-        }
-       else if (primeInt == 306){
+                Char2speech.text = "";
+      }
+       else if (primeInt == 208){
                 Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "I honestly have no idea what's happening.";
                 Char2speech.text = "";
-        }
-		else if (primeInt == 307){
+      }
+	  	 else if (primeInt == 209){
                 Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "Chris";
-              StartCoroutine(TypeText(Char2speech,"BUT... since we took you in as our family, I have a responsibility to take care of you so I will help you."));
+                Char2speech.text = "BUT... since we took you in as our family, I have a responsibility to take care of you so I will help you.";
 
-              }
-              else if (primeInt == 305){
+      }
+              else if (primeInt == 210){
                           Char1name.text = "";
                           Char1speech.text = "";
                           Char2name.text = "Chris";
-                        StartCoroutine(TypeText(Char2speech,"It's good that you chose us..I and my husband work for the government."));
+                          Char2speech.text = "It's good that you chose us..I and my husband work for the government.";
                   }
-                 else if (primeInt == 306){
+                 else if (primeInt == 211){
                           Char1name.text = "Alien";
                           Char1speech.text = "So you will help me?";
                           Char2name.text = "";
                           Char2speech.text = "";
                   }
-                  else if (primeInt == 305){
+                  else if (primeInt == 212){
                               Char1name.text = "";
                               Char1speech.text = "";
                               Char2name.text = "Chris";
-                            StartCoroutine(TypeText(Char2speech,"Family meeting!"));
-                      }
+                              Char2speech.text = "Family meeting!";
                 nextButton.SetActive(false);
                 allowSpace = false;
                 NextScene1Button.SetActive(true); //scene 2
-        }
+
+            }
 
      //Encounter after choice 3: without communication
-        else if (primeInt == 100){
+        else if (primeInt == 400){
               Char1name.text = "YOU";
               Char1speech.text = "That smell is amazing. This species sure does have an interesting number of sensory options.";
               Char2name.text = "";
               Char2speech.text = "";
       }
-          else if (primeInt == 101){
+          else if (primeInt == 401){
               Char1name.text = "";
               Char1speech.text = "";
               Char2name.text = "Chris";
@@ -247,7 +255,7 @@ public void talking(){         // main story function. Players hit next to progr
               allowSpace = false;
               NextScene1Button.SetActive(true); //scene 2
       }
-      else if (primeInt == 17){
+      else if (primeInt == 402){
                Char1name.text = "";
                Char1speech.text = "(Holds out a meatball on a fork)";
                Char2name.text = "";
@@ -257,17 +265,16 @@ public void talking(){         // main story function. Players hit next to progr
                allowSpace = false;
                Choice1a.SetActive(true); // function Choice1aFunct()
                Choice1b.SetActive(true); // function Choice1bFunct()
-       Choice1c.SetActive(true); // function Choice1bFunct()
+               Choice1c.SetActive(true); // function Choice1bFunct()
        }
-
        //Choice b (reject)for without communication device:
-       else if (primeInt == 100){
+       else if (primeInt == 501){
              Char1name.text = "YOU";
-             Char1speech.text = "That does smell good. But I must stay viflant. Much of this planet is still a mystery to me.";
+             Char1speech.text = "That does smell good. But I must stay vigilant. Much of this planet is still a mystery to me.";
              Char2name.text = "";
              Char2speech.text = "";
-     }
-         else if (primeInt == 101){
+    }
+         else if (primeInt == 502){
              Char1name.text = "";
              Char1speech.text = "";
              Char2name.text = "Chris";
@@ -275,14 +282,16 @@ public void talking(){         // main story function. Players hit next to progr
              nextButton.SetActive(false);
              allowSpace = false;
              NextScene1Button.SetActive(true); //scene 2
-             else if (primeInt == 100){
+    }
+             else if (primeInt == 503){
                    Char1name.text = "YOU";
                    Char1speech.text = "Seems like this one is a bust too. Is there anyone else I can try?";
                    Char2name.text = "";
                    Char2speech.text = "";
                    //GameObject.FindWithTag("GameHandler").GetComponent<GameHandler>().hasProof = true;
                    GameHandler.hasProof = true;
-                    }
+    }
+  }
 
 
 
@@ -299,8 +308,6 @@ public void talking(){         // main story function. Players hit next to progr
                 nextButton.SetActive(true);
                 allowSpace = true;
 				//GameObject.FindWithTag("GameHandler").GetComponent<GameHandler>().hasComm = true;
-				GameHandler.hasComm = true;
-        	GameHandler.hasAi = true;
         }
         public void Choice1bFunct(){
                 Char1name.text = "YOU";
@@ -314,15 +321,26 @@ public void talking(){         // main story function. Players hit next to progr
                 nextButton.SetActive(true);
                 allowSpace = true;
                 //GameObject.FindWithTag("GameHandler").GetComponent<GameHandler>().hasComm = true;
-                GameHandler.hasComm = true;
-                GameHandler.hasAi = true;
-              }
+                //GameHandler.hasAi = true;
+        }
 
 
 
         public void SceneChange1(){
                SceneManager.LoadScene("Scene8");
         }
+
+  IEnumerator FadeOut(GameObject fadeImage){
+                float alphaLevel = 1;
+                fadeImage.GetComponent<Image>().color = new Color(1, 1, 1, alphaLevel);
+                for(int i = 0; i < 100; i++){
+                        alphaLevel -= 0.01f;
+                        yield return null;
+                        fadeImage.GetComponent<Image>().color = new Color(1, 1, 1, alphaLevel);
+                        Debug.Log("Alpha is: " + alphaLevel);
+              }
+        }
         //public void SceneChange2(){
         //        SceneManager.LoadScene("Scene2b");
         //}
+    }

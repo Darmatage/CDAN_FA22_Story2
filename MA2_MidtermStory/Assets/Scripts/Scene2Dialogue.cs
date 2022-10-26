@@ -16,9 +16,8 @@ public class Scene2Dialogue : MonoBehaviour {
        //public Text Char3name;
        //public Text Char3speech;
         public GameObject DialogueDisplay;
-        public GameObject ArtChar1a; // cat off in distance, appearing on screen
-        public GameObject ArtChar1b; // cat looking up
-        public GameObject ArtChar1c; // closeup of cat, (alien approaches)
+        public GameObject ArtChar1a;
+        public GameObject ArtChar1b;
         public GameObject ArtBG1;
         public GameObject Choice1a;
         public GameObject Choice1b;
@@ -38,7 +37,6 @@ void Start(){         // initial visibility settings
         DialogueDisplay.SetActive(false);
         ArtChar1a.SetActive(false);
         ArtChar1b.SetActive(false);
-        ArtChar1c.SetActive(false);
         ArtBG1.SetActive(true);
         Choice1a.SetActive(false);
         Choice1b.SetActive(false);
@@ -120,13 +118,16 @@ public void talking(){  // main story function. Players hit next to progress to 
       }
        else if (primeInt == 101){ // cat runs away
                 DialogueDisplay.SetActive(false);
+                ArtChar1a.SetActive(false);
+                ArtChar1b.SetActive(true);
                 Char1name.text = "";
                 Char1speech.text = "";
-                Char2name.text = "";
-                Char2speech.text = "";
+                Char2name.text = "Cat";
+                Char2speech.text = "(Hiss!)";
       }
        else if (primeInt == 102){
                 DialogueDisplay.SetActive(true);
+                ArtChar1b.SetActive(false);
                 Char1name.text = "YOU";
                 Char1speech.text = "(Ugh, it seems this creature cannot understand my .. dog tongue.)";
                 Char2name.text = "";
@@ -268,11 +269,12 @@ public void talking(){  // main story function. Players hit next to progress to 
 
       /* show option b */
 
-      if (GameHandler.hasAI){
-        // Direct the player to line 299l if hasAI = false then primeInt stays 299
+      if (GameHandler.hasAi){
+        // Direct the player to line 299 if hasAI = false then primeInt stays 299
         primeInt=299;
       }
     }
+
 
     /* show option a */
 
