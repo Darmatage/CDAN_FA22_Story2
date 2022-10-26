@@ -33,9 +33,6 @@ public class Scene1Dialogue : MonoBehaviour {
        //public AudioSource audioSource;
         private bool allowSpace = true;
 		private bool isEndofScene = false;
-        
-		
-
 
 void Start(){         // initial visibility settings
         DialogueDisplay.SetActive(false);

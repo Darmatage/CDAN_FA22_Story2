@@ -84,6 +84,9 @@ public class GameHandler : MonoBehaviour {
 
 	public void RestartGame(){
 		Time.timeScale = 1f;
+		hasComm = false;
+		hasProof = false;
+		hasAi = false;
 		SceneManager.LoadScene("MainMenu");
 	}
 
