@@ -18,8 +18,9 @@ public class Scene1Dialogue : MonoBehaviour {
 		public GameObject ArtChar1b;
 		//public GameObject ArtChar1c;
        public GameObject ArtChar2;
-	   //public GameObject ArtChar2b;
+	   public GameObject ArtChar2b;
 	   //public GameObject ArtChar2c;
+	   public GameObject ArtChar3;
         public GameObject ArtBG1;
 		public GameObject ArtBG_black;
         public GameObject Choice1a;
@@ -31,15 +32,18 @@ public class Scene1Dialogue : MonoBehaviour {
         public GameHandler gameHandler;
        //public AudioSource audioSource;
         private bool allowSpace = true;
-        public static bool hasComm=false;
-        public static bool hasProof=false;
-        public static bool hasAi=false;
+		private bool isEndofScene = false;
+        
+		
+
 
 void Start(){         // initial visibility settings
         DialogueDisplay.SetActive(false);
-        ArtChar1.SetActive(false); // pixeli motherboard form
-		ArtChar1b.SetActive(false); // pixeli  collar form
-		ArtChar2.SetActive(false); // stray dog
+        ArtChar1.SetActive(false); // pixeli monitor form1
+		ArtChar1b.SetActive(false); // pixeli monitor form2
+		ArtChar2.SetActive(false); // pixeli  collar1
+		ArtChar2b.SetActive(false); // pixeli collar2
+		ArtChar3.SetActive(false); // stray dog
         ArtBG1.SetActive(true);
 		ArtBG_black.SetActive(true);
         Choice1a.SetActive(false);
@@ -146,7 +150,7 @@ public void talking(){         // main story function. Players hit next to progr
                 Char2speech.text = "";
         }
 		else if (primeInt ==14){
-			ArtChar2.SetActive(true);
+			ArtChar3.SetActive(true);
                 Char1name.text = "YOU";
                 Char1speech.text = "(Ah, a canine. \n I’ve heard humans find these creatures endearing. \nPerhaps I will take on its form!)";
                 Char2name.text = "";
@@ -154,7 +158,7 @@ public void talking(){         // main story function. Players hit next to progr
         }
 
 		else if (primeInt ==15){
-			ArtChar2.SetActive(false);
+			ArtChar3.SetActive(false);
                 Char1name.text = "YOU";
                 Char1speech.text = "(I have a mission to fulfill. \n But first, .. what should I do first? \n The ship is in bad shape, and I don’t have a lot of time.)";
                 Char2name.text = "";
@@ -268,6 +272,7 @@ public void talking(){         // main story function. Players hit next to progr
                 nextButton.SetActive(false);
                 allowSpace = false;
                 NextScene1Button.SetActive(true); //scene 2
+				isEndofScene = true;
         }
 
      }
@@ -357,7 +362,9 @@ public void talking(){         // main story function. Players hit next to progr
                         target.text = currentText;
                         yield return new WaitForSeconds(delay);
                 }
-                nextButton.SetActive(true);
-                allowSpace = true;
+				if (isEndofScene == false){
+					nextButton.SetActive(true);
+					allowSpace = true;
+				}
         }
 }
