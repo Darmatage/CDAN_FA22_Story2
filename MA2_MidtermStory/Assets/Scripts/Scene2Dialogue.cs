@@ -11,6 +11,8 @@ public class Scene2Dialogue : MonoBehaviour {
         public Text Char1speech;
         public Text Char2name;
         public Text Char2speech;
+        public Text Char3name;
+        public Text Char3speech;
        //public Text Char3name;
        //public Text Char3speech;
         public GameObject DialogueDisplay;
@@ -27,9 +29,9 @@ public class Scene2Dialogue : MonoBehaviour {
        //public GameHandler gameHandler;
        //public AudioSource audioSource;
         private bool allowSpace = true;
-        public static bool hasComm=false;
-        public static bool hasAi=false;
-        public static bool hasProof=false;
+        public static bool hasComm=true;
+        public static bool hasAi=true;
+        public static bool hasProof=true;
 
 
 void Start(){         // initial visibility settings
@@ -49,18 +51,10 @@ void Update(){ // use spacebar as Next button
         if (allowSpace == true){
                 if (Input.GetKeyDown("space")){
                        talking();
-                 if (hasComm==true){
-                     Choice1a.SetActive(false);
-                 if (hasAi==true){
-                    Choice1a.SetActive(false);
-                if (hasProof==true){
-                    Choice1b.SetActive(false);
+
               }
             }
           }
-        }
-      }
-    }
 
 //Story Units:
 public void talking(){  // main story function. Players hit next to progress to next int
@@ -223,27 +217,67 @@ public void talking(){  // main story function. Players hit next to progress to 
                   NextScene2Button.SetActive(true);
         }
       else if (primeInt == 300){
+                 Char1name.text = "YOU";
+                 Char1speech.text = "(Bark!)";
+                 Char2name.text = "";
+                 Char2speech.text = "";
+                 Char3name.text = "";
+                 Char3speech.text = "";
+                 nextButton.SetActive(true);
+                 allowSpace = true;
+         }
+      else if (primeInt == 301){
                  Char1name.text = "";
                  Char1speech.text = "";
-                 Char2name.text = "You";
-                 Char2speech.text = "Ragu hangs out in a rough part of town. I'll take you now.";
-                 nextButton.SetActive(false);
-                 allowSpace = false;
-                 NextScene2Button.SetActive(true);
+                 Char2name.text = "";
+                 Char2speech.text = "";
+                 Char3name.text = "Pixeli";
+                 Char3speech.text = "Don’t fret, creature. We mean no harm.";
+         }
+      else if (primeInt == 302){
+                 Char1name.text = "";
+                 Char1speech.text = "";
+                 Char2name.text = "Cat";
+                 Char2speech.text = "...";
+                 Char3name.text = "";
+                 Char3speech.text = "";
+         }
+      else if (primeInt == 303){
+                 Char1name.text = "YOU";
+                 Char1speech.text = "... (Bark, bark!)";
+                 Char2name.text = "";
+                 Char2speech.text = "";
+                 Char3name.text = "";
+                 Char3speech.text = "";
+         }
+       else if (primeInt == 304){
+                  Char1name.text = "YOU";
+                  Char1speech.text = "... (Bark, bark!)";
+                  Char2name.text = "";
+                  Char2speech.text = "";
+                  Char3name.text = "";
+                  Char3speech.text = "";
          }
      }
 
 // FUNCTIONS FOR BUTTONS TO ACCESS (Choice #1 and switch scenes)
         public void Choice1aFunct(){
+          if (GameHandler.hasAi==true){
+             Choice1a.SetActive(false);
+          if (GameHandler.hasComm==true){
+             Choice1a.SetActive(false);
                 primeInt = 99;
                 Choice1a.SetActive(false);
                 Choice1b.SetActive(false);
                 nextButton.SetActive(true);
                 allowSpace = true;
+          }
+        }
+      }
 
-
-    }
         public void Choice1bFunct(){
+          if (GameHandler.hasProof==true){
+             Choice1b.SetActive(false);
                 primeInt = 199;
                 Choice1a.SetActive(false);
                 Choice1b.SetActive(false);
@@ -251,11 +285,12 @@ public void talking(){  // main story function. Players hit next to progress to 
                 allowSpace = true;
             if (hasComm==true){
                 primeInt = 199;
-           if (hasAi==true){
+            if (hasAi==true){
                 primeInt=299;
           }
         }
       }
+    }
 
         public void SceneChange1(){
                SceneManager.LoadScene("Scene3a");

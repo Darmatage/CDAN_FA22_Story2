@@ -1102,7 +1102,7 @@ GameObject:
   - component: {fileID: 1413621987}
   m_Layer: 5
   m_Name: Canvas
-  m_TagString: Untagged
+  m_TagString: GameHandler
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1214,6 +1214,8 @@ MonoBehaviour:
   Char1speech: {fileID: 2202874877094450638}
   Char2name: {fileID: 2202874877094450637}
   Char2speech: {fileID: 2202874877094450636}
+  Char3name: {fileID: 0}
+  Char3speech: {fileID: 0}
   DialogueDisplay: {fileID: 1194211659}
   ArtChar1a: {fileID: 750828626}
   ArtChar1b: {fileID: 750828626}
