@@ -21,6 +21,10 @@ public class Scene3Dialogue : MonoBehaviour {
         public GameObject Choice1b;
         public GameObject NextScene1Button;
         public GameObject NextScene2Button;
+        public GameObject NextScene3Button;
+        public GameObject NextScene4Button;
+        public GameObject NextScene5Button;
+        public GameObject NextScene6Button;
         public GameObject nextButton;
         public GameHandler gameHandler;
        //public AudioSource audioSource;
@@ -35,13 +39,16 @@ void Start(){         // initial visibility settings
         NextScene1Button.SetActive(false);
         NextScene2Button.SetActive(false);
         nextButton.SetActive(true);
-   }
+        if(GameHandler.hasAi==true){
+          primeInt=100;
+    }
+  }
 
 void Update(){         // use spacebar as Next button
         if (allowSpace == true){
                 if (Input.GetKeyDown("space")){
                        talking();
-                }
+            }
         }
    }
 
@@ -52,7 +59,7 @@ public void talking(){         // main story function. Players hit next to progr
         //if (GameHandler.hasProof==true)
         //if (GameHandler.hasComm==true){
                 // AudioSource.Play();
-        }
+      }
         else if (primeInt == 2){
                ArtChar1.SetActive(true);
                 DialogueDisplay.SetActive(true);
@@ -60,69 +67,66 @@ public void talking(){         // main story function. Players hit next to progr
                 Char1speech.text = "(The amount of humans here..is overwhelming.\n(...)\n(The more the better I suppose.)";
                 Char2name.text = "";
                 Char2speech.text = "";
-        }
+      }
        else if (primeInt == 3){
                 Char1name.text = "YOU";
                 Char1speech.text ="(Wait, is that .. a little human?)";
                 Char1speech.text ="";
                 Char2speech.text = "";
-              }
+      }
 
        else if (primeInt == 4){
-                         Char1name.text = "YOU";
-                         Char1speech.text = "(It's coming toward me!)";
-                         Char2name.text = "";
-                         Char2speech.text = "";
-                         
-                 }
-  if (primeInt == 99){
+                Char1name.text = "YOU";
+                Char1speech.text = "(It's coming toward me!)";
+                Char2name.text = "";
+                Char2speech.text = "";
 
-  }
+      }
 
        else if (primeInt == 100){
-                         Char1name.text = "YOU";
-                         Char1speech.text = "Pixeli, do you have any information about this place? \nHave you surveyed the area?";
-                         Char2name.text = "";
-                         Char2speech.text = "";
+                Char1name.text = "YOU";
+                Char1speech.text = "Pixeli, do you have any information about this place? \nHave you surveyed the area?";
+                Char2name.text = "";
+                Char2speech.text = "";
                          //gameHandler.AddPlayerStat(1);
                  }
 
        else if (primeInt == 101){
-                         Char1name.text = "";
-                         Char1speech.text = "";
-                         Char2name.text = "Pixeli";
-                         Char2speech.text = "Yes: this area is urban and metropolitan in nature. \nHumans colloquially refer to this as a 'city'.";
+                Char1name.text = "";
+                Char1speech.text = "";
+                Char2name.text = "Pixeli";
+                Char2speech.text = "Yes: this area is urban and metropolitan in nature. \nHumans colloquially refer to this as a 'city'.";
 
                  }
        else if (primeInt == 102){
-                         Char1name.text = "YOU";
-                         Char1speech.text = "Wait, Pixeli. \nIs that a small human?";
-                         Char2name.text = "";
-                         Char2speech.text = "";
+                Char1name.text = "YOU";
+                Char1speech.text = "Wait, Pixeli. \nIs that a small human?";
+                Char2name.text = "";
+                Char2speech.text = "";
 
                  }
        else if (primeInt == 102){
-                         Char1name.text = "YOU";
-                         Char1speech.text = "Wait, Pixeli. \nIs that a small human?";
-                         Char2name.text = "";
-                         Char2speech.text = "";
+                Char1name.text = "YOU";
+                Char1speech.text = "Wait, Pixeli. \nIs that a small human?";
+                Char2name.text = "";
+                Char2speech.text = "";
 
                  }
        else if (primeInt == 103){
-                         Char1name.text = "";
-                         Char1speech.text = "";
-                         Char2name.text = "Pixeli";
-                         Char2speech.text = "Yes. Small humans are commonly referred to as children.";
+                Char1name.text = "";
+                Char1speech.text = "";
+                Char2name.text = "Pixeli";
+                Char2speech.text = "Yes. Small humans are commonly referred to as children.";
 
                  }
       else if (primeInt == 104){
-                          Char1name.text = "YOU";
-                          Char1speech.text = "I see. \nI need to act fast.";
-                          Char2name.text = "";
-                          Char2speech.text = "";
-                          nextButton.SetActive(false);
-                          Choice1a.SetActive(true);
-                          Choice1b.SetActive(true);
+                Char1name.text = "YOU";
+                Char1speech.text = "I see. \nI need to act fast.";
+                Char2name.text = "";
+                Char2speech.text = "";
+                nextButton.SetActive(false);
+                NextScene1Button.SetActive(true);
+                NextScene2Button.SetActive(true);
 
                 }
 // ENCOUNTER AFTER CHOICE #1
@@ -142,33 +146,33 @@ public void talking(){         // main story function. Players hit next to progr
                          NextScene1Button.SetActive(true); //scene 2
                          }
                 else if (primeInt == 202){
-                                  Char1name.text = "";
-                                  Char1speech.text = "";
-                                  Char2name.text = "Matilda";
-                                  Char2speech.text ="They work in a big office where they beat bad guys and talk to people in neat suits always. They're the coolest!";
-                                  nextButton.SetActive(false);
-                                  allowSpace = false;
-                                  NextScene1Button.SetActive(true); //scene 2
+                        Char1name.text = "";
+                        Char1speech.text = "";
+                        Char2name.text = "Matilda";
+                        Char2speech.text ="They work in a big office where they beat bad guys and talk to people in neat suits always. They're the coolest!";
+                        nextButton.SetActive(false);
+                        allowSpace = false;
+                        NextScene1Button.SetActive(true); //scene 2
 
                                   }
                 else if (primeInt == 203){
-                                  Char1name.text = "";
-                                  Char1speech.text = "";
-                                  Char2name.text = "Matilda";
-                                  Char2speech.text = "Do you want a jelly sandwich, it's my favorite!";
+                        Char1name.text = "";
+                        Char1speech.text = "";
+                        Char2name.text = "Matilda";
+                        Char2speech.text = "Do you want a jelly sandwich, it's my favorite!";
                                    }
                 else if (primeInt == 204){
-                                  Char1name.text = "YOU";
-                                  Char1speech.text = "Your reply is astonishingly unhelpful. What's this sand-wich you are shubbing into your mouth?";
-                                  Char2name.text = "Matilda";
-                                  Char2speech.text = "No, you nincompoop. Sandwich is a sandwich. Here. Try some.";
-                                  nextButton.SetActive(false);
-                                  allowSpace = false;
-                                  NextScene1Button.SetActive(true); //scene 2
+                        Char1name.text = "YOU";
+                        Char1speech.text = "Your reply is astonishingly unhelpful. What's this sand-wich you are shubbing into your mouth?";
+                        Char2name.text = "Matilda";
+                        Char2speech.text = "No, you nincompoop. Sandwich is a sandwich. Here. Try some.";
+                        nextButton.SetActive(false);
+                        allowSpace = false;
+                        NextScene1Button.SetActive(true); //scene 2
                                            }
 
                 else if (primeInt == 205){
-                                  Char1name.text = "";
+                        Char1name.text = "";
                                   Char1speech.text = " ";
                                   Char2name.text = "Matilda";
                                   Char2speech.text = "Do they not have sandwiches on Gi-niper-a?";
@@ -232,10 +236,10 @@ public void talking(){         // main story function. Players hit next to progr
                          }
 
                 else if (primeInt == 302){
-                                  Char1name.text = "Human2";
-                                  Char1speech.text = "What the hell!";
-                                  Char2name.text = "Human3";
-                                  Char2speech.text = "I'm calling the freaking police!";
+                        Char1name.text = "Human2";
+                        Char1speech.text = "What the hell!";
+                        Char2name.text = "Human3";
+                        Char2speech.text = "I'm calling the freaking police!";
                           }
                 else if (primeInt == 303){
                                   Char1name.text = "YOU";

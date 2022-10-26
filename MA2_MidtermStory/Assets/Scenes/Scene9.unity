@@ -1204,6 +1204,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 22cbb7e617ac7406f8400564945fd453, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  primeInt: 1
+  Char1name: {fileID: 0}
+  Char1speech: {fileID: 0}
+  Char2name: {fileID: 0}
+  Char2speech: {fileID: 0}
+  DialogueDisplay: {fileID: 0}
+  ArtChar1: {fileID: 0}
+  ArtBG1: {fileID: 0}
+  Choice1a: {fileID: 0}
+  Choice1b: {fileID: 0}
+  NextScene1Button: {fileID: 0}
+  NextScene2Button: {fileID: 0}
+  nextButton: {fileID: 0}
+  gameHandler: {fileID: 0}
 --- !u!1 &1618883222
 GameObject:
   m_ObjectHideFlags: 0
@@ -1262,7 +1276,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 971f05cbc33bf4ce1b4f2018f2e65ebd, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 25dfcb221a3b7442aa6ce5129c4a2735, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
