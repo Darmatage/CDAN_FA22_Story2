@@ -5,7 +5,7 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using UnityEngine.Audio;
 
-public class Scene3aDialogue : MonoBehaviour {
+public class Scene3Dialogue : MonoBehaviour {
         public int primeInt = 1;         // This integer drives game progress!
         public Text Char1name;
         public Text Char1speech;
@@ -22,7 +22,7 @@ public class Scene3aDialogue : MonoBehaviour {
         public GameObject NextScene1Button;
         public GameObject NextScene2Button;
         public GameObject nextButton;
-       //public GameHandler gameHandler;
+        public GameHandler gameHandler;
        //public AudioSource audioSource;
         private bool allowSpace = true;
 
@@ -73,12 +73,9 @@ public void talking(){         // main story function. Players hit next to progr
                          Char1speech.text = "(It's coming toward me!)";
                          Char2name.text = "";
                          Char2speech.text = "";
-                         nextButton.SetActive(false);
-                         Choice1a.SetActive(true);
-                         Choice1b.SetActive(true);
+                         
                  }
-  if (primeInt == 99)
-  if (GameHandler.hasAi==true){
+  if (primeInt == 99){
 
   }
 
