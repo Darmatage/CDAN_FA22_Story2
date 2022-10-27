@@ -5,7 +5,7 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using UnityEngine.Audio;
 
-public class Scene1Dialogue : MonoBehaviour {
+public class Scene6Dialogue : MonoBehaviour {
         public int primeInt = 1;         // This integer drives game progress!
         public Text Char1name;
         public Text Char1speech;
@@ -18,9 +18,9 @@ public class Scene1Dialogue : MonoBehaviour {
        //public GameObject ArtChar1b;
        //public GameObject ArtChar2;
         public GameObject ArtBG1;
-        public GameObject Choice1a; 
+        public GameObject Choice1a;
         public GameObject Choice1b;
-		public GameObject Choice1c;
+        public GameObject Choice1c;
         public GameObject NextScene1Button;
         public GameObject NextScene2Button;
         public GameObject nextButton;
@@ -29,22 +29,25 @@ public class Scene1Dialogue : MonoBehaviour {
         private bool allowSpace = true;
 		public static bool hasComm = false;
 		public static bool hasProof = false;
-		public static bool hasAI = false; 
+		public static bool hasAI = false;
 
 // initial visibility settings. Any new images or buttons need to also be SetActive(false);
-void Start(){  
+void Start(){
         DialogueDisplay.SetActive(false);
         ArtChar1.SetActive(false);
         ArtBG1.SetActive(true);
         Choice1a.SetActive(false);
-        Choice1b.SetActive(false);
         NextScene1Button.SetActive(false);
         NextScene2Button.SetActive(false);
         nextButton.SetActive(true);
 
+    if(GameHandler.hasComm==true){
+          primeInt=299;
+
      // Find the gameHandler:
      // gameHandler = GameObject.FindWithTag("GameHandler").GetComponent<GameHandler>();
    }
+ }
 
 void Update(){         // use spacebar as Next button
         if (allowSpace == true){
@@ -73,11 +76,11 @@ public void talking(){
                 Char1speech.text = "Perhaps I could speak with the other specimen residing here too?";
                 Char2name.text = "";
                 Char2speech.text = "";
-				Choice1a.SetActive(true);  
+				Choice1a.SetActive(true);
 				NextScene1Button.SetActive(true);//chris dialogue in Scene7
-				NextScene2Button.SetActive(true);//frank(the cat)dialogue in Scene8  
+				NextScene2Button.SetActive(true);//frank(the cat)dialogue in Scene8
                 //gameHandler.AddPlayerStat(1);
-      
+
         }
 
 // ENCOUNTER AFTER CHOICE #1
@@ -125,7 +128,7 @@ public void talking(){
 				Choice1b.SetActive(true);
 				Choice1c.SetActive(true);
 		}
-		
+
        else if (primeInt == 200){
                 Char1name.text = "";
                 Char1speech.text = "";
@@ -264,7 +267,7 @@ public void talking(){
                 allowSpace = false;
                 NextScene1Button.SetActive(true);
         }
-		
+
        else if (primeInt == 302){
                 Char1name.text = "";
                 Char1speech.text = "";
@@ -403,37 +406,10 @@ public void talking(){
                 nextButton.SetActive(true);
                 allowSpace = true;
         }
-        public void Choice1bFunct(){
-                Char1name.text = "";
-                Char1speech.text = "";
-                Char2name.text = "";
-                Char2speech.text = "";
-                primeInt = 199;
-                Choice1a.SetActive(false);
-                Choice1b.SetActive(false);
-                nextButton.SetActive(true);
-                allowSpace = true;
-        }
-		  public void Choice1cFunct(){
-                Char1name.text = "";
-                Char1speech.text = "";
-                Char2name.text = "";
-                Char2speech.text = "";
-                primeInt = 299;
-                Choice1a.SetActive(false);
-                Choice1b.SetActive(false);
-                nextButton.SetActive(true);
-                allowSpace = true;
-        }
-
-
         public void SceneChange1(){
                SceneManager.LoadScene("Scene7");
         }
         public void SceneChange2(){
                 SceneManager.LoadScene("Scene8");
         }
-		
-		if (GameHandler.hasComm == true){
-				
-}
+    }
