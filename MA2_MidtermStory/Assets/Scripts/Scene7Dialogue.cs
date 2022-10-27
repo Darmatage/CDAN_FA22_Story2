@@ -26,6 +26,7 @@ public class Scene7Dialogue : MonoBehaviour {
         public GameObject Choice1a;
         public GameObject Choice1b;
 		    public GameObject Choice1c;
+        public GameObject Choice1d;
         public GameObject NextScene1Button;
         //public GameObject NextScene2Button;
         public GameObject nextButton;
@@ -354,8 +355,6 @@ public void talking(){         // main story function. Players hit next to progr
                     //GameHandler.hasAi = true;
             }
 
-  }
-
 
 
 // FUNCTIONS FOR BUTTONS TO ACCESS (Choice #1 and switch scenes)
@@ -404,8 +403,8 @@ public void talking(){         // main story function. Players hit next to progr
                         fadeImage.GetComponent<Image>().color = new Color(1, 1, 1, alphaLevel);
                         Debug.Log("Alpha is: " + alphaLevel);
               }
+           }
         }
-        //public void SceneChange2(){
-        //        SceneManager.LoadScene("Scene2b");
-        //}
-    }
+   //public void SceneChange2(){
+   //        SceneManager.LoadScene("Scene2b");
+   //}
