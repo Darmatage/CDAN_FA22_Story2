@@ -309,11 +309,56 @@ public void talking(){  // main story function. Players hit next to progress to 
                 Char3name.text = "";
                 Char3speech.text = "";
      }
+           else if (primeInt == 310){
+              Char1name.text = "";
+              Char1speech.text = "";
+              Char2name.text = "";
+              Char2speech.text = "";
+              Char3name.text = "Pixeli";
+              Char3speech.text = "Does that not alarm you?";
   }
+          else if (primeInt == 311){
+            ArtChar1a.SetActive(false);
+              Char1name.text = "YOU";
+              Char1speech.text = "Bark, bark, bark!";
+              Char2name.text = "";
+              Char2speech.text = "";
+              Char3name.text = "";
+              Char3speech.text = "";
+}
+          else if (primeInt == 312){
+            Char1name.text = "";
+            Char1speech.text = "";
+            Char3name.text = "Pixeli";
+            Char3speech.text = "Wait, please come back!";
+}
+          else if (primeInt == 313){
+            Char1name.text = "YOU";
+            Char1speech.text = "... It must not understand.\nThank you for your help anyway, Pixeli.";
+            Char3name.text = "";
+            Char3speech.text = "";
+}
+          else if (primeInt == 314){
+            Char1name.text = "";
+            Char1speech.text = "";
+            Char3name.text = "Pixeli";
+            Char3speech.text = "Of course.";
+}
+          else if (primeInt == 315){
+            Char1name.text = "YOU";
+            Char1speech.text = "(Hmph, that was a huge waste of time.)/n(I better come across a human soon.)";
+            Char3name.text = "";
+            Char3speech.text = "";
+            nextButton.SetActive(false);
+            NextScene1Button.SetActive(true);
+            NextScene2Button.SetActive(true);
 
+}
+}
 
 // FUNCTIONS FOR BUTTONS TO ACCESS (Choice #1 and switch scenes)
-        public void Choice1aFunct(){ //bark
+        public void Choice1aFunct(){
+          if (GameHandler.hasProof == true){primeInt = 99;}//bark
                 primeInt = 99;
                 Choice1a.SetActive(false);
                 Choice1b.SetActive(false);
@@ -327,7 +372,6 @@ public void talking(){  // main story function. Players hit next to progress to 
                 Char2speech.text = "";
 				if (GameHandler.hasComm == true){primeInt = 199;}
 				  else if (GameHandler.hasAi == true){primeInt = 299;}
-
                 Choice1a.SetActive(false);
                 Choice1b.SetActive(false);
                 nextButton.SetActive(true);
