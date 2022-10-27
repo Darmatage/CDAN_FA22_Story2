@@ -56,7 +56,8 @@ void Update(){         // use spacebar as Next button
                 if (Input.GetKeyDown("space")){
                        talking();
                 }
-                if (GameHandler.hasComm == true)||(GameHandler.hasAi == true){primeInt = 199;}
+                if (GameHandler.hasComm == true){primeInt = 199;}
+                if(GameHandler.hasAi == true){primeInt = 199;}
                 else if (GameHandler.hasProof == true){primeInt = 299;}
 
         }
@@ -323,6 +324,7 @@ public void talking(){         // main story function. Players hit next to progr
 
     }
   }
+  }
     // FUNCTIONS FOR BUTTONS TO ACCESS (Choice #1 and switch scenes)
             public void Choice1aFunct(){
                     Char1name.text = "YOU";
@@ -384,7 +386,7 @@ public void talking(){         // main story function. Players hit next to progr
                 //GameObject.FindWithTag("GameHandler").GetComponent<GameHandler>().hasComm = true;
                 //GameHandler.hasAi = true;
         }
-      
+
 
 
 
