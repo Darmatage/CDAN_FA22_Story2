@@ -69,7 +69,7 @@ public void talking(){         // main story function. Players hit next to progr
         }
         else if (primeInt == 2){
           ArtChar1.SetActive(true);
-                DialogueDisplay.SetActive(true);
+          DialogueDisplay.SetActive(true);
                 Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "Pixeli";
@@ -90,7 +90,7 @@ public void talking(){         // main story function. Players hit next to progr
         }
        else if (primeInt == 5){
                 Char1name.text = "YOU";
-                Char1speech.text = "Yeah, I think I'm alright";
+                Char1speech.text = "Yeah, I think I'm alright.";
                 Char2name.text = "";
                 Char2speech.text = "";
                 //gameHandler.AddPlayerStat(1);
@@ -118,7 +118,7 @@ public void talking(){         // main story function. Players hit next to progr
         }
        else if (primeInt ==9){
                 Char1name.text = "YOU";
-                Char1speech.text = "--Pixel? Are YOU OK?";
+                Char1speech.text = "Pixel..? Are YOU OK?";
                 Char2name.text = "";
                 Char2speech.text = "";
         }
@@ -188,15 +188,10 @@ public void talking(){         // main story function. Players hit next to progr
 				Choice1c.SetActive(true); // function Choice1bFunct()
         }
 // ENCOUNTER AFTER CHOICE #1
+
        else if (primeInt == 100){
-                Char1name.text = "";
-                Char1speech.text = "<TEN HOURS LATER>";
-                Char2name.text = "";
-                Char2speech.text = "";
-        }
-       else if (primeInt == 101){
                 Char1name.text = "YOU";
-                Char1speech.text = "Ugh. I've lost so much time. Well, let's get out there.";
+                Char1speech.text = "(Ugh, that took a whole light year. Well, let's get out there.)";
                 Char2name.text = "";
                 Char2speech.text = "";
                 nextButton.SetActive(false);
@@ -238,7 +233,7 @@ public void talking(){         // main story function. Players hit next to progr
                 Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "Pixeli";
-              StartCoroutine(TypeText(Char2speech, "Sir! You're OK! \nYou look .. different, though."));
+StartCoroutine(TypeText(Char2speech, "Sir! You're OK! \nYou look .. different, though."));
         }
        else if (primeInt == 303){
                 Char1name.text = "YOU";
@@ -259,7 +254,7 @@ public void talking(){         // main story function. Players hit next to progr
                 Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "Pixeli";
-              StartCoroutine(TypeText(Char2speech,"Am I on your collar computer? \nI’ve never been unplugged from the motherboard before."));
+StartCoroutine(TypeText(Char2speech,"Am I on your collar computer? \nI’ve never been unplugged from the motherboard before."));
         }
        else if (primeInt == 306){
                 Char1name.text = "YOU";
@@ -273,7 +268,7 @@ public void talking(){         // main story function. Players hit next to progr
                 Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "Pixeli";
-              StartCoroutine(TypeText(Char2speech,"Always so prepared. \nLet’s be off then."));
+StartCoroutine(TypeText(Char2speech,"Always so prepared. \nLet’s be off then."));
                 nextButton.SetActive(false);
                 allowSpace = false;
                 NextScene1Button.SetActive(true); //scene 2
@@ -371,5 +366,5 @@ public void talking(){         // main story function. Players hit next to progr
 					nextButton.SetActive(true);
 					allowSpace = true;
 				}
-        }
+    }
 }

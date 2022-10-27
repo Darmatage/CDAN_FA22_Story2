@@ -18,6 +18,9 @@ public class GameHandler : MonoBehaviour {
 	public static bool hasComm = false;
 	public static bool hasProof = false;
 	public static bool hasAi = false;
+	public static bool metMatilda = false;
+	public static bool metEvan = false;
+	public static bool metChris = false;
 
 	void Awake (){
 		SetLevel (volumeLevel);
@@ -31,7 +34,7 @@ public class GameHandler : MonoBehaviour {
 	void Start (){
 		pauseMenuUI.SetActive(false);
 		GameisPaused = false;
-	
+
 		CheckPlayerStat();
 	}
 
@@ -97,5 +100,5 @@ public class GameHandler : MonoBehaviour {
 		Application.Quit();
 		#endif
 	}
-	
+
 }
