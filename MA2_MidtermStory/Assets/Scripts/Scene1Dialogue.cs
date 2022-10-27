@@ -15,23 +15,24 @@ public class Scene1Dialogue : MonoBehaviour {
        //public Text Char3speech;
         public GameObject DialogueDisplay;
         public GameObject ArtChar1;
-		public GameObject ArtChar1b;
+		    public GameObject ArtChar1b;
 		//public GameObject ArtChar1c;
-       public GameObject ArtChar2;
-	   public GameObject ArtChar2b;
+        public GameObject ArtChar2;
+	      public GameObject ArtChar2b;
+        public GameObject ArtChar2c;
 	   //public GameObject ArtChar2c;
-	   public GameObject ArtChar3;
+	      public GameObject ArtChar3;
         public GameObject ArtBG1;
-		public GameObject ArtBG_black;
+		    public GameObject ArtBG_black;
         public GameObject Choice1a;
         public GameObject Choice1b;
-		public GameObject Choice1c;
+		    public GameObject Choice1c;
         public GameObject NextScene1Button;
         //public GameObject NextScene2Button;
         public GameObject nextButton;
         public GameHandler gameHandler;
        //public AudioSource audioSource;
-        private bool allowSpace = true;
+    private bool allowSpace = true;
 		private bool isEndofScene = false;
 
 void Start(){         // initial visibility settings
@@ -40,6 +41,7 @@ void Start(){         // initial visibility settings
 		ArtChar1b.SetActive(false); // pixeli monitor form2
 		ArtChar2.SetActive(false); // pixeli  collar1
 		ArtChar2b.SetActive(false); // pixeli collar2
+    ArtChar2c.SetActive(false); // pixeli collar3
 		ArtChar3.SetActive(false); // stray dog
         ArtBG1.SetActive(true);
 		ArtBG_black.SetActive(true);
@@ -220,7 +222,7 @@ public void talking(){         // main story function. Players hit next to progr
 
 		else if (primeInt == 300){
                 Char1name.text = "YOU";
-                Char1speech.text = "OK, I have extracted as much of Pixeli as I could from the ships computer. \n Pixeli, Come Online!";
+                Char1speech.text = "OK, I have extracted as much of Pixeli as I could. .. \n Pixeli, come online!";
                 Char2name.text = "";
                 Char2speech.text = "";
         }
@@ -232,7 +234,7 @@ public void talking(){         // main story function. Players hit next to progr
         }
 
 		else if (primeInt == 302){
-			ArtChar1b.SetActive(true);
+			ArtChar2.SetActive(true);
                 Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "Pixeli";
@@ -252,6 +254,8 @@ public void talking(){         // main story function. Players hit next to progr
         }
 
 		else if (primeInt == 305){
+        ArtChar2.SetActive(false);
+        ArtChar2b.SetActive(true);
                 Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "Pixeli";
@@ -264,6 +268,8 @@ public void talking(){         // main story function. Players hit next to progr
                 Char2speech.text = "";
         }
 		else if (primeInt == 307){
+      ArtChar2b.SetActive(false);
+      ArtChar2.SetActive(true);
                 Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "Pixeli";

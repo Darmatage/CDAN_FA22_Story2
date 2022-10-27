@@ -86,7 +86,9 @@ public void talking(){         // main story function. Players hit next to progr
                 nextButton.SetActive(false);
                 NextScene1Button.SetActive(true);
                 NextScene2Button.SetActive(true);
-
+              if (GameHandler.hasProof==true){
+                NextScene2Button.SetActive(false);
+        }
       }
 
        else if (primeInt == 100){
@@ -137,21 +139,21 @@ public void talking(){         // main story function. Players hit next to progr
                 }
 // ENCOUNTER AFTER CHOICE #1
       else if (primeInt == 200){
-                         Char1name.text = "YOU";
-                         Char1speech.text = "Hello, underdeveloped female human. I need your help.";
-                         Char2name.text = "Matilda";
-                         Char2speech.text = "Woah, a talking dog?/nHere, doggy doggy!";
+                Char1name.text = "YOU";
+                Char1speech.text = "Humans! I came here with a warning. \nYou’re all in incredible danger!";
+                Char2name.text = "";
+                Char2speech.text = "";
                  }
       else if (primeInt == 201){
-                         Char1name.text = "YOU";
-                         Char1speech.text = "(This must be a common gesture among humans. I should cooperate with this specimen so things go smoothly)";
-                         Char2name.text = "";
-                         Char2speech.text = "My name is Matilda! How can I help?";
-                         nextButton.SetActive(false);
-                         allowSpace = false;
-                         NextScene1Button.SetActive(true); //scene 2
-                         }
-                else if (primeInt == 202){
+                Char1name.text = "YOU";
+                Char1speech.text = "(This must be a common gesture among humans. I should cooperate with this specimen so things go smoothly)";
+                Char2name.text = "";
+                Char2speech.text = "My name is Matilda! How can I help?";
+                nextButton.SetActive(false);
+                allowSpace = false;
+                NextScene1Button.SetActive(true); //scene 2
+                  }
+      else if (primeInt == 202){
                         Char1name.text = "";
                         Char1speech.text = "";
                         Char2name.text = "Matilda";
@@ -286,6 +288,9 @@ public void talking(){         // main story function. Players hit next to progr
                          }
     public void SceneChange1(){
         SceneManager.LoadScene("Scene4");
+      }
+    public void SceneChange2(){
+        primeInt=199;
       }
                          //public void SceneChange2(){
                          //        SceneManager.LoadScene("Scene2b");
