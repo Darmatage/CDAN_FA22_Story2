@@ -16,9 +16,8 @@ public class Scene2Dialogue : MonoBehaviour {
        //public Text Char3name;
        //public Text Char3speech;
         public GameObject DialogueDisplay;
-        public GameObject ArtChar1a; // cat off in distance, appearing on screen
-        public GameObject ArtChar1b; // cat looking up
-        public GameObject ArtChar1c; // closeup of cat, (alien approaches)
+        public GameObject ArtChar1a;
+        public GameObject ArtChar1b;
         public GameObject ArtBG1;
         public GameObject Choice1a;
         public GameObject Choice1b;
@@ -38,7 +37,6 @@ void Start(){         // initial visibility settings
         DialogueDisplay.SetActive(false);
         ArtChar1a.SetActive(false);
         ArtChar1b.SetActive(false);
-        ArtChar1c.SetActive(false);
         ArtBG1.SetActive(true);
         Choice1a.SetActive(false);
         Choice1b.SetActive(false);
@@ -68,6 +66,8 @@ public void talking(){  // main story function. Players hit next to progress to 
                 Char1speech.text = "(Those buildings .. )\n(They look like human capacity units.)";
                 Char2name.text = "";
                 Char2speech.text = "";
+				        Char3name.text = "";
+                Char3speech.text = "";
         }
        else if (primeInt ==3){
                 Char1name.text = "You";
@@ -105,28 +105,44 @@ public void talking(){  // main story function. Players hit next to progress to 
                 Char2speech.text = "";
                 nextButton.SetActive(false);
                 allowSpace = false;
-                Choice1a.SetActive(true); // function Choice1aFunct()
-                Choice1b.SetActive(true); // function Choice1bFunct(), only if player has AI or Comm
+
+				//show button based on Statc Variable
+				if (GameHandler.hasProof == true){
+					Choice1a.SetActive(true); // bark
+					Choice1b.SetActive(false);
+					Debug.Log("hasProof is true, showing bark button");
+				}
+				else if ((GameHandler.hasComm == true)||(GameHandler.hasAi == true)){
+					Choice1a.SetActive(false);
+					Choice1b.SetActive(true); // Attempt communication (only if player has AI or Comm)
+					Debug.Log("hasComm or hasAi is true, showing talk button");
+				}
+				else {
+					Debug.Log("no static variable is true. No button for you");
+					}
         }
 
 // ENCOUNTER AFTER CHOICE #1
        else if (primeInt == 100){
                 Char1name.text = "YOU";
-                Char1speech.text = "(Bark, bark!)";
+                Char1speech.text = "Bark, bark! BARK!";
                 Char2name.text = "";
                 Char2speech.text = "";
                 nextButton.SetActive(true);
                 allowSpace = true;
       }
-       else if (primeInt == 101){ // cat runs away
+       else if (primeInt == 101){ 				// cat runs away
                 DialogueDisplay.SetActive(false);
+                ArtChar1a.SetActive(false);
+                ArtChar1b.SetActive(true);
                 Char1name.text = "";
                 Char1speech.text = "";
-                Char2name.text = "";
-                Char2speech.text = "";
+                Char2name.text = "Cat";
+                Char2speech.text = "(Hiss!)";
       }
        else if (primeInt == 102){
                 DialogueDisplay.SetActive(true);
+                ArtChar1b.SetActive(false);
                 Char1name.text = "YOU";
                 Char1speech.text = "(Ugh, it seems this creature cannot understand my .. dog tongue.)";
                 Char2name.text = "";
@@ -169,12 +185,12 @@ public void talking(){  // main story function. Players hit next to progress to 
                 Char2name.text = "";
                 Char2speech.text = "";
         }
-      else if (primeInt == 202){ // cat head tilt
+      else if (primeInt == 202){ 			// cat head tilt
                 DialogueDisplay.SetActive(false);
                 Char1name.text = "";
                 Char1speech.text = "";
-                Char2name.text = "";
-                Char2speech.text = "";
+                Char2name.text = "Cat";
+                Char2speech.text = " .. Meow?";
          }
        else if (primeInt == 203){
                 DialogueDisplay.SetActive(true);
@@ -185,11 +201,12 @@ public void talking(){  // main story function. Players hit next to progress to 
          }
         else if (primeInt == 204){
                 Char1name.text = "YOU";
-                Char1speech.text = "I am .. here to warn you. \nIs .. danger soon!";
+                Char1speech.text = "I am .. here to warn you. \nYou are .. in imminent danger!";
                 Char2name.text = "";
                 Char2speech.text = "";
          }
         else if (primeInt == 205){ // cat runs away
+          ArtChar1a.SetActive(false);
                 Char1name.text = "YOU";
                 Char1speech.text = "No, wait! This is very important. .. ";
                 Char2name.text = "";
@@ -211,9 +228,10 @@ public void talking(){  // main story function. Players hit next to progress to 
                   NextScene1Button.SetActive(true);
                   NextScene2Button.SetActive(true);
         }
+
       else if (primeInt == 300){
                  Char1name.text = "YOU";
-                 Char1speech.text = "(Bark!)";
+                 Char1speech.text = "Bark! \n (I hope Pixeli's translation function is working. .. )";
                  Char2name.text = "";
                  Char2speech.text = "";
                  Char3name.text = "";
@@ -221,7 +239,21 @@ public void talking(){  // main story function. Players hit next to progress to 
                  nextButton.SetActive(true);
                  allowSpace = true;
          }
-      else if (primeInt == 301){
+
+
+	 else if (primeInt == 301){
+              ArtChar1a.SetActive(false);
+              ArtChar1b.SetActive(true);
+                 Char1name.text = "";
+                 Char1speech.text = "";
+                 Char2name.text = "Cat";
+                 Char2speech.text = "Hisss!";
+                 Char3name.text = "";
+                 Char3speech.text = "";
+                 nextButton.SetActive(true);
+                 allowSpace = true;
+         }
+      else if (primeInt == 302){
                  Char1name.text = "";
                  Char1speech.text = "";
                  Char2name.text = "";
@@ -229,7 +261,9 @@ public void talking(){  // main story function. Players hit next to progress to 
                  Char3name.text = "Pixeli";
                  Char3speech.text = "Don’t fret, creature. We mean no harm.";
          }
-      else if (primeInt == 302){
+      else if (primeInt == 303){
+           ArtChar1b.SetActive(false);
+           ArtChar1a.SetActive(true);
                  Char1name.text = "";
                  Char1speech.text = "";
                  Char2name.text = "Cat";
@@ -237,60 +271,115 @@ public void talking(){  // main story function. Players hit next to progress to 
                  Char3name.text = "";
                  Char3speech.text = "";
          }
-      else if (primeInt == 303){
+      else if (primeInt == 305){
                  Char1name.text = "YOU";
-                 Char1speech.text = "... (Bark, bark!)";
+                 Char1speech.text = "(Thank the stars.)\n... Bark, bark!";
                  Char2name.text = "";
                  Char2speech.text = "";
                  Char3name.text = "";
                  Char3speech.text = "";
          }
-       else if (primeInt == 304){
-                  Char1name.text = "YOU";
-                  Char1speech.text = "... (Bark, bark!)";
+       else if (primeInt == 306){
+                  Char1name.text = "";
+                  Char1speech.text = "";
                   Char2name.text = "";
                   Char2speech.text = "";
-                  Char3name.text = "";
-                  Char3speech.text = "";
+                  Char3name.text = "Pixeli";
+                  Char3speech.text = "Indeed, we are life forms, intent on saving your spieces!";
          }
-     }
-
-// FUNCTIONS FOR BUTTONS TO ACCESS (Choice #1 and switch scenes)
-// Let's assume that GameHandler.hasProof has the value we set it to at the end of scene 1
-  public void scenefunc(){
-
-    // Direct the player to the line 199 as default
-    primeInt = 199;
-
-
-    // if the player does not have proof (aka either has Comm or has AI)
-    if (!(GameHandler.hasProof)){
-
-      /* show option b */
-
-      if (GameHandler.hasAI){
-        // Direct the player to line 299l if hasAI = false then primeInt stays 299
-        primeInt=299;
+		        else if (primeInt == 307){
+                  Char1name.text = "";
+                  Char1speech.text = "";
+                  Char2name.text = "";
+                  Char2speech.text = "";
+                  Char3name.text = "Pixeli";
+                  Char3speech.text = "He says: ‘Your planet is in imminent danger.";
+         }
+		       else if (primeInt == 308){
+                 Char1name.text = "";
+                 Char1speech.text = "";
+                 Char2name.text = "Cat";
+                 Char2speech.text = "...";
+				         Char3name.text = "";
+                 Char3speech.text = "";
       }
-    }
-
-    /* show option a */
-
-    // Other vars
-    Choice1a.SetActive(false);
-    Choice1b.SetActive(false);
-    nextButton.SetActive(true);
-    allowSpace = true;
-
+            else if (primeInt == 309){
+                Char1name.text = "YOU";
+                Char1speech.text = "... Bark?";
+                Char2name.text = "";
+                Char2speech.text = "";
+                Char3name.text = "";
+                Char3speech.text = "";
+     }
   }
 
 
+// FUNCTIONS FOR BUTTONS TO ACCESS (Choice #1 and switch scenes)
+        public void Choice1aFunct(){
+                Char1name.text = "YOU";
+                Char1speech.text = "(I guess I have no choice)";
+                Char2name.text = "";
+                Char2speech.text = "";
+                primeInt = 99;
+                Choice1a.SetActive(false);
+                Choice1b.SetActive(false);
+                nextButton.SetActive(true);
+                allowSpace = true;
+        }
+        public void Choice1bFunct(){
+                Char1name.text = "YOU";
+                Char1speech.text = "This is not a human... but it is worth a shot";
+                Char2name.text = "";
+                Char2speech.text = "";
+				if (GameHandler.hasComm == true){primeInt = 199;}
+				  else if (GameHandler.hasAi == true){primeInt = 299;}
+
+                Choice1a.SetActive(false);
+                Choice1b.SetActive(false);
+                nextButton.SetActive(true);
+                allowSpace = true;
+
+        }
+
+        IEnumerator TypeText(Text target, string fullText){
+                   float delay = 0.01f;
+                   nextButton.SetActive(false);
+                   allowSpace = false;
+                   for (int i = 0; i < fullText.Length; i++){
+                           string currentText = fullText.Substring(0,i);
+                           target.text = currentText;
+                           yield return new WaitForSeconds(delay);
+                   }
+                }
 
 
         public void SceneChange1(){
-               SceneManager.LoadScene("Scene3a");
+               SceneManager.LoadScene("Scene4"); //subarbs
         }
         public void SceneChange2(){
-                SceneManager.LoadScene("Scene3b");
+                SceneManager.LoadScene("Scene3"); //city
         }
-}
+     }
+
+   // Let's assume that GameHandler.hasProof has the value we set it to at the end of scene 1
+    // public void scenefunc(){
+       // Direct the player to the line 199 as default
+       //primeInt = 199;
+
+       // if the player does not have proof (aka either has Comm or has AI)
+       //if (!(GameHandler.hasProof)){
+         /* show option b */
+
+         //if (GameHandler.hasAi){
+           // Direct the player to line 299 if hasAI = false then primeInt stays 299
+           //primeInt=299;
+         //}
+       //}
+
+       /* show option a */
+       // Other vars
+       //Choice1a.SetActive(false);
+       //Choice1b.SetActive(false);
+       //nextButton.SetActive(true);
+       //allowSpace = true;
+     //}

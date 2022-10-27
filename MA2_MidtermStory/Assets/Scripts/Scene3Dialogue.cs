@@ -39,10 +39,15 @@ void Start(){         // initial visibility settings
         NextScene1Button.SetActive(false);
         NextScene2Button.SetActive(false);
         nextButton.SetActive(true);
-        if(GameHandler.hasAi==true){
-          primeInt=100;
-    }
-  }
+
+      if(GameHandler.hasAi==true){
+        primeInt=99;
+      }
+      else if ((GameHandler.hasComm == true)||(GameHandler.hasProof == true)){
+        primeInt=1;
+      }
+}
+
 
 void Update(){         // use spacebar as Next button
         if (allowSpace == true){
@@ -56,8 +61,6 @@ void Update(){         // use spacebar as Next button
 public void talking(){         // main story function. Players hit next to progress to next int
         primeInt = primeInt + 1;
         if (primeInt == 1){
-        //if (GameHandler.hasProof==true)
-        //if (GameHandler.hasComm==true){
                 // AudioSource.Play();
       }
         else if (primeInt == 2){
@@ -80,6 +83,9 @@ public void talking(){         // main story function. Players hit next to progr
                 Char1speech.text = "(It's coming toward me!)";
                 Char2name.text = "";
                 Char2speech.text = "";
+                nextButton.SetActive(false);
+                NextScene1Button.SetActive(true);
+                NextScene2Button.SetActive(true);
 
       }
 
@@ -130,13 +136,13 @@ public void talking(){         // main story function. Players hit next to progr
 
                 }
 // ENCOUNTER AFTER CHOICE #1
-                else if (primeInt == 200){
+      else if (primeInt == 200){
                          Char1name.text = "YOU";
                          Char1speech.text = "Hello, underdeveloped female human. I need your help.";
                          Char2name.text = "Matilda";
                          Char2speech.text = "Woah, a talking dog?/nHere, doggy doggy!";
                  }
-                else if (primeInt == 201){
+      else if (primeInt == 201){
                          Char1name.text = "YOU";
                          Char1speech.text = "(This must be a common gesture among humans. I should cooperate with this specimen so things go smoothly)";
                          Char2name.text = "";
@@ -252,36 +258,36 @@ public void talking(){         // main story function. Players hit next to progr
                           }
                  }
 // FUNCTIONS FOR BUTTONS TO ACCESS (Choice #1 and switch scenes)
-                        public void Choice1aFunct(){
-                                 Char1name.text = "YOU";
-                                 Char1speech.text = "(This small human has some comforting ambience.. I wonder why?)";
-                                 Char2name.text = "";
-                                 Char2speech.text = "";
-                                 primeInt = 199;
-                                 Choice1a.SetActive(false);
-                                 Choice1b.SetActive(false);
-                                 nextButton.SetActive(true);
-                                 allowSpace = true;
+  public void Choice1aFunct(){
+       Char1name.text = "YOU";
+       Char1speech.text = "(This small human has some comforting ambience.. I wonder why?)";
+       Char2name.text = "";
+       Char2speech.text = "";
+       primeInt = 199;
+       Choice1a.SetActive(false);
+       Choice1b.SetActive(false);
+       nextButton.SetActive(true);
+       allowSpace = true;
                  				//GameObject.FindWithTag("GameHandler").GetComponent<GameHandler>().hasComm = true;
-                 				GameHandler.hasComm = true;
+       GameHandler.hasComm = true;
                          }
-                         public void Choice1bFunct(){
-                                 Char1name.text = "YOU";
-                                 Char1speech.text = "The more the better. At least one of them has to believe me!";
-                                 Char2name.text = "";
-                                 Char2speech.text = "";
-                                 primeInt = 299;
-                                 Choice1a.SetActive(false);
-                                 Choice1b.SetActive(false);
-                                 nextButton.SetActive(true);
-                                 allowSpace = true;
+  public void Choice1bFunct(){
+        Char1name.text = "YOU";
+        Char1speech.text = "The more the better. At least one of them has to believe me!";
+        Char2name.text = "";
+        Char2speech.text = "";
+        primeInt = 299;
+        Choice1a.SetActive(false);
+        Choice1b.SetActive(false);
+        nextButton.SetActive(true);
+        allowSpace = true;
                  				//GameObject.FindWithTag("GameHandler").GetComponent<GameHandler>().hasProof = true;
-                 				GameHandler.hasProof = true;
+        GameHandler.hasProof = true;
                          }
-                         public void SceneChange1(){
-                                SceneManager.LoadScene("Scene3b");
-                         }
+    public void SceneChange1(){
+        SceneManager.LoadScene("Scene4");
+      }
                          //public void SceneChange2(){
                          //        SceneManager.LoadScene("Scene2b");
                          //}
-                 }
+ }

@@ -14,6 +14,7 @@ public class GameHandler : MonoBehaviour {
 	public static float volumeLevel = 1.0f;
 	private Slider sliderVolumeCtrl;
 
+	//STATIC VARIABLES
 	public static bool hasComm = false;
 	public static bool hasProof = false;
 	public static bool hasAi = false;
@@ -83,6 +84,9 @@ public class GameHandler : MonoBehaviour {
 
 	public void RestartGame(){
 		Time.timeScale = 1f;
+		hasComm = false;
+		hasProof = false;
+		hasAi = false;
 		SceneManager.LoadScene("MainMenu");
 	}
 
