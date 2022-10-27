@@ -107,6 +107,8 @@ public void talking(){         // main story function. Players hit next to progr
         }
 
 		else if (primeInt == 8){
+      ArtChar1.SetActive(false);
+      ArtChar1b.SetActive(true);
                 Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "Pixeli";
@@ -126,7 +128,7 @@ public void talking(){         // main story function. Players hit next to progr
 				StartCoroutine(TypeText(Char2speech, "Pl-plLeasE T-aK-e CA-"));
         }
        else if (primeInt ==11){
-         ArtChar1.SetActive(false);
+         ArtChar1b.SetActive(false);
                 Char1name.text = "YOU";
                 Char1speech.text = "(... \n Guess the crash busted her.)";
                 Char2name.text = "";
