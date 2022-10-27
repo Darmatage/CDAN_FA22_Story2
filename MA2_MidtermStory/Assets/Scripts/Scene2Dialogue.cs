@@ -259,7 +259,7 @@ public void talking(){  // main story function. Players hit next to progress to 
                  Char2name.text = "";
                  Char2speech.text = "";
                  Char3name.text = "Pixeli";
-  StartCoroutine(TypeText(Char3speech.text = "Don’t fret, creature. We mean no harm."));
+                 Char3speech.text = "Don’t fret, creature. We mean no harm.";
          }
       else if (primeInt == 303){
            ArtChar1b.SetActive(false);
@@ -293,7 +293,7 @@ public void talking(){  // main story function. Players hit next to progress to 
                   Char2name.text = "";
                   Char2speech.text = "";
                   Char3name.text = "Pixeli";
-StartCoroutine(TypeText(Char3speech.text = "He says: ‘Your planet is in imminent danger."));
+                  Char3speech.text = "He says: ‘Your planet is in imminent danger.";
          }
 		       else if (primeInt == 308){
                  Char1name.text = "";
@@ -332,7 +332,7 @@ StartCoroutine(TypeText(Char3speech.text = "He says: ‘Your planet is in immine
                 Char2name.text = "";
                 Char2speech.text = "";
 				if (GameHandler.hasComm == true){primeInt = 199;}
-				else if (GameHandler.hasAi == true){primeInt = 299;}
+				  else if (GameHandler.hasAi == true){primeInt = 299;}
 
                 Choice1a.SetActive(false);
                 Choice1b.SetActive(false);
@@ -350,32 +350,8 @@ StartCoroutine(TypeText(Char3speech.text = "He says: ‘Your planet is in immine
                            target.text = currentText;
                            yield return new WaitForSeconds(delay);
                    }
+                }
 
-
-
-
-// Let's assume that GameHandler.hasProof has the value we set it to at the end of scene 1
- // public void scenefunc(){
-    // Direct the player to the line 199 as default
-    //primeInt = 199;
-
-    // if the player does not have proof (aka either has Comm or has AI)
-    //if (!(GameHandler.hasProof)){
-      /* show option b */
-
-      //if (GameHandler.hasAi){
-        // Direct the player to line 299 if hasAI = false then primeInt stays 299
-        //primeInt=299;
-      //}
-    //}
-
-    /* show option a */
-    // Other vars
-    //Choice1a.SetActive(false);
-    //Choice1b.SetActive(false);
-    //nextButton.SetActive(true);
-    //allowSpace = true;
-  //}
 
         public void SceneChange1(){
                SceneManager.LoadScene("Scene4"); //subarbs
@@ -383,4 +359,27 @@ StartCoroutine(TypeText(Char3speech.text = "He says: ‘Your planet is in immine
         public void SceneChange2(){
                 SceneManager.LoadScene("Scene3"); //city
         }
-}
+     }
+
+   // Let's assume that GameHandler.hasProof has the value we set it to at the end of scene 1
+    // public void scenefunc(){
+       // Direct the player to the line 199 as default
+       //primeInt = 199;
+
+       // if the player does not have proof (aka either has Comm or has AI)
+       //if (!(GameHandler.hasProof)){
+         /* show option b */
+
+         //if (GameHandler.hasAi){
+           // Direct the player to line 299 if hasAI = false then primeInt stays 299
+           //primeInt=299;
+         //}
+       //}
+
+       /* show option a */
+       // Other vars
+       //Choice1a.SetActive(false);
+       //Choice1b.SetActive(false);
+       //nextButton.SetActive(true);
+       //allowSpace = true;
+     //}
