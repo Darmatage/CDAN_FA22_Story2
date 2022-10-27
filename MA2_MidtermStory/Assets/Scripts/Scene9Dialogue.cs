@@ -5,7 +5,7 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using UnityEngine.Audio;
 
-public class Scene1Dialogue : MonoBehaviour {
+public class Scene9Dialogue : MonoBehaviour {
         public int primeInt = 1;         // This integer drives game progress!
         public Text Char1name; //you
         public Text Char1speech;
@@ -81,7 +81,7 @@ public void talking(){
                 Char2speech.text = "";
         }
        else if (primeInt == 5){
-                Char4nameame.text = "Chris";
+                Char4name.text = "Chris";
                 Char4speech.text = "Yeah? What did you see, Mat?";
                 Char2name.text = "";
                 Char2speech.text = "";
@@ -280,7 +280,7 @@ public void talking(){
 	 else if (primeInt == 213){
 				Char2name.text = "Matilda";
                 Char2speech.text ="Yay! Off to save the world! This beats math homework by leagues!";
-				NextScene1Button.setActive(true);
+				NextScene1Button.SetActive(true);
 	 }
 	 
 	//SCENE 9 CHOICE 2:
@@ -394,9 +394,9 @@ public void talking(){
 	 else if (primeInt == 213){
 				Char2name.text = "Matilda";
                 Char2speech.text ="Yay! Off to save the world! This beats math homework by leagues!";
-				NextScene1Button.setActive(true);
+				NextScene1Button.SetActive(true);
 	 }
-	 
+}
 	 
 	 
 
