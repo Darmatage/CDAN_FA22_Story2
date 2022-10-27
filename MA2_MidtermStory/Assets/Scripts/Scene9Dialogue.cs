@@ -5,7 +5,7 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using UnityEngine.Audio;
 
-public class Scene1Dialogue : MonoBehaviour {
+public class Scene9Dialogue : MonoBehaviour {
         public int primeInt = 1;         // This integer drives game progress!
         public Text Char1name; //you
         public Text Char1speech;
@@ -13,7 +13,7 @@ public class Scene1Dialogue : MonoBehaviour {
         public Text Char2speech;
 		public Text Char3name; //Evan
         public Text Char3speech;
-		public Text Char4name; //Chris 
+		public Text Char4name; //Chris
         public Text Char4speech;
         public GameObject DialogueDisplay;
         public GameObject ArtChar1;
@@ -30,7 +30,7 @@ public class Scene1Dialogue : MonoBehaviour {
         private bool allowSpace = true;
 
 // initial visibility settings. Any new images or buttons need to also be SetActive(false);
-void Start(){  
+void Start(){
         DialogueDisplay.SetActive(false);
         ArtChar1.SetActive(false);
         ArtBG1.SetActive(true);
@@ -81,7 +81,7 @@ public void talking(){
                 Char2speech.text = "";
         }
        else if (primeInt == 5){
-                Char4nameame.text = "Chris";
+                Char4name.text = "Chris";
                 Char4speech.text = "Yeah? What did you see, Mat?";
                 Char2name.text = "";
                 Char2speech.text = "";
@@ -134,10 +134,10 @@ public void talking(){
 		else if (primeInt == 17){
                 Char1name.text = "";
                 Char1speech.text = "(Evan and Chris retreat into the kitchen. Matilda however does not go upstairs but instead stays).";
-				
+
 			if (GameHandler.hasComm == true){primeInt = 99;}
     else if (GameHandler.hasProof == true){primeInt = 299;}
-	
+
 		}
 
 
@@ -145,7 +145,7 @@ public void talking(){
        else if (primeInt == 100){
                 Char2name.text = "Matilda";
                 Char2speech.text = "What should we do doggy? You like playing catch?";
-	   }          
+	   }
         else if (primeInt == 101){
                 Char1name.text = "YOU";
                 Char1speech.text ="I most certainly do not. I don’t think it’s appropriate for someone of my intellectual standing to be involved in such boorish activities. You should also most definitely not be disobeying your parental figues.";
@@ -153,27 +153,27 @@ public void talking(){
 	  else if (primeInt == 102){
                 Char2name.text = "Matilda";
                 Char2speech.text ="Ohhh a talking doggie? I don’t see that every day. Are there a lot of talking dogs on Guinpera?";
-     } 
+     }
 	 else if (primeInt == 103){
                 Char1name.text = "YOU";
                 Char1speech.text ="How do you know that? Have humans discovered my planet already? I didn’t think you humans have advanced your technological expertise that far yet.";
-     } 
+     }
 	 else if (primeInt == 104){
                 Char2name.text = "Matilda";
                 Char2speech.text ="I don’t know what this “tec-oh-ology” thing is. I just heard it from you.";
-     } 
+     }
 	 else if (primeInt == 105){
                 Char1name.text = "YOU";
                 Char1speech.text ="But I haven’t said anything about my home planet. How could you know?";
-     } 
+     }
 	 else if (primeInt == 106){
                 Char2name.text = "Matilda";
                 Char2speech.text ="I didn’t hear your mouth saying it. (She points to A’s head). I heard it from your head.";
-     } 
+     }
 	 else if (primeInt == 107){
                 Char1name.text = "YOU";
                 Char1speech.text ="A psychic? I’ve never heard of a human psychic. Your species shouldn’t have developed enough to possess that ability.";
-     } 
+     }
 	 else if (primeInt == 108){
                 Char2name.text = "Matilda";
                 Char2speech.text ="People’s heads have always talked to me. Their head voices are quieter, but I can hear them. No one else seems to be able to. (M pauses for a second) Your friends are coming too? But they’re not coming to visit right? They’re coming… to fight?";
@@ -210,6 +210,7 @@ public void talking(){
 				Char2name.text = "";
                 Char2speech.text ="";
      }
+   }
 
 
 // FUNCTIONS FOR BUTTONS TO ACCESS (Choice #1 and switch-scenes)
