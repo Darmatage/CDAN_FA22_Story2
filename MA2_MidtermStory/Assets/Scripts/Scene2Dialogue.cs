@@ -110,12 +110,10 @@ public void talking(){  // main story function. Players hit next to progress to 
 				if (GameHandler.hasProof == true){
 					Choice1a.SetActive(true); // bark
 					Choice1b.SetActive(false);
-					Debug.Log("hasProof is true, showing bark button");
 				}
 				else if ((GameHandler.hasComm == true)||(GameHandler.hasAi == true)){
 					Choice1a.SetActive(false);
 					Choice1b.SetActive(true); // Attempt communication (only if player has AI or Comm)
-					Debug.Log("hasComm or hasAi is true, showing talk button");
 				}
 				else {
 					Debug.Log("no static variable is true. No button for you");
@@ -315,20 +313,16 @@ public void talking(){  // main story function. Players hit next to progress to 
 
 
 // FUNCTIONS FOR BUTTONS TO ACCESS (Choice #1 and switch scenes)
-        public void Choice1aFunct(){
-                Char1name.text = "YOU";
-                Char1speech.text = "(I guess I have no choice)";
-                Char2name.text = "";
-                Char2speech.text = "";
+        public void Choice1aFunct(){ //bark
                 primeInt = 99;
                 Choice1a.SetActive(false);
                 Choice1b.SetActive(false);
                 nextButton.SetActive(true);
                 allowSpace = true;
-        }
+  }
         public void Choice1bFunct(){
                 Char1name.text = "YOU";
-                Char1speech.text = "This is not a human... but it is worth a shot";
+                Char1speech.text = "(This is not a human... but it is worth a shot.)";
                 Char2name.text = "";
                 Char2speech.text = "";
 				if (GameHandler.hasComm == true){primeInt = 199;}
@@ -354,10 +348,10 @@ public void talking(){  // main story function. Players hit next to progress to 
 
 
         public void SceneChange1(){
-               SceneManager.LoadScene("Scene4"); //subarbs
+               SceneManager.LoadScene("Scene3"); //city
         }
         public void SceneChange2(){
-                SceneManager.LoadScene("Scene3"); //city
+                SceneManager.LoadScene("Scene5"); //suburbs
         }
      }
 
