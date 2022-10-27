@@ -212,7 +212,7 @@ public void talking(){         // main story function. Players hit next to progr
           }
           }
 
-                else if (primeInt == 205){
+                 else if (primeInt == 205){
                         Char1name.text = "";
                                   Char1speech.text = " ";
                                   Char2name.text = "Matilda";
