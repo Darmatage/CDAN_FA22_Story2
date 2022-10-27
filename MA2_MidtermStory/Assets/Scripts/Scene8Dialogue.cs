@@ -33,14 +33,13 @@ public class Scene8Dialogue : MonoBehaviour{
 void Start(){
    DialogueDisplay.SetActive(false);
       ArtChar1a.SetActive(false);
-      ArtChar1b.SetActive(false);
+      ArtChar2a.SetActive(false);
       ArtBG1.SetActive(true);
       NextScene1Button.SetActive(false);
-      NextScene2Button.SetActive(false);
       nextButton.SetActive(true);
- }
+   }
 
-    }
+
 
     // Update is called once per frame
     void Update(){
@@ -50,8 +49,7 @@ void Start(){
 
 
     }
-
-}
+  }
 }
 //Story Units:
 void talking(){         // main story function. Players hit next to progress to next int
@@ -278,26 +276,22 @@ else if (primeInt == 306){
       NextScene1Button.SetActive(true); //scene 2
 
 }
-}
 
 
-
-                    // Turn off "Next" button, turn on "Choice" buttons
-                    nextButton.SetActive(false);
-                    allowSpace = false;
-
-                  IEnumerator TypeText(Text target, string fullText){
-                             float delay = 0.01f;
-                             nextButton.SetActive(false);
-                             allowSpace = false;
-                             for (int i = 0; i < fullText.Length; i++){
-                                     string currentText = fullText.Substring(0,i);
-                                     target.text = currentText;
-                                     yield return new WaitForSeconds(delay);
-                             }
-                          }
+    IEnumerator TypeText(Text target, string fullText){
+          float delay = 0.01f;
+          nextButton.SetActive(false);
+          allowSpace = false;
+          for (int i = 0; i < fullText.Length; i++){
+          string currentText = fullText.Substring(0,i);
+          target.text = currentText;
+          yield return new WaitForSeconds(delay);
+          }
+  }
 
 
     void SceneChange1(){
-                         SceneManager.LoadScene("Scene9"); //city
+                         SceneManager.LoadScene("Scene9");
                   }
+             }
+        }
