@@ -185,37 +185,225 @@ public void talking(){
 	 	 else if (primeInt == 110){
 				Char2name.text = "Matilda";
                 Char2speech.text ="Well that’s good. Both of my dads are the smartest people I know. So what do you do on Guinpera? It doesn’t sound like a fun place.";
+				Choice1a.SetActive(true);
+				Choice1b.SetActive(true);
+	 }
+	 
+	 	 else if (primeInt == 200){
+				Char1name.text = "YOU";
+                Char1speech.text =" Well, Guinpera, in simple terms, is a rather vast planet, much larger than this one.Our civilization relies on organic resources to survive much like yours, but while your planet has an abundance of such materials, the environment on my planet is much less suited for such growth. We barely survive by using our technology to replicate poor copies of the little organisms that we have but now that has become too unsustainable. We need other resources outside of our planet. And your planet has been chosen as the target.";
      }
-	 	 else if (primeInt == 109){
-				Char2name.text = "";
-                Char2speech.text ="";
+	 else if (primeInt == 201){
+				Char2name.text = "Matilda";
+                Char2speech.text ="Ohh. I see. So .. why are you here? Why do you .. want to warn us?";
      }
-	 else if (primeInt == 109){
-				Char2name.text = "";
-                Char2speech.text ="";
+	 else if (primeInt == 202){
+				Char1name.text = "YOU";
+                Char1speech.text =" I’ve always been fascinated with you humans.Your culture is so rich and diverse. I just .. want to preserve that. I also believe that it is much more prudent to cooperate than try to dominate and take from other societies. ";
      }
-	 else if (primeInt == 109){
-				Char2name.text = "";
-                Char2speech.text ="";
+	 else if (primeInt == 203){
+				Char2name.text = "Matilda";
+                Char2speech.text =" Hmmm, I think it’s also good to have peace rather than fight for things too!Dad has always told me that peace is always the first option we should go for. We should only fight when we absolutely have to and when there are no other choice.";
      }
-	 else if (primeInt == 109){
-				Char2name.text = "";
-                Char2speech.text ="";
+	 else if (primeInt == 204){
+				Char1name.text = "YOU";
+                Char1speech.text ="Your parental figures are very wise. I agree wholeheartedly with them. Unfortunately, some of my people, the loudest and most vocal ones believe that there are no other choice but to take what we need by force. That is why I’m here to prevent that.";
      }
-	 else if (primeInt == 109){
-				Char2name.text = "";
-                Char2speech.text ="";
+	 else if (primeInt == 205){
+				Char2name.text = "Matilda";
+                Char2speech.text ="Don’t worry. My dads will take you to work tomorrow.You’ll save the world!";
      }
-	 else if (primeInt == 109){
-				Char2name.text = "";
-                Char2speech.text ="";
+	 else if (primeInt == 206){
+				Char1name.text = "YOU";
+                Char1speech.text ="Your parents seem like very capable people. I just hope your government understands how urgent this situation is.";
      }
-
+	 else if (primeInt == 207){
+				Char2name.text = "Matilda";
+                Char2speech.text ="We’ll make them understand. No matter how thick-headed they can be, they can’t ignore an issue as big as this right?";
+     }
+	 else if (primeInt == 208){
+				Char1name.text = "YOU";
+                Char1speech.text ="Like I said, I hope so.";
+     }
+	 else if (primeInt == 209){
+				Char3name.text = "Evan";
+                Char3speech.text ="Hey, I got good news. The President agrees-( Evan stops himself as he catches sight of Matilda still in the room). Matilda. I thought I told you to go to your room. ";
+     }
+	 else if (primeInt == 210){
+				Char2name.text = "Matilda";
+                Char2speech.text ="(shrugs) Well the doggie started talking and I thought that was more interesting than doing some boring old math problems. ";
+	 }
+	 else if (primeInt == 211){
+				Char3name.text = "Evan";
+                Char3speech.text = "(at A) You spoke in front of Matilda?!";
+	 }
+	 else if (primeInt == 212){
+				Char1name.text = "YOU";
+                Char1speech.text ="I was not aware that it was supposed to be a secret that I could talk. I assumed that if you were seemingly unfazed by my oherworldly origins, your child would be as well. ";
+	 }
+	 else if (primeInt == 213){
+				Char3name.text = "Evan";
+                Char3speech.text ="Tha-That’s not how that works. Whatever, it ‘s okay . Everything’s fine. It’s fine.(turns to Matilda) So now you know Matilda.";
+	 }
+		else if (primeInt == 214){
+				Char2name.text = "Matilda";
+                Char2speech.text ="Yep. And I want to help.";
+	 } 
+	 else if (primeInt == 215){
+				Char3name.text = "Evan";
+                Char3speech.text ="Of course you do. Well, as I was saying, the President has agreed to this meeting. He said he would like to meet A as soon as possible. So we need to leave. Now. ";
+	 } 
+	 else if (primeInt == 216){
+				Char1name.text = "YOU";
+                Char1speech.text =" Where are we going exactly?";
+	 } 
+	 else if (primeInt == 217){
+				Char3name.text = "Evan";
+                Char3speech.text =" To the nearest government  military encampment, Fort MacHeath. The President is flying down as we speak. ";
+	 } 
+	 else if (primeInt == 218){
+				Char1name.text = "YOU";
+                Char1speech.text ="Huh. I assumed it would’ve been more of a hassle to convince your government to agree to a meeting. ";
+	 } 
+	 else if (primeInt == 219){
+				Char3name.text = "Evan";
+                Char3speech.text ="So did I. The Preseident must know something, otherwise I can’t see him agreeing to  a meeting with a foreign being so quickly. Anyway that’s enough talking, we need to head for Fort MacHeath. It’ll be about a three hour drive. ";
+	 } 
+	 else if (primeInt == 220){
+				Char2name.text = "Matilda";
+                Char2speech.text ="Ohhh, can I come?";
+	 } 
+	 else if (primeInt == 213){
+				Char3name.text = "Evan";
+                Char3speech.text ="(sighs) Well it's not like there's a different option. We can't exactly leave a ten-year-old alone at home without supervision.";
+	 } 
+	 else if (primeInt == 213){
+				Char2name.text = "Matilda";
+                Char2speech.text ="Yay! Off to save the world! This beats math homework by leagues!";
+				NextScene1Button.setActive(true);
+	 }
+	 
+	//SCENE 9 CHOICE 2:
+	// ENCOUNTER AFTER CHOICE #1
+       
+	 else if (primeInt == 300){
+				Char1name.text = "YOU";
+                Char1speech.text = "I don't think someone of your age would be able to comprehend it.";
+	 }
+	  else if (primeInt == 200){
+				Char2name.text = "Matilda";
+                Char2speech.text = "Ha! Try me, space doggy. I know more than you think.";
+	  }
+	   else if (primeInt == 200){
+				Char1name.text = "YOU";
+                Char1speech.text = "Hmm, I guess so. You could always just pull the information from my head, can’t you?";
+	  }
+	   else if (primeInt == 200){
+				Char2name.text = "Matilda";
+                Char2speech.text = "Exactly. It doesn't really work that way, but close enough ";
+	  }
+	 
+	 else if (primeInt == 200){
+				Char1name.text = "YOU";
+                Char1speech.text =" Well, Guinpera, in simple terms, is a rather vast planet, much larger than this one.Our civilization relies on organic resources to survive much like yours, but while your planet has an abundance of such materials, the environment on my planet is much less suited for such growth. We barely survive by using our technology to replicate poor copies of the little organisms that we have but now that has become too unsustainable. We need other resources outside of our planet. And your planet has been chosen as the target.";
+     }
+	 else if (primeInt == 201){
+				Char2name.text = "Matilda";
+                Char2speech.text ="Ohh. I see. So .. why are you here? Why do you .. want to warn us?";
+     }
+	 else if (primeInt == 202){
+				Char1name.text = "YOU";
+                Char1speech.text =" I’ve always been fascinated with you humans.Your culture is so rich and diverse. I just .. want to preserve that. I also believe that it is much more prudent to cooperate than try to dominate and take from other societies. ";
+     }
+	 else if (primeInt == 203){
+				Char2name.text = "Matilda";
+                Char2speech.text =" Hmmm, I think it’s also good to have peace rather than fight for things too!Dad has always told me that peace is always the first option we should go for. We should only fight when we absolutely have to and when there are no other choice.";
+     }
+	 else if (primeInt == 204){
+				Char1name.text = "YOU";
+                Char1speech.text ="Your parental figures are very wise. I agree wholeheartedly with them. Unfortunately, some of my people, the loudest and most vocal ones believe that there are no other choice but to take what we need by force. That is why I’m here to prevent that.";
+     }
+	 else if (primeInt == 205){
+				Char2name.text = "Matilda";
+                Char2speech.text ="Don’t worry. My dads will take you to work tomorrow.You’ll save the world!";
+     }
+	 else if (primeInt == 206){
+				Char1name.text = "YOU";
+                Char1speech.text ="Your parents seem like very capable people. I just hope your government understands how urgent this situation is.";
+     }
+	 else if (primeInt == 207){
+				Char2name.text = "Matilda";
+                Char2speech.text ="We’ll make them understand. No matter how thick-headed they can be, they can’t ignore an issue as big as this right?";
+     }
+	 else if (primeInt == 208){
+				Char1name.text = "YOU";
+                Char1speech.text ="Like I said, I hope so.";
+     }
+	 else if (primeInt == 209){
+				Char3name.text = "Evan";
+                Char3speech.text ="Hey, I got good news. The President agrees-( Evan stops himself as he catches sight of Matilda still in the room). Matilda. I thought I told you to go to your room. ";
+     }
+	 else if (primeInt == 210){
+				Char2name.text = "Matilda";
+                Char2speech.text ="(shrugs) Well the doggie started talking and I thought that was more interesting than doing some boring old math problems. ";
+	 }
+	 else if (primeInt == 211){
+				Char3name.text = "Evan";
+                Char3speech.text = "(at A) You spoke in front of Matilda?!";
+	 }
+	 else if (primeInt == 212){
+				Char1name.text = "YOU";
+                Char1speech.text ="I was not aware that it was supposed to be a secret that I could talk. I assumed that if you were seemingly unfazed by my oherworldly origins, your child would be as well. ";
+	 }
+	 else if (primeInt == 213){
+				Char3name.text = "Evan";
+                Char3speech.text ="Tha-That’s not how that works. Whatever, it ‘s okay . Everything’s fine. It’s fine.(turns to Matilda) So now you know Matilda.";
+	 }
+		else if (primeInt == 214){
+				Char2name.text = "Matilda";
+                Char2speech.text ="Yep. And I want to help.";
+	 } 
+	 else if (primeInt == 215){
+				Char3name.text = "Evan";
+                Char3speech.text ="Of course you do. Well, as I was saying, the President has agreed to this meeting. He said he would like to meet A as soon as possible. So we need to leave. Now. ";
+	 } 
+	 else if (primeInt == 216){
+				Char1name.text = "YOU";
+                Char1speech.text =" Where are we going exactly?";
+	 } 
+	 else if (primeInt == 217){
+				Char3name.text = "Evan";
+                Char3speech.text =" To the nearest government  military encampment, Fort MacHeath. The President is flying down as we speak. ";
+	 } 
+	 else if (primeInt == 218){
+				Char1name.text = "YOU";
+                Char1speech.text ="Huh. I assumed it would’ve been more of a hassle to convince your government to agree to a meeting. ";
+	 } 
+	 else if (primeInt == 219){
+				Char3name.text = "Evan";
+                Char3speech.text ="So did I. The Preseident must know something, otherwise I can’t see him agreeing to  a meeting with a foreign being so quickly. Anyway that’s enough talking, we need to head for Fort MacHeath. It’ll be about a three hour drive. ";
+	 } 
+	 else if (primeInt == 220){
+				Char2name.text = "Matilda";
+                Char2speech.text ="Ohhh, can I come?";
+	 } 
+	 else if (primeInt == 213){
+				Char3name.text = "Evan";
+                Char3speech.text ="(sighs) Well it's not like there's a different option. We can't exactly leave a ten-year-old alone at home without supervision.";
+	 } 
+	 else if (primeInt == 213){
+				Char2name.text = "Matilda";
+                Char2speech.text ="Yay! Off to save the world! This beats math homework by leagues!";
+				NextScene1Button.setActive(true);
+	 }
+	 
+	 
+	 
 
 // FUNCTIONS FOR BUTTONS TO ACCESS (Choice #1 and switch-scenes)
         public void Choice1aFunct(){
-                Char1name.text = "YOU";
-                Char1speech.text = "I don't know what you're talking about!";
+                Char1name.text = "";
+                Char1speech.text = "";
                 Char2name.text = "";
                 Char2speech.text = "";
                 primeInt = 199;
@@ -225,8 +413,8 @@ public void talking(){
                 allowSpace = true;
         }
         public void Choice1bFunct(){
-                Char1name.text = "YOU";
-                Char1speech.text = "Sure, anything you want... just lay off the club.";
+                Char1name.text = "";
+                Char1speech.text = "";
                 Char2name.text = "";
                 Char2speech.text = "";
                 primeInt = 299;
