@@ -66,7 +66,7 @@ public void talking(){  // main story function. Players hit next to progress to 
                 Char1speech.text = "(Those buildings .. )\n(They look like human capacity units.)";
                 Char2name.text = "";
                 Char2speech.text = "";
-				Char3name.text = "";
+				        Char3name.text = "";
                 Char3speech.text = "";
         }
        else if (primeInt ==3){
@@ -105,7 +105,7 @@ public void talking(){  // main story function. Players hit next to progress to 
                 Char2speech.text = "";
                 nextButton.SetActive(false);
                 allowSpace = false;
-				
+
 				//show button based on Statc Variable
 				if (GameHandler.hasProof == true){
 					Choice1a.SetActive(true); // bark
@@ -189,8 +189,8 @@ public void talking(){  // main story function. Players hit next to progress to 
                 DialogueDisplay.SetActive(false);
                 Char1name.text = "";
                 Char1speech.text = "";
-                Char2name.text = "";
-                Char2speech.text = "";
+                Char2name.text = "Cat";
+                Char2speech.text = " .. Meow?";
          }
        else if (primeInt == 203){
                 DialogueDisplay.SetActive(true);
@@ -201,11 +201,12 @@ public void talking(){  // main story function. Players hit next to progress to 
          }
         else if (primeInt == 204){
                 Char1name.text = "YOU";
-                Char1speech.text = "I am .. here to warn you. \nIs .. danger soon!";
+                Char1speech.text = "I am .. here to warn you. \nYou are .. in imminent danger!";
                 Char2name.text = "";
                 Char2speech.text = "";
          }
         else if (primeInt == 205){ // cat runs away
+          ArtChar1a.SetActive(false);
                 Char1name.text = "YOU";
                 Char1speech.text = "No, wait! This is very important. .. ";
                 Char2name.text = "";
@@ -227,10 +228,10 @@ public void talking(){  // main story function. Players hit next to progress to 
                   NextScene1Button.SetActive(true);
                   NextScene2Button.SetActive(true);
         }
-		
+
       else if (primeInt == 300){
                  Char1name.text = "YOU";
-                 Char1speech.text = "Bark! \n (I hope Pixeli can translate)";
+                 Char1speech.text = "Bark! \n (I hope Pixeli's translation function is working. .. )";
                  Char2name.text = "";
                  Char2speech.text = "";
                  Char3name.text = "";
@@ -238,9 +239,11 @@ public void talking(){  // main story function. Players hit next to progress to 
                  nextButton.SetActive(true);
                  allowSpace = true;
          }
-		 
-		
+
+
 	 else if (primeInt == 301){
+              ArtChar1a.SetActive(false);
+              ArtChar1b.SetActive(true);
                  Char1name.text = "";
                  Char1speech.text = "";
                  Char2name.text = "Cat";
@@ -256,9 +259,11 @@ public void talking(){  // main story function. Players hit next to progress to 
                  Char2name.text = "";
                  Char2speech.text = "";
                  Char3name.text = "Pixeli";
-                 Char3speech.text = "Don’t fret, creature. We mean no harm.";
+  StartCoroutine(TypeText(Char3speech.text = "Don’t fret, creature. We mean no harm."));
          }
       else if (primeInt == 303){
+           ArtChar1b.SetActive(false);
+           ArtChar1a.SetActive(true);
                  Char1name.text = "";
                  Char1speech.text = "";
                  Char2name.text = "Cat";
@@ -268,7 +273,7 @@ public void talking(){  // main story function. Players hit next to progress to 
          }
       else if (primeInt == 305){
                  Char1name.text = "YOU";
-                 Char1speech.text = "(whew)... Bark, bark!";
+                 Char1speech.text = "(Thank the stars.)\n... Bark, bark!";
                  Char2name.text = "";
                  Char2speech.text = "";
                  Char3name.text = "";
@@ -288,21 +293,25 @@ public void talking(){  // main story function. Players hit next to progress to 
                   Char2name.text = "";
                   Char2speech.text = "";
                   Char3name.text = "Pixeli";
-                  Char3speech.text = "Well, not your spieces, per se. We are actually more inetersted in the humans";
+StartCoroutine(TypeText(Char3speech.text = "He says: ‘Your planet is in imminent danger."));
          }
 		       else if (primeInt == 308){
                  Char1name.text = "";
                  Char1speech.text = "";
-                 Char2name.text = "";
-                 Char2speech.text = "";
-				 Char3name.text = "Pixeli";
-                  Char3speech.text = "Oh, it ran away. Oh, well. Where to now?";
-                 allowSpace=false;
-                 nextButton.SetActive(false);
-                 NextScene1Button.SetActive(true);
-                 NextScene2Button.SetActive(true);
+                 Char2name.text = "Cat";
+                 Char2speech.text = "...";
+				         Char3name.text = "";
+                 Char3speech.text = "";
       }
+            else if (primeInt == 309){
+                Char1name.text = "YOU";
+                Char1speech.text = "... Bark?";
+                Char2name.text = "";
+                Char2speech.text = "";
+                Char3name.text = "";
+                Char3speech.text = "";
      }
+  }
 
 
 // FUNCTIONS FOR BUTTONS TO ACCESS (Choice #1 and switch scenes)
@@ -324,13 +333,23 @@ public void talking(){  // main story function. Players hit next to progress to 
                 Char2speech.text = "";
 				if (GameHandler.hasComm == true){primeInt = 199;}
 				else if (GameHandler.hasAi == true){primeInt = 299;}
-                
+
                 Choice1a.SetActive(false);
                 Choice1b.SetActive(false);
                 nextButton.SetActive(true);
                 allowSpace = true;
 
         }
+
+        IEnumerator TypeText(Text target, string fullText){
+                   float delay = 0.01f;
+                   nextButton.SetActive(false);
+                   allowSpace = false;
+                   for (int i = 0; i < fullText.Length; i++){
+                           string currentText = fullText.Substring(0,i);
+                           target.text = currentText;
+                           yield return new WaitForSeconds(delay);
+                   }
 
 
 
