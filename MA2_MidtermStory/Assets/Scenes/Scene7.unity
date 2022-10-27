@@ -1368,16 +1368,19 @@ MonoBehaviour:
   DialogueDisplay: {fileID: 0}
   ArtChar1: {fileID: 0}
   ArtChar1b: {fileID: 0}
+  ArtChar1c: {fileID: 0}
+  ArtChar1d: {fileID: 0}
+  ArtChar1e: {fileID: 0}
   ArtChar2: {fileID: 0}
   ArtBG1: {fileID: 0}
   ArtBG2: {fileID: 0}
-  ArtBG_black: {fileID: 0}
   Choice1a: {fileID: 0}
   Choice1b: {fileID: 0}
   Choice1c: {fileID: 0}
+  Choice1d: {fileID: 0}
   NextScene1Button: {fileID: 0}
   nextButton: {fileID: 0}
-  gameHandler: {fileID: 0}
+  gameHandler: {fileID: 1652130664}
 --- !u!1 &1444902600
 GameObject:
   m_ObjectHideFlags: 0

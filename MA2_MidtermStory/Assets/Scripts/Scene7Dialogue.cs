@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using UnityEngine.Audio;
-
 public class Scene7Dialogue : MonoBehaviour {
         public int primeInt = 1;         // This integer drives game progress!
         public Text Char1name;
@@ -16,13 +15,15 @@ public class Scene7Dialogue : MonoBehaviour {
         public GameObject DialogueDisplay;
         public GameObject ArtChar1;
 		    public GameObject ArtChar1b;
+        public GameObject ArtChar1c;
+        public GameObject ArtChar1d;
+        public GameObject ArtChar1e;
 		//public GameObject ArtChar1c;
        public GameObject ArtChar2;
 	   //public GameObject ArtChar2b;
 	   //public GameObject ArtChar2c;
         public GameObject ArtBG1;
         public GameObject ArtBG2;
-		    public GameObject ArtBG_black;
         public GameObject Choice1a;
         public GameObject Choice1b;
 		    public GameObject Choice1c;
@@ -43,7 +44,6 @@ void Start(){         // initial visibility settings
 		    ArtChar1b.SetActive(false);
 		    ArtChar2.SetActive(false);
         ArtBG1.SetActive(true);
-	    	ArtBG_black.SetActive(true);
         Choice1a.SetActive(false);
         Choice1b.SetActive(false);
 		    Choice1c.SetActive(false);
@@ -294,8 +294,7 @@ public void talking(){         // main story function. Players hit next to progr
                allowSpace = false;
                Choice1a.SetActive(true); // function Choice1aFunct()
                Choice1b.SetActive(true); // function Choice1bFunct()
-               Choice1c.SetActive(true); // function Choice1bFunct()
-               Choice1d.SetActive(true);
+
        }
 
        //Choice b (reject)for without communication device:
