@@ -7,14 +7,20 @@ using UnityEngine.Audio;
 
 public class Scene3Dialogue : MonoBehaviour {
         public int primeInt = 1;         // This integer drives game progress!
-        public Text Char1name;
+        public Text Char1name; //alien
         public Text Char1speech;
-        public Text Char2name;
+        public Text Char2name; //pixeli
         public Text Char2speech;
+        public Text Char3name; //Human1
+        public Text Char3speech;
+        public Text Char4name; //Human2
+        public Text Char4speech;
+        public Text Char5name; //Human3
+        public Text Char5speech;
        //public Text Char3name;
        //public Text Char3speech;
         public GameObject DialogueDisplay;
-        public GameObject ArtChar1;
+        public GameObject ArtChar1; //human crowd
        //public GameObject ArtChar2;
         public GameObject ArtBG1;
         public GameObject Choice1a;
@@ -70,6 +76,12 @@ public void talking(){         // main story function. Players hit next to progr
                 Char1speech.text = "(The amount of humans here..is overwhelming.\n(...)\n(The more the better I suppose.)";
                 Char2name.text = "";
                 Char2speech.text = "";
+                Char3name.text = "";
+                Char3speech.text = "";
+                Char4name.text = "";
+                Char4speech.text = "";
+                Char5name.text = "";
+                Char5speech.text = "";
       }
        else if (primeInt == 3){
                 Char1name.text = "YOU";
@@ -143,48 +155,69 @@ public void talking(){         // main story function. Players hit next to progr
                 Char1speech.text = "Humans! I came here with a warning. \nYou’re all in incredible danger!";
                 Char2name.text = "";
                 Char2speech.text = "";
-                 }
+                Char3name.text = "";
+                Char3speech.text = "";
+                Char4name.text = "";
+                Char4speech.text = "";
+                Char5name.text = "";
+                Char5speech.text = "";
+          }
       else if (primeInt == 201){
-                Char1name.text = "YOU";
-                Char1speech.text = "(This must be a common gesture among humans. I should cooperate with this specimen so things go smoothly)";
+                Char1name.text = "";
+                Char1speech.text = "";
                 Char2name.text = "";
-                Char2speech.text = "My name is Matilda! How can I help?";
-                nextButton.SetActive(false);
-                allowSpace = false;
-                NextScene1Button.SetActive(true); //scene 2
-                  }
+                Char2speech.text = "";
+                Char3name.text = "Human1";
+                Char3speech.text = "Is .. that dog talking?";
+                Char4name.text = "";
+                Char4speech.text = "";
+                Char5name.text = "";
+                Char5speech.text = "";
+          }
       else if (primeInt == 202){
-                        Char1name.text = "";
-                        Char1speech.text = "";
-                        Char2name.text = "Matilda";
-                        Char2speech.text ="They work in a big office where they beat bad guys and talk to people in neat suits always. They're the coolest!";
-                        nextButton.SetActive(false);
-                        allowSpace = false;
-                        NextScene1Button.SetActive(true); //scene 2
-
-                                  }
-                else if (primeInt == 203){
-                        Char1name.text = "";
-                        Char1speech.text = "";
-                        Char2name.text = "Matilda";
-                        Char2speech.text = "Do you want a jelly sandwich, it's my favorite!";
-                                   }
+                Char1name.text = "YOU";
+                Char1speech.text = "Yes, human. Heed me! I bring warnings!";
+                Char2name.text = "";
+                Char2speech.text = "";
+                Char3name.text = "";
+                Char3speech.text = "";
+                Char4name.text = "";
+                Char4speech.text = "";
+                Char5name.text = "";
+                Char5speech.text = "";
+          }
+      else if (primeInt == 203){
+                Char1name.text = "";
+                Char1speech.text = "";
+                Char2name.text = "";
+                Char2speech.text = "";
+                Char3name.text = "Human1";
+                Char3speech.text = "Hey, Francesca, you see this?";
+                Char4name.text = "";
+                Char4speech.text = "";
+                Char5name.text = "";
+                Char5speech.text = "";
+          }
                 else if (primeInt == 204){
-                        Char1name.text = "YOU";
-                        Char1speech.text = "Your reply is astonishingly unhelpful. What's this sand-wich you are shubbing into your mouth?";
-                        Char2name.text = "Matilda";
-                        Char2speech.text = "No, you nincompoop. Sandwich is a sandwich. Here. Try some.";
-                        nextButton.SetActive(false);
-                        allowSpace = false;
-                        NextScene1Button.SetActive(true); //scene 2
-                                           }
+                Char1name.text = "YOU";
+                Char1speech.text = "";
+                Char2name.text = "";
+                Char2speech.text = "";
+                Char3name.text = "";
+                Char3speech.text = "";
+                Char4name.text = "Human2";
+                Char4speech.text = "What the hell..?!";
+                Char5name.text = "";
+                Char5speech.text = "";
+          }
+          }
 
                 else if (primeInt == 205){
                         Char1name.text = "";
                                   Char1speech.text = " ";
                                   Char2name.text = "Matilda";
                                   Char2speech.text = "Do they not have sandwiches on Gi-niper-a?";
-                                                              }
+          }
                  else if (primeInt == 206){
                                   Char1name.text = "YOU";
                                   Char1speech.text = "How..just how do you know that? Have humans discovered my planet already?";
@@ -193,13 +226,13 @@ public void talking(){         // main story function. Players hit next to progr
                                   nextButton.SetActive(false);
                                   allowSpace = false;
                                   NextScene1Button.SetActive(true); //scene 2
-                                }
+          }
                   else if (primeInt == 207){
                                     Char1name.text = "YOU";
                                                   Char1speech.text = "But I haven't said anything about my home planet. How could you know?";
                                                   Char2name.text = "Matilda";
                                                   Char2speech.text = "I didn't hear your mouth saying it. I heard from your head.";
-                                                                                         }
+          }
                   else if (primeInt == 208){
                                                   Char1name.text = "YOU";
                                                   Char1speech.text = "A psychic? I've never heard of it. Your human species shouldn't have developed enough to possess that ability.";
@@ -208,13 +241,13 @@ public void talking(){         // main story function. Players hit next to progr
                                                   nextButton.SetActive(false);
                                                   allowSpace = false;
                                                   NextScene1Button.SetActive(true); //scene 2
-                                                                                                 }
+          }
                   else if (primeInt == 209){
                                                   Char1name.text = "YOU";
                                                   Char1speech.text = "Right! Your planet is in danger. I need to talk to the leader of this planet.";
                                                   Char2name.text = "Matilda";
                                                   Char2speech.text = "Off to go see Dad and Dad then!";
-                                            }
+          }
                   else if (primeInt == 210){
                                                     Char1name.text = "";
                                                     Char1speech.text = "";
@@ -224,7 +257,7 @@ public void talking(){         // main story function. Players hit next to progr
                                                     allowSpace = false;
                                                     NextScene1Button.SetActive(true); //scene 2
 
-                                }
+          }
     // Encounter after Choice 1b                                                                                                                     }
                 else if (primeInt == 300){
                          Char1name.text = "";
@@ -275,7 +308,7 @@ public void talking(){         // main story function. Players hit next to progr
                          }
   public void Choice1bFunct(){
         Char1name.text = "YOU";
-        Char1speech.text = "The more the better. At least one of them has to believe me!";
+        Char1speech.text = "(The more the better. At least one of them has to believe me!)";
         Char2name.text = "";
         Char2speech.text = "";
         primeInt = 299;
