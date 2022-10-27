@@ -210,7 +210,8 @@ public void talking(){         // main story function. Players hit next to progr
                 Char5name.text = "";
                 Char5speech.text = "";
           }
-          }
+          
+
 
                 else if (primeInt == 205){
                         Char1name.text = "";

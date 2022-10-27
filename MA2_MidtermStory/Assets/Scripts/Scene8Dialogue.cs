@@ -30,8 +30,8 @@ public class Scene8Dialogue : MonoBehaviour{
 
  //public AudioSource audioSource;
     // Start is called before the first frame update
-    void Start()
-    {  DialogueDisplay.SetActive(false);
+void Start(){
+   DialogueDisplay.SetActive(false);
       ArtChar1a.SetActive(false);
       ArtChar1b.SetActive(false);
       ArtBG1.SetActive(true);
@@ -43,8 +43,8 @@ public class Scene8Dialogue : MonoBehaviour{
     }
 
     // Update is called once per frame
-    void Update()
-    {  if (allowSpace == true){
+    void Update(){
+        if (allowSpace == true){
               if (Input.GetKeyDown("space")){
                      talking();
 
@@ -54,7 +54,7 @@ public class Scene8Dialogue : MonoBehaviour{
 }
 }
 //Story Units:
-public void talking(){         // main story function. Players hit next to progress to next int
+void talking(){         // main story function. Players hit next to progress to next int
         primeInt = primeInt + 1;
         if (primeInt == 1){
                 // AudioSource.Play();
@@ -67,9 +67,9 @@ public void talking(){         // main story function. Players hit next to progr
                 Char1speech.text = "Hm, this specimen doesn't look human. Perhaps a little communicaton won't hurt?";
                 Char2speech.text = "";
 
-    if (GameHandler.hasComm == true){primeInt = 199;}
-    if(GameHandler.hasAi == true){primeInt = 199;}
-    else if (GameHandler.hasProof == true){primeInt = 299;}
+                if (GameHandler.hasComm == true){primeInt = 199;}
+                if(GameHandler.hasAi == true){primeInt = 199;}
+                else if (GameHandler.hasProof == true){primeInt = 299;}
 
 }
             //scene 7a: with communication device
@@ -179,7 +179,7 @@ else if (primeInt == 214){
          Char1name.text = "";
          Char1speech.text = "";
          Char2name.text = "Frank";
-         Char2speech.text = "The kid of those two guys. For some reason, she's able to understand what I say or rather what I'm thinking. It's kinda weird but it's convenient when I want some extra catnip.";
+         Char2speech.text = "The kid of those two guys./nFor some reason, she's able to understand what I say or rather what I'm thinking./nIt's kinda weird but it's convenient when I want some extra catnip.";
 }
 else if (primeInt == 215){
   ArtChar1a.SetActive(false);
@@ -208,8 +208,7 @@ else if (primeInt == 218){
          Char1speech.text = "";
          Char2name.text = "Frank";
          Char2speech.text = "(yawns)Yeah, yeah. If we're done, can you go away now? I need my afternoon nap unless you want me to rip your tail off.";
-
-        nextButton.SetActive(false);
+         nextButton.SetActive(false);
          allowSpace = false;
       NextScene1Button.SetActive(true); //scene 2
     }
@@ -286,8 +285,19 @@ else if (primeInt == 306){
                     // Turn off "Next" button, turn on "Choice" buttons
                     nextButton.SetActive(false);
                     allowSpace = false;
-                  }
 
-    public void SceneChange1(){
-                           SceneManager.LoadScene("Scene9");
-                    }
+                  IEnumerator TypeText(Text target, string fullText){
+                             float delay = 0.01f;
+                             nextButton.SetActive(false);
+                             allowSpace = false;
+                             for (int i = 0; i < fullText.Length; i++){
+                                     string currentText = fullText.Substring(0,i);
+                                     target.text = currentText;
+                                     yield return new WaitForSeconds(delay);
+                             }
+                          }
+
+
+    void SceneChange1(){
+                         SceneManager.LoadScene("Scene9"); //city
+                  }
