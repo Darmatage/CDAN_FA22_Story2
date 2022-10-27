@@ -56,26 +56,14 @@ void Update(){         // use spacebar as Next button
                 if (Input.GetKeyDown("space")){
                        talking();
                 }
-
-                if (GameHandler.hasProof == true){
-                  class Ncomm.SetActive(true); // bark
-                  class Ycomm.SetActive(false);
-                  Debug.Log("hasProof is true, showing class Ncomm");
-
-                }
-
-                else if ((GameHandler.hasComm == true)||(GameHandler.hasAi == true)){
-                  class Ncomm.SetActive(false);
-                  class Ycomm.SetActive(true); // Attempt communication (only if player has AI or Comm)
-                  Debug.Log("hasComm or hasAi is true, showing class Ycomm");
-                }
-                }
+                if (GameHandler.hasComm == true)||(GameHandler.hasAi == true){primeInt = 199;}
+                else if (GameHandler.hasProof == true){primeInt = 299;}
 
         }
    }
 
-class Ycomm{
-//Main story:
+
+//Story Units:
 public void talking(){         // main story function. Players hit next to progress to next int
         primeInt = primeInt + 1;
         if (primeInt == 1){
@@ -94,8 +82,23 @@ public void talking(){         // main story function. Players hit next to progr
                 Char1speech.text = "(This is one of the two tall humans that welcomed me in. Let's try to have a conversation.)";
                 Char2name.text = "";
                 Char2speech.text = "";
+
                 //gameHandler.AddPlayerStat(1);
-    }
+                if (GameHandler.hasProof == true){
+                  Choice1a.SetActive(true); // bark
+                  Choice1b.SetActive(true);
+                  Choice1c.SetActive(false);
+                  Choice1d.SetActive(false);
+                  Debug.Log("hasProof is true, showing bark button");
+                }
+                else if ((GameHandler.hasComm == true)||(GameHandler.hasAi == true)){
+                  Choice1a.SetActive(false); // bark
+                  Choice1b.SetActive(false);
+                  Choice1c.SetActive(true);
+                  Choice1d.SetActive(true);
+                  Debug.Log("hasComm or hasAi is true, showing talk button");
+                }
+
 
 
         //scene 7a: with communication device
@@ -122,7 +125,7 @@ public void talking(){         // main story function. Players hit next to progr
 
        else if (primeInt == 203){
                 Char1name.text = "YOU";
-                Char1speech.text = "(I don't feel any harm in this 'mealballs'.. perhaps I can try it? / I'm not used to human food- let's avoid getting into trouble.)";
+                Char1speech.text = "(I don't feel any harm in this 'meatballs'.. perhaps I can try it? / I'm not used to human food- let's avoid getting into trouble.)";
                 Char2name.text = "";
                 Char2speech.text = "";
                 // Turn off "Next" button, turn on "Choice" buttons
@@ -131,6 +134,7 @@ public void talking(){         // main story function. Players hit next to progr
                 Choice1a.SetActive(true); // function Choice1aFunct()
                 Choice1b.SetActive(true); // function Choice1bFunct()
 			        	Choice1c.SetActive(true); // function Choice1bFunct()
+                Choice1d.SetActive(true);// function Choice1dFunct()
         }
 
 
@@ -259,61 +263,8 @@ public void talking(){         // main story function. Players hit next to progr
                 nextButton.SetActive(false);
                 allowSpace = false;
                 NextScene1Button.SetActive(true); //scene 2
-              }
-            }
-                // FUNCTIONS FOR BUTTONS TO ACCESS (Choice #1 and switch scenes)
-                        public void Choice1aFunct(){
-                                Char1name.text = "YOU";
-                                Char1speech.text = "I can't let down this human's favor.";
-                                Char2name.text = "";
-                                Char2speech.text = "";
-                                primeInt = 499;
-                                Choice1a.SetActive(false);
-                                Choice1b.SetActive(false);
-                				        Choice1c.SetActive(false);
-                                nextButton.SetActive(true);
-                                allowSpace = true;
-                				//GameObject.FindWithTag("GameHandler").GetComponent<GameHandler>().hasComm = true;
-                        }
-                        public void Choice1bFunct(){
-                                Char1name.text = "YOU";
-                                Char1speech.text = "I must stay viglant. Much of this planet is still a mystery to me.";
-                                Char2name.text = "";
-                                Char2speech.text = "";
-                                primeInt = 599;
-                                Choice1a.SetActive(false);
-                                Choice1b.SetActive(false);
-                				        Choice1c.SetActive(false);
-                                nextButton.SetActive(true);
-                                allowSpace = true;
-                                //GameObject.FindWithTag("GameHandler").GetComponent<GameHandler>().hasComm = true;
-                                //GameHandler.hasAi = true;
-                        }
 
             }
-          }
-
-  class Ncomm{
-    public void talking(){         // main story function. Players hit next to progress to next int
-            primeInt = primeInt + 1;
-            if (primeInt == 1){
-                    // AudioSource.Play();
-        }
-            else if (primeInt == 2){
-              ArtChar1.SetActive(true);
-                    DialogueDisplay.SetActive(true);
-                    Char1name.text = "";
-                    Char1speech.text = "<Amazing smell leads you to Chris's kitchen when Christ notices you>";
-                    Char2name.text = "";
-                    Char2speech.text = "";
-        }
-           else if (primeInt ==3){
-                    Char1name.text = "YOU";
-                    Char1speech.text = "(This is one of the two tall humans that welcomed me in. Let's try to have a conversation.)";
-                    Char2name.text = "";
-                    Char2speech.text = "";
-                    //gameHandler.AddPlayerStat(1);
-        }
 
      //Encounter without communication
         else if (primeInt == 300){
@@ -342,14 +293,8 @@ public void talking(){         // main story function. Players hit next to progr
                Choice1a.SetActive(true); // function Choice1aFunct()
                Choice1b.SetActive(true); // function Choice1bFunct()
                Choice1c.SetActive(true); // function Choice1bFunct()
+               Choice1d.SetActive(true);
        }
-       // Turn off "Next" button, turn on "Choice" buttons
-       nextButton.SetActive(false);
-       allowSpace = false;
-       Choice1a.SetActive(true); // function Choice1aFunct()
-       Choice1b.SetActive(true); // function Choice1bFunct()
-       Choice1c.SetActive(true); // function Choice1bFunct()
-
 
        //Choice b (reject)for without communication device:
        else if (primeInt == 701){
@@ -397,7 +342,7 @@ public void talking(){         // main story function. Players hit next to progr
                     Char1speech.text = "I must stay viglant. Much of this planet is still a mystery to me.";
                     Char2name.text = "";
                     Char2speech.text = "";
-                    primeInt = 799;
+                    primeInt = 699;
                     Choice1a.SetActive(false);
                     Choice1b.SetActive(false);
     				        Choice1c.SetActive(false);
@@ -411,6 +356,35 @@ public void talking(){         // main story function. Players hit next to progr
 
 
 
+// FUNCTIONS FOR BUTTONS TO ACCESS (Choice #1 and switch scenes)
+        public void Choice1cFunct(){
+                Char1name.text = "YOU";
+                Char1speech.text = "I can't let down this human's favor.";
+                Char2name.text = "";
+                Char2speech.text = "";
+                primeInt = 499;
+                Choice1a.SetActive(false);
+                Choice1b.SetActive(false);
+				        Choice1c.SetActive(false);
+                nextButton.SetActive(true);
+                allowSpace = true;
+				//GameObject.FindWithTag("GameHandler").GetComponent<GameHandler>().hasComm = true;
+        }
+        public void Choice1dFunct(){
+                Char1name.text = "YOU";
+                Char1speech.text = "I must stay viglant. Much of this planet is still a mystery to me.";
+                Char2name.text = "";
+                Char2speech.text = "";
+                primeInt = 599;
+                Choice1a.SetActive(false);
+                Choice1b.SetActive(false);
+				        Choice1c.SetActive(false);
+                nextButton.SetActive(true);
+                allowSpace = true;
+                //GameObject.FindWithTag("GameHandler").GetComponent<GameHandler>().hasComm = true;
+                //GameHandler.hasAi = true;
+        }
+      
 
 
 
