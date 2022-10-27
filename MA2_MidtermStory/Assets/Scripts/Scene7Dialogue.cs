@@ -78,12 +78,14 @@ public void talking(){         // main story function. Players hit next to progr
                 Char1speech.text = "<Amazing smell leads you to Chris's kitchen when Christ notices you>";
                 Char2name.text = "";
                 Char2speech.text = "";
+                  NextScene1Button.SetActive(true);
     }
        else if (primeInt ==3){
                 Char1name.text = "YOU";
                 Char1speech.text = "(This is one of the two tall humans that welcomed me in. Let's try to have a conversation.)";
                 Char2name.text = "";
                 Char2speech.text = "";
+
 
                 //gameHandler.AddPlayerStat(1);
                 if (GameHandler.hasProof == true){
@@ -371,7 +373,15 @@ public void talking(){         // main story function. Players hit next to progr
                 //GameObject.FindWithTag("GameHandler").GetComponent<GameHandler>().hasComm = true;
                 //GameHandler.hasAi = true;
         }
-
+        IEnumerator TypeText(Text target, string fullText){
+                   float delay = 0.01f;
+                   nextButton.SetActive(false);
+                   allowSpace = false;
+                   for (int i = 0; i < fullText.Length; i++){
+                           string currentText = fullText.Substring(0,i);
+                           target.text = currentText;
+                           yield return new WaitForSeconds(delay);
+                   }}
 
 
 
@@ -379,18 +389,4 @@ public void talking(){         // main story function. Players hit next to progr
         public void SceneChange1(){
                SceneManager.LoadScene("Scene9");
         }
-
-  IEnumerator FadeOut(GameObject fadeImage){
-                float alphaLevel = 1;
-                fadeImage.GetComponent<Image>().color = new Color(1, 1, 1, alphaLevel);
-                for(int i = 0; i < 100; i++){
-                        alphaLevel -= 0.01f;
-                        yield return null;
-                        fadeImage.GetComponent<Image>().color = new Color(1, 1, 1, alphaLevel);
-                        Debug.Log("Alpha is: " + alphaLevel);
-              }
-           }
-        }
-   //public void SceneChange2(){
-   //        SceneManager.LoadScene("Scene2b");
-   //}
+      }
