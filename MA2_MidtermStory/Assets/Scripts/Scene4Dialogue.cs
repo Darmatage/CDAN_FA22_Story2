@@ -65,12 +65,12 @@ public void talking(){         // main story function. Players hit next to progr
                 // AudioSource.Play();
         }
         else if (primeInt == 2){
-          ArtChar1.SetActive(true);
+          ArtChar1a.SetActive(true);
                 DialogueDisplay.SetActive(true);
                 Char1name.text = "YOU";
                 Char1speech.text = "(I’m not sure how well a conversation will go with this one, but I’ll try.)";
                 Char2name.text = "";
-                Char2speech = "";
+                Char2speech.text = "";
         }
        else if (primeInt ==3){
                 Char1name.text = "YOU";
@@ -84,7 +84,7 @@ public void talking(){         // main story function. Players hit next to progr
                 Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "Small Human";
-                Char2speech = "Woah, a talking dog?";
+                Char2speech.text = "Woah, a talking dog?";
         }
        else if (primeInt == 5){
          ArtChar1a.SetActive(false);
@@ -99,7 +99,7 @@ public void talking(){         // main story function. Players hit next to progr
                 Char1name.text = "YOU";
                 Char1speech.text = "(She is .. touching my head?)/n(.. Huh. It’s strangely nice.)";
                 Char2name.text = "";
-				        Char2speech = "";
+				        Char2speech.text = "";
         }
        else if (primeInt ==7){
                 Char1name.text = "YOU";
@@ -112,7 +112,7 @@ public void talking(){         // main story function. Players hit next to progr
                 Char1name.text = "YOU";
                 Char1speech.text = "It is a pleasure to meet you human, but time is of the essence and we don’t have the luxury of dawdling.";
                 Char2name.text = "";
-                Char2speech = "";
+                Char2speech.text = "";
         }
        else if (primeInt ==9){
                 Char1name.text = "YOU";
@@ -127,7 +127,7 @@ public void talking(){         // main story function. Players hit next to progr
                 Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "Small Human";
-                Char2speech = "You want to meet my dads? They’re pretty rad.";
+                Char2speech.text = "You want to meet my dads? They’re pretty rad.";
         }
        else if (primeInt ==11){
                 Char1name.text = "";
@@ -181,19 +181,5 @@ public void talking(){         // main story function. Players hit next to progr
                         fadeImage.GetComponent<Image>().color = new Color(1, 1, 1, alphaLevel);
                         Debug.Log("Alpha is: " + alphaLevel);
                 }
-        }
-
-		//TYPE ON EFFECT
-		 IEnumerator TypeText(Text target, string fullText){
-                float delay = 0.01f;
-                nextButton.SetActive(false);
-                allowSpace = false;
-                for (int i = 0; i < fullText.Length; i++){
-                        string currentText = fullText.Substring(0,i);
-                        target.text = currentText;
-                        yield return new WaitForSeconds(delay);
-                }
-                nextButton.SetActive(true);
-                allowSpace = true;
         }
 }

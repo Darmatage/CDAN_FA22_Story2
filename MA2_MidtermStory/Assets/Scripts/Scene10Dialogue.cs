@@ -5,7 +5,7 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using UnityEngine.Audio;
 
-public class Scene2Dialogue : MonoBehaviour {
+public class Scene10Dialogue : MonoBehaviour {
         public int primeInt = 1;  // This integer drives game progress!
         public Text Char1name;
         public Text Char1speech;
@@ -13,6 +13,14 @@ public class Scene2Dialogue : MonoBehaviour {
         public Text Char2speech;
         public Text Char3name;
         public Text Char3speech;
+        public Text Char4name;
+        public Text Char4speech;
+        public Text Char5name;
+        public Text Char5speech;
+        public Text Char6name;
+        public Text Char6speech;
+        public Text Char7name;
+        public Text Char7speech;
        //public Text Char3name;
        //public Text Char3speech;
         public GameObject DialogueDisplay;
@@ -115,7 +123,7 @@ public void talking(){  // main story function. Players hit next to progress to 
          Char4speech.text = "";
                 //gameHandler.AddPlayerStat(1);
         }
-        else if (primeInt == 5){
+        else if (primeInt == 6){
           DialogueDisplay.SetActive(true);
           DialogueDisplay.SetActive(true);
           Char1name.text = "";
@@ -128,7 +136,7 @@ public void talking(){  // main story function. Players hit next to progress to 
           Char4speech.text = "Yes, sir!";
                  //gameHandler.AddPlayerStat(1);
          }
-         else if (primeInt == 5){
+         else if (primeInt == 7){
            DialogueDisplay.SetActive(true);
            DialogueDisplay.SetActive(true);
            Char1name.text = "";
@@ -141,7 +149,7 @@ public void talking(){  // main story function. Players hit next to progress to 
            Char4speech.text = "";
                   //gameHandler.AddPlayerStat(1);
           }
-          else if (primeInt == 5){
+          else if (primeInt == 8){
             DialogueDisplay.SetActive(true);
             DialogueDisplay.SetActive(true);
             Char1name.text = "YOU";
@@ -154,7 +162,7 @@ public void talking(){  // main story function. Players hit next to progress to 
             Char4speech.text = "";
                    //gameHandler.AddPlayerStat(1);
            }
-           else if (primeInt == 5){
+           else if (primeInt == 9){
              DialogueDisplay.SetActive(true);
              DialogueDisplay.SetActive(true);
              Char1name.text = "YOU";
@@ -167,7 +175,7 @@ public void talking(){  // main story function. Players hit next to progress to 
              Char4speech.text = "";
                     //gameHandler.AddPlayerStat(1);
             }
-            else if (primeInt == 5){
+            else if (primeInt == 10){
               DialogueDisplay.SetActive(true);
               DialogueDisplay.SetActive(true);
               Char1name.text = "";
@@ -182,7 +190,7 @@ public void talking(){  // main story function. Players hit next to progress to 
               Char5speech.text = "Then we should be preparing our defenses now! We need to notify every country and mobilize our army! The Navy, Homeland Security, everything sir!";
                      //gameHandler.AddPlayerStat(1);
              }
-             else if (primeInt == 5){
+             else if (primeInt == 11){
                DialogueDisplay.SetActive(true);
                DialogueDisplay.SetActive(true);
                Char1name.text = "";
@@ -197,7 +205,7 @@ public void talking(){  // main story function. Players hit next to progress to 
                Char5speech.text = "";
                       //gameHandler.AddPlayerStat(1);
               }
-              else if (primeInt == 5){
+              else if (primeInt == 12){
                 DialogueDisplay.SetActive(true);
                 DialogueDisplay.SetActive(true);
                 Char1name.text = "";
@@ -212,7 +220,7 @@ public void talking(){  // main story function. Players hit next to progress to 
                 Char5speech.text = "They will be forced to face reality when they see the truth with their own eyes. Then they weill know that we were right!";
                        //gameHandler.AddPlayerStat(1);
                }
-               else if (primeInt == 5){
+               else if (primeInt == 13){
                  DialogueDisplay.SetActive(true);
                  DialogueDisplay.SetActive(true);
                  Char1name.text = "";
@@ -227,7 +235,7 @@ public void talking(){  // main story function. Players hit next to progress to 
                  Char5speech.text = "";
                         //gameHandler.AddPlayerStat(1);
                 }
-                else if (primeInt == 5){
+                else if (primeInt == 14){
                   DialogueDisplay.SetActive(true);
                   DialogueDisplay.SetActive(true);
                   Char1name.text = "YOU";
@@ -242,7 +250,7 @@ public void talking(){  // main story function. Players hit next to progress to 
                   Char5speech.text = "";
                          //gameHandler.AddPlayerStat(1);
                  }
-                 else if (primeInt == 5){
+                 else if (primeInt == 15){
                    DialogueDisplay.SetActive(true);
                    DialogueDisplay.SetActive(true);
                    Char1name.text = "";
@@ -259,8 +267,7 @@ public void talking(){  // main story function. Players hit next to progress to 
                    nextButton.SetActive(false);
                    allowSpace = false;
                    Choice1a.SetActive(true); // function Choice1aFunct()
-                   Choice1b.SetActive(true); // function Choice1bFunct()
-
+}
 
         //after choice 1:
                 else if (primeInt == 500){
@@ -278,7 +285,7 @@ public void talking(){  // main story function. Players hit next to progress to 
                   Char5speech.text = "";
                          //gameHandler.AddPlayerStat(1);
                  }
-                 else if (primeInt == 5){
+                 else if (primeInt == 501){
                    DialogueDisplay.SetActive(true);
                    DialogueDisplay.SetActive(true);
                    Char1name.text = "";
@@ -293,7 +300,7 @@ public void talking(){  // main story function. Players hit next to progress to 
                    Char5speech.text = "";
                           //gameHandler.AddPlayerStat(1);
                   }
-                  else if (primeInt == 5){
+                  else if (primeInt == 502){
                     DialogueDisplay.SetActive(true);
                     DialogueDisplay.SetActive(true);
                     Char1name.text = "YOU";
@@ -308,7 +315,7 @@ public void talking(){  // main story function. Players hit next to progress to 
                     Char5speech.text = "";
                            //gameHandler.AddPlayerStat(1);
                    }
-                   else if (primeInt == 5){
+                   else if (primeInt == 503){
                      DialogueDisplay.SetActive(true);
                      DialogueDisplay.SetActive(true);
                      Char1name.text = "";
@@ -325,7 +332,7 @@ public void talking(){  // main story function. Players hit next to progress to 
 
 
                 }
-                else if (primeInt == 5){
+                else if (primeInt == 504){
                   DialogueDisplay.SetActive(true);
                   DialogueDisplay.SetActive(true);
                   Char1name.text = "But you will die! If you surrender, your race will be able to live on!";
@@ -340,7 +347,7 @@ public void talking(){  // main story function. Players hit next to progress to 
                   Char5speech.text = "";
                          //gameHandler.AddPlayerStat(1);
                  }
-                 else if (primeInt == 5){
+                 else if (primeInt == 505){
                    DialogueDisplay.SetActive(true);
                    DialogueDisplay.SetActive(true);
                    Char1name.text = "";
@@ -355,7 +362,7 @@ public void talking(){  // main story function. Players hit next to progress to 
                    Char5speech.text = "";
                           //gameHandler.AddPlayerStat(1);
                   }
-                  else if (primeInt == 5){
+                  else if (primeInt == 506){
                     DialogueDisplay.SetActive(true);
                     DialogueDisplay.SetActive(true);
                     Char1name.text = "";
@@ -371,7 +378,7 @@ public void talking(){  // main story function. Players hit next to progress to 
                            //gameHandler.AddPlayerStat(1);
                    }
                    //Go to the bad ending 3: THE ANNIHILATION
-               }
+
                else if (primeInt == 600){
                  DialogueDisplay.SetActive(true);
                  DialogueDisplay.SetActive(true);
@@ -387,7 +394,7 @@ public void talking(){  // main story function. Players hit next to progress to 
                  Char5speech.text = "";
                         //gameHandler.AddPlayerStat(1);
                 }
-                else if (primeInt == 600){
+                else if (primeInt == 601){
                   DialogueDisplay.SetActive(true);
                   DialogueDisplay.SetActive(true);
                   Char1name.text = "YOU";
@@ -402,7 +409,7 @@ public void talking(){  // main story function. Players hit next to progress to 
                   Char5speech.text = "";
                          //gameHandler.AddPlayerStat(1);
                  }
-                 else if (primeInt == 600){
+                 else if (primeInt == 602){
                    DialogueDisplay.SetActive(true);
                    DialogueDisplay.SetActive(true);
                    Char1name.text = "";
@@ -417,11 +424,11 @@ public void talking(){  // main story function. Players hit next to progress to 
                    Char5speech.text = "";
                           //gameHandler.AddPlayerStat(1);
                   }
-            }
+
 
 
                }
-             }
+
 
 
 
@@ -452,6 +459,4 @@ public void talking(){  // main story function. Players hit next to progress to 
                                 //GameObject.FindWithTag("GameHandler").GetComponent<GameHandler>().hasComm = true;
                                 //GameHandler.hasAi = true;
                         }
-
-
-                          }
+                  }
