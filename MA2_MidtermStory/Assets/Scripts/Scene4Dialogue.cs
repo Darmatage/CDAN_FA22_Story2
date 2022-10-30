@@ -137,7 +137,7 @@ public void talking(){         // main story function. Players hit next to progr
         }
 		else if (primeInt ==12){
                 Char1name.text = "YOU";
-                Char1speech.text = "(it'd be best to follow this little human who seems to understand my words)";
+                Char1speech.text = "";
                 Char2name.text = "";
                 Char2speech.text = "";
         }
