@@ -5,7 +5,7 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using UnityEngine.Audio;
 
-public class Scene4bDialogue : MonoBehaviour {
+public class Scene4Dialogue : MonoBehaviour {
         public int primeInt = 1;         // This integer drives game progress!
         public Text Char1name;
         public Text Char1speech;
@@ -14,17 +14,14 @@ public class Scene4bDialogue : MonoBehaviour {
        //public Text Char3name;
        //public Text Char3speech;
         public GameObject DialogueDisplay;
-        public GameObject ArtChar1;
-		public GameObject ArtChar1b;
-		//public GameObject ArtChar1c;
-       public GameObject ArtChar2;
-	   //public GameObject ArtChar2b;
-	   //public GameObject ArtChar2c;
+        public GameObject ArtChar1a; //MatildaExcited
+		    public GameObject ArtChar1b; //MatildaHappy
+        public GameObject ArtChar1c; //MatilaLeaningIn
+        public GameObject ArtChar1d; //MatildaQuestioning
         public GameObject ArtBG1;
-		public GameObject ArtBG_black;
         public GameObject Choice1a;
         public GameObject Choice1b;
-		public GameObject Choice1c;
+		    public GameObject Choice1c;
         public GameObject NextScene1Button;
         //public GameObject NextScene2Button;
         public GameObject nextButton;
@@ -37,17 +34,20 @@ public class Scene4bDialogue : MonoBehaviour {
 
 void Start(){         // initial visibility settings
         DialogueDisplay.SetActive(false);
-        ArtChar1.SetActive(false); // pixeli motherboard form
-		ArtChar1b.SetActive(false); // pixeli  collar form
-		ArtChar2.SetActive(false); // stray dog
+        ArtChar1a.SetActive(false);
+		    ArtChar1b.SetActive(false);
+		    ArtChar1c.SetActive(false);
+        ArtChar1d.SetActive(false);
         ArtBG1.SetActive(true);
-		ArtBG_black.SetActive(true);
         Choice1a.SetActive(false);
         Choice1b.SetActive(false);
-		Choice1c.SetActive(false);
+		    Choice1c.SetActive(false);
         NextScene1Button.SetActive(false);
         //NextScene2Button.SetActive(false);
         nextButton.SetActive(true);
+      if (GameHandler.hasComm==true){primeInt=1;}
+      if (GameHandler.hasAi==true){}
+      if (GameHandler.hasProof==true){}
    }
 
 void Update(){         // use spacebar as Next button
@@ -68,68 +68,72 @@ public void talking(){         // main story function. Players hit next to progr
           ArtChar1.SetActive(true);
                 DialogueDisplay.SetActive(true);
                 Char1name.text = "YOU";
-                Char1speech.text = "Woof! Woof, woof.";
+                Char1speech.text = "(I’m not sure how well a conversation will go with this one, but I’ll try.)";
                 Char2name.text = "";
-				StartCoroutine(TypeText(Char2speech, ""));
+                Char2speech = "";
         }
        else if (primeInt ==3){
-                Char1name.text = "";
-                Char1speech.text = "";
-                Char2name.text = "Matilda";
-                Char2speech.text = "Here, doggy, doggy!";
+                Char1name.text = "YOU";
+                Char1speech.text = "Hello, underdeveloped female human. I need your help.";
+                Char2name.text = "";
+                Char2speech.text = "";
                 //gameHandler.AddPlayerStat(1);
         }
        else if (primeInt == 4){
-                Char1name.text = "YOU";
-                Char1speech.text = "(Right..without communication device, this human won't understand me)";
-                Char2name.text = "";
-				StartCoroutine(TypeText(Char2speech, ""));
-        }
-       else if (primeInt == 5){
+         ArtChar1a.SetActive(true);
                 Char1name.text = "";
                 Char1speech.text = "";
-                Char2name.text = "Matilda";
-                Char2speech.text = "Wait a minute!/nyou are not just a dog, are you?";
+                Char2name.text = "Small Human";
+                Char2speech = "Woah, a talking dog?";
+        }
+       else if (primeInt == 5){
+         ArtChar1a.SetActive(false);
+         ArtChar1c.SetActive(true);
+                Char1name.text = "";
+                Char1speech.text = "";
+                Char2name.text = "Small Human";
+                Char2speech.text = "Here, doggy doggy!";
                 //gameHandler.AddPlayerStat(1);
         }
        else if (primeInt == 6){
                 Char1name.text = "YOU";
-                Char1speech.text = "(Huh? DOes..does this human know?)";
+                Char1speech.text = "(She is .. touching my head?)/n(.. Huh. It’s strangely nice.)";
                 Char2name.text = "";
-				StartCoroutine(TypeText(Char2speech, ""));
+				        Char2speech = "";
         }
        else if (primeInt ==7){
-                Char1name.text = "";
-                Char1speech.text = "";
-                Char2name.text = "Matilda";
-                Char2speech.text = "How? Your head told me";
+                Char1name.text = "YOU";
+                Char1speech.text = "(This must be a common gesture among humans.)/n(I should cooperate with this underdeveloped specimen so things go smoothly.)";
+                Char2name.text = "";
+                Char2speech.text = "";
         }
 
 		else if (primeInt == 8){
                 Char1name.text = "YOU";
-                Char1speech.text = "A psychic? Humans have developed enough to possess that ability?";
+                Char1speech.text = "It is a pleasure to meet you human, but time is of the essence and we don’t have the luxury of dawdling.";
                 Char2name.text = "";
-				StartCoroutine(TypeText(Char2speech, ""));
+                Char2speech = "";
         }
        else if (primeInt ==9){
-                Char1name.text = "";
-                Char1speech.text = "";
-                Char2name.text = "Matilda";
-                Char2speech.text = "You're friends are coming too? But they're not coming to visit right? They are coming..to fight?";
+                Char1name.text = "YOU";
+                Char1speech.text = "Please take me to your leader.";
+                Char2name.text = "";
+                Char2speech.text = "";
         }
 
 		else if (primeInt == 10){
-                Char1name.text = "YOU";
-                Char1speech.text = "It's complicated but yes this planet is in danger. I need to talk to the leader of this planet NOW";
-                Char2name.text = "";
-				StartCoroutine(TypeText(Char2speech, ""));
-        }
-       else if (primeInt ==11){
-         ArtChar1.SetActive(false);
+      ArtChar1c.SetActive(false);
+      ArtChar1b.SetActive(true);
                 Char1name.text = "";
                 Char1speech.text = "";
-                Char2name.text = "Matilda";
-                Char2speech.text = "Oh you want to go see my dads? They are pretty rad. They work in big office and beat bad guys for living";
+                Char2name.text = "Small Human";
+                Char2speech = "You want to meet my dads? They’re pretty rad.";
+        }
+       else if (primeInt ==11){
+                Char1name.text = "";
+                Char1speech.text = "";
+                Char2name.text = "Small Human";
+                Char2speech.text = "They work in a big office where they beat bad guys and talk to people in neat suits./nThey’re the coolest!";
         }
 		else if (primeInt ==12){
                 Char1name.text = "YOU";
@@ -138,8 +142,6 @@ public void talking(){         // main story function. Players hit next to progr
                 Char2speech.text = "";
         }
 		else if (primeInt ==13){
-			StartCoroutine(FadeOut(ArtBG_black));
-
                 Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "";
@@ -147,7 +149,7 @@ public void talking(){         // main story function. Players hit next to progr
         }
 	}
 
-     
+
 
 
 

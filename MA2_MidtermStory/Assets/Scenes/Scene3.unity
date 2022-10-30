@@ -2220,6 +2220,7 @@ MonoBehaviour:
   ArtChar3: {fileID: 547825757}
   ArtChar4: {fileID: 1561876603}
   ArtBG1: {fileID: 1618883222}
+  ArtBG2: {fileID: 0}
   Choice1a: {fileID: 1688778716}
   Choice1b: {fileID: 150069303}
   NextScene1Button: {fileID: 1805861599}
