@@ -268,7 +268,8 @@ public void talking(){  // main story function. Players hit next to progress to 
                    // Turn off "Next" button, turn on "Choice" buttons
                    nextButton.SetActive(false);
                    allowSpace = false;
-                   Choice1a.SetActive(true); // function Choice1aFunct()
+                   Choice1a.SetActive(true);
+                   Choice1b.SetActive(true);
 }
 
         //after choice 1:
@@ -377,7 +378,7 @@ public void talking(){  // main story function. Players hit next to progress to 
                     Char4speech.text = "";
                     Char5name.text = "";
                     Char5speech.text = "";
-                           //gameHandler.AddPlayerStat(1);
+                    NextScene1Button.SetActive(true);
                    }
                    //Go to the bad ending 3: THE ANNIHILATION
 
@@ -1228,7 +1229,7 @@ Choice1a.SetActive(true); // function Choice1aFunct()
 Choice1b.SetActive(true); // function Choice1bFunct()
 }
                     }
-                  
+
 
 
 
@@ -1289,16 +1290,13 @@ Choice1b.SetActive(true); // function Choice1bFunct()
                                nextButton.SetActive(true);
                                allowSpace = true;
 
-                  }
+                      }
+                      public void nextSceneButton1Funct(){
+                        SceneManager.LoadScene("End_BadEnd2");
+                      }
+                      public void nextSceneChange2Funct(){
+                        SceneManager.LoadScene("End_GoodEnd");
+                      }
 
-                  IEnumerator TypeText(Text target, string fullText){
-                             float delay = 0.01f;
-                             nextButton.SetActive(false);
-                             allowSpace = false;
-                             for (int i = 0; i < fullText.Length; i++){
-                                     string currentText = fullText.Substring(0,i);
-                                     target.text = currentText;
-                                     yield return new WaitForSeconds(delay);
-                             }}
 
-                    }
+              }
