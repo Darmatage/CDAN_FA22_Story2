@@ -278,20 +278,11 @@ else if (primeInt == 306){
 }
 
 
-    IEnumerator TypeText(Text target, string fullText){
-          float delay = 0.01f;
-          nextButton.SetActive(false);
-          allowSpace = false;
-          for (int i = 0; i < fullText.Length; i++){
-          string currentText = fullText.Substring(0,i);
-          target.text = currentText;
-          yield return new WaitForSeconds(delay);
-          }
+
   }
 
 
-    void SceneChange1(){
+    void SceneChange1Funct(){
                          SceneManager.LoadScene("Scene9");
                   }
              }
-        }

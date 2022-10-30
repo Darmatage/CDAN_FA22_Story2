@@ -63,7 +63,7 @@ public void talking(){         // main story function. Players hit next to progr
         primeInt = primeInt + 1;
         if (primeInt == 1){
                 // AudioSource.Play();
-        }
+              }
         else if (primeInt == 2){
           ArtChar1a.SetActive(true);
                 DialogueDisplay.SetActive(true);
@@ -71,21 +71,21 @@ public void talking(){         // main story function. Players hit next to progr
                 Char1speech.text = "(I’m not sure how well a conversation will go with this one, but I’ll try.)";
                 Char2name.text = "";
                 Char2speech.text = "";
-        }
+              }
        else if (primeInt ==3){
                 Char1name.text = "YOU";
                 Char1speech.text = "Hello, underdeveloped female human. I need your help.";
                 Char2name.text = "";
                 Char2speech.text = "";
                 //gameHandler.AddPlayerStat(1);
-        }
+              }
        else if (primeInt == 4){
          ArtChar1a.SetActive(true);
                 Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "Small Human";
                 Char2speech.text = "Woah, a talking dog?";
-        }
+              }
        else if (primeInt == 5){
          ArtChar1a.SetActive(false);
          ArtChar1c.SetActive(true);
@@ -94,32 +94,32 @@ public void talking(){         // main story function. Players hit next to progr
                 Char2name.text = "Small Human";
                 Char2speech.text = "Here, doggy doggy!";
                 //gameHandler.AddPlayerStat(1);
-        }
+              }
        else if (primeInt == 6){
                 Char1name.text = "YOU";
                 Char1speech.text = "(She is .. touching my head?)/n(.. Huh. It’s strangely nice.)";
                 Char2name.text = "";
 				        Char2speech.text = "";
-        }
+              }
        else if (primeInt ==7){
                 Char1name.text = "YOU";
                 Char1speech.text = "(This must be a common gesture among humans.)/n(I should cooperate with this underdeveloped specimen so things go smoothly.)";
                 Char2name.text = "";
                 Char2speech.text = "";
-        }
+              }
 
-		else if (primeInt == 8){
+		   else if (primeInt == 8){
                 Char1name.text = "YOU";
                 Char1speech.text = "It is a pleasure to meet you human, but time is of the essence and we don’t have the luxury of dawdling.";
                 Char2name.text = "";
                 Char2speech.text = "";
-        }
+              }
        else if (primeInt ==9){
                 Char1name.text = "YOU";
                 Char1speech.text = "Please take me to your leader.";
                 Char2name.text = "";
                 Char2speech.text = "";
-        }
+              }
 
 		else if (primeInt == 10){
       ArtChar1c.SetActive(false);
@@ -128,30 +128,39 @@ public void talking(){         // main story function. Players hit next to progr
                 Char1speech.text = "";
                 Char2name.text = "Small Human";
                 Char2speech.text = "You want to meet my dads? They’re pretty rad.";
-        }
+              }
        else if (primeInt ==11){
                 Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "Small Human";
                 Char2speech.text = "They work in a big office where they beat bad guys and talk to people in neat suits./nThey’re the coolest!";
-        }
+              }
 		else if (primeInt ==12){
+                Char1name.text = "";
+                Char1speech.text = "";
+                Char2name.text = "Small Human";
+                Char2speech.text = "Do you wanna a jelly sandwich, by the way?";
+                nextButton.SetActive(false);
+                Choice1a.SetActive(true);
+                Choice1b.SetActive(true);
+              }
+    else if (primeInt ==100){
                 Char1name.text = "YOU";
                 Char1speech.text = "";
                 Char2name.text = "";
-                Char2speech.text = "";
+                Char2speech.text = "?";
+
+	             }
+}
+
+
+
+        public void Choice1aFunct(){
+          primeInt=99;
+          nextButton.SetActive(true);
+          Choice1a.SetActive(false);
+          Choice1b.SetActive(false);
         }
-		else if (primeInt ==13){
-                Char1name.text = "";
-                Char1speech.text = "";
-                Char2name.text = "";
-                Char2speech.text = "";
-        }
-	}
-
-
-
-
 
         public void SceneChange1(){
                SceneManager.LoadScene("Scene5");
