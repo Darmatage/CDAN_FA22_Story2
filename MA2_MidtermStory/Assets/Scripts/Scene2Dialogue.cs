@@ -358,8 +358,7 @@ public void talking(){  // main story function. Players hit next to progress to 
 
 // FUNCTIONS FOR BUTTONS TO ACCESS (Choice #1 and switch scenes)
         public void Choice1aFunct(){
-          if (GameHandler.hasProof == true){primeInt = 99;}//bark
-                primeInt = 99;
+        if(GameHandler.hasProof==true){primeInt=99;}
                 Choice1a.SetActive(false);
                 Choice1b.SetActive(false);
                 nextButton.SetActive(true);

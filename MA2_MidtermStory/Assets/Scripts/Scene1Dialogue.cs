@@ -65,7 +65,6 @@ void Update(){         // use spacebar as Next button
 public void talking(){         // main story function. Players hit next to progress to next int
         primeInt = primeInt + 1;
         if (primeInt == 1){
-                // AudioSource.Play();
         }
         else if (primeInt == 2){
           ArtChar1.SetActive(true);

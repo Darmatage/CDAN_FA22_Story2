@@ -26,6 +26,7 @@ public class Scene3Dialogue : MonoBehaviour {
         public GameObject ArtChar4; //Human4 (no dialogue)
        //public GameObject ArtChar2;
         public GameObject ArtBG1;
+        public GameObject ArtBG2;
         public GameObject Choice1a;
         public GameObject Choice1b;
         public GameObject NextScene1Button;
@@ -77,7 +78,6 @@ void Update(){         // use spacebar as Next button
 public void talking(){         // main story function. Players hit next to progress to next int
         primeInt = primeInt + 1;
         if (primeInt == 1){
-                // AudioSource.Play();
       }
         else if (primeInt == 2){
                 DialogueDisplay.SetActive(true);
@@ -154,6 +154,10 @@ public void talking(){         // main story function. Players hit next to progr
                 }
 // ENCOUNTER AFTER CHOICE #1
       else if (primeInt == 200){
+          ArtChar1.SetActive(true);
+          ArtChar2.SetActive(true);
+          ArtChar3.SetActive(true);
+          ArtChar4.SetActive(true);
                 Char1name.text = "YOU";
                 Char1speech.text = "Humans! I came here with a warning. \nYou’re all in incredible danger!";
                 Char2name.text = "";
@@ -406,6 +410,12 @@ else if (primeInt == 403){
     }
     public void SceneChange4(){
         primeInt=499;
+    }
+    public void SceneChange5(){
+      SceneManager.LoadScene("End_BadEnd1");
+    }
+    public void SceneChange6(){
+      SceneManager.LoadScene("Scene4");
     }
     IEnumerator TypeText(Text target, string fullText){
                  float delay = 0.01f;
