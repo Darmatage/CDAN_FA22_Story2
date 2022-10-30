@@ -26,6 +26,8 @@ public class Scene7Dialogue : MonoBehaviour {
         public GameObject ArtBG2;
         public GameObject Choice1a;
         public GameObject Choice1b;
+        public GameObject Choice1c;
+        public GameObject Choice1d;
         public GameObject NextScene1Button;
         public GameObject NextScene2Button;
         //public GameObject NextScene2Button;
