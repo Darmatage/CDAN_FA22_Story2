@@ -57,12 +57,6 @@ void Start(){         // initial visibility settings
         NextScene6Button.SetActive(false);
         nextButton.SetActive(true);
 
-      if(GameHandler.hasAi==true){
-        primeInt=99;
-      }
-      else if ((GameHandler.hasComm == true)||(GameHandler.hasProof == true)){
-        primeInt=1;
-      }
 }
 
 
@@ -154,22 +148,6 @@ public void talking(){         // main story function. Players hit next to progr
                 }
 // ENCOUNTER AFTER CHOICE #1
       else if (primeInt == 200){
-          ArtChar1.SetActive(true);
-          ArtChar2.SetActive(true);
-          ArtChar3.SetActive(true);
-          ArtChar4.SetActive(true);
-                Char1name.text = "YOU";
-                Char1speech.text = "Humans! I came here with a warning. \nYou’re all in incredible danger!";
-                Char2name.text = "";
-                Char2speech.text = "";
-                Char3name.text = "";
-                Char3speech.text = "";
-                Char4name.text = "";
-                Char4speech.text = "";
-                Char5name.text = "";
-                Char5speech.text = "";
-          }
-      else if (primeInt == 201){
                 Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "";
@@ -181,7 +159,7 @@ public void talking(){         // main story function. Players hit next to progr
                 Char5name.text = "";
                 Char5speech.text = "";
           }
-      else if (primeInt == 202){
+      else if (primeInt == 201){
                 Char1name.text = "YOU";
                 Char1speech.text = "Yes, human. Heed me! I bring warnings!";
                 Char2name.text = "";
@@ -193,7 +171,7 @@ public void talking(){         // main story function. Players hit next to progr
                 Char5name.text = "";
                 Char5speech.text = "";
           }
-      else if (primeInt == 203){
+      else if (primeInt == 202){
                 Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "";
@@ -205,7 +183,7 @@ public void talking(){         // main story function. Players hit next to progr
                 Char5name.text = "";
                 Char5speech.text = "";
           }
-                else if (primeInt == 204){
+                else if (primeInt == 203){
                 Char1name.text = "YOU";
                 Char1speech.text = "";
                 Char2name.text = "";
@@ -220,7 +198,7 @@ public void talking(){         // main story function. Players hit next to progr
 
 
 
-                 else if (primeInt == 205){
+                 else if (primeInt == 204){
                         Char1name.text = "";
                                   Char1speech.text = " ";
                                   Char2name.text = "";
@@ -232,7 +210,7 @@ public void talking(){         // main story function. Players hit next to progr
                                   Char5name.text = "";
                                   Char5speech.text = "";
           }
-                 else if (primeInt == 206){
+                 else if (primeInt == 205){
                                   Char1name.text = "";
                                   Char1speech.text = "";
                                   Char2name.text = "";
@@ -377,6 +355,15 @@ else if (primeInt == 403){
                           }
 }
 // FUNCTIONS FOR BUTTONS TO ACCESS (Choice #1 and switch scenes)
+  public void nextButtonFunct(){
+    if(GameHandler.hasAi==true){
+          primeInt=99;
+        }
+      else if ((GameHandler.hasComm == true)||(GameHandler.hasProof == true)){
+          primeInt=1;
+        }
+  }
+
   public void Choice1aFunct(){
        primeInt = 299;
        Choice1a.SetActive(false);
@@ -403,6 +390,22 @@ else if (primeInt == 403){
         SceneManager.LoadScene("Scene4");
       }
     public void SceneChange2(){
+      ArtChar1.SetActive(true);
+      ArtChar2.SetActive(true);
+      ArtChar3.SetActive(true);
+      ArtChar4.SetActive(true);
+      NextScene1Button.SetActive(false);
+      NextScene2Button.SetActive(false);
+            Char1name.text = "YOU";
+            Char1speech.text = "Humans! I came here with a warning. \nYou’re all in incredible danger!";
+            Char2name.text = "";
+            Char2speech.text = "";
+            Char3name.text = "";
+            Char3speech.text = "";
+            Char4name.text = "";
+            Char4speech.text = "";
+            Char5name.text = "";
+            Char5speech.text = "";
         primeInt=199;
       }
     public void SceneChange3(){
