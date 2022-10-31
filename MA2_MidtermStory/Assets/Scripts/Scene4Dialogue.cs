@@ -21,7 +21,6 @@ public class Scene4Dialogue : MonoBehaviour {
         public GameObject ArtBG1;
         public GameObject Choice1a;
         public GameObject Choice1b;
-		    public GameObject Choice1c;
         public GameObject NextScene1Button;
         //public GameObject NextScene2Button;
         public GameObject nextButton;
@@ -41,7 +40,6 @@ void Start(){         // initial visibility settings
         ArtBG1.SetActive(true);
         Choice1a.SetActive(false);
         Choice1b.SetActive(false);
-		    Choice1c.SetActive(false);
         NextScene1Button.SetActive(false);
         //NextScene2Button.SetActive(false);
         nextButton.SetActive(true);
