@@ -57,6 +57,25 @@ void Start(){         // initial visibility settings
         NextScene6Button.SetActive(false);
         nextButton.SetActive(true);
 
+        if(GameHandler.hasAi==true){
+          DialogueDisplay.SetActive(true);
+          Char1name.text = "YOU";
+          Char1speech.text = "Pixeli, do you have any information about this place? \nHave you surveyed the area?";
+          Char2name.text = "";
+          Char2speech.text = "";
+          Char3name.text = "";
+          Char3speech.text = "";
+          Char4name.text = "";
+          Char4speech.text = "";
+          Char5name.text = "";
+          Char5speech.text = "";
+
+              primeInt=99;
+            }
+          else if ((GameHandler.hasComm == true)||(GameHandler.hasProof == true)){
+              primeInt=1;
+            }
+
 }
 
 
@@ -107,21 +126,13 @@ public void talking(){         // main story function. Players hit next to progr
   }
 
        else if (primeInt == 100){
-                Char1name.text = "YOU";
-                Char1speech.text = "Pixeli, do you have any information about this place? \nHave you surveyed the area?";
-                Char2name.text = "";
-                Char2speech.text = "";
-                         //gameHandler.AddPlayerStat(1);
-                 }
-
-       else if (primeInt == 101){
                 Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "Pixeli";
                 Char2speech.text = "Yes: this area is urban and metropolitan in nature. \nHumans colloquially refer to this as a 'city'.";
 
                  }
-       else if (primeInt == 102){
+       else if (primeInt == 101){
                 Char1name.text = "YOU";
                 Char1speech.text = "Wait, Pixeli. \nIs that a small human?";
                 Char2name.text = "";
@@ -129,14 +140,14 @@ public void talking(){         // main story function. Players hit next to progr
 
                  }
 
-       else if (primeInt == 103){
+       else if (primeInt == 102){
                 Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "Pixeli";
                 Char2speech.text = "Yes. Small humans are commonly referred to as children.";
 
                  }
-      else if (primeInt == 104){
+      else if (primeInt == 103){
                 Char1name.text = "YOU";
                 Char1speech.text = "I see. \nI need to act fast.";
                 Char2name.text = "";
@@ -146,6 +157,7 @@ public void talking(){         // main story function. Players hit next to progr
                 NextScene2Button.SetActive(true);
 
                 }
+
 // ENCOUNTER AFTER CHOICE #1
       else if (primeInt == 200){
                 Char1name.text = "";
@@ -355,14 +367,6 @@ else if (primeInt == 403){
                           }
 }
 // FUNCTIONS FOR BUTTONS TO ACCESS (Choice #1 and switch scenes)
-  public void nextButtonFunct(){
-    if(GameHandler.hasAi==true){
-          primeInt=99;
-        }
-      else if ((GameHandler.hasComm == true)||(GameHandler.hasProof == true)){
-          primeInt=1;
-        }
-  }
 
   public void Choice1aFunct(){
        primeInt = 299;
@@ -390,6 +394,9 @@ else if (primeInt == 403){
         SceneManager.LoadScene("Scene4");
       }
     public void SceneChange2(){
+      if (GameHandler.hasProof==true){
+        NextScene2Button.SetActive(false);
+      }
       ArtChar1.SetActive(true);
       ArtChar2.SetActive(true);
       ArtChar3.SetActive(true);
