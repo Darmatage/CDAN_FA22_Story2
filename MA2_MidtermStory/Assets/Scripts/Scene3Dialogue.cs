@@ -69,7 +69,6 @@ void Start(){         // initial visibility settings
           Char4speech.text = "";
           Char5name.text = "";
           Char5speech.text = "";
-
               primeInt=99;
             }
           else if ((GameHandler.hasComm == true)||(GameHandler.hasProof == true)){
@@ -95,7 +94,7 @@ public void talking(){         // main story function. Players hit next to progr
         else if (primeInt == 2){
                 DialogueDisplay.SetActive(true);
                 Char1name.text = "YOU";
-                Char1speech.text = "(The amount of humans here..is overwhelming./n(...)/n(The more the better I suppose.)";
+                Char1speech.text = "(The amount of humans here..is overwhelming. \n(...) \n(The more the better I suppose.)";
                 Char2name.text = "";
                 Char2speech.text = "";
                 Char3name.text = "";
@@ -129,12 +128,12 @@ public void talking(){         // main story function. Players hit next to progr
                 Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "Pixeli";
-                Char2speech.text = "Yes: this area is urban and metropolitan in nature./nHumans colloquially refer to this as a 'city'.";
+                Char2speech.text = "Yes: this area is urban and metropolitan in nature. \nHumans colloquially refer to this as a 'city'.";
 
                  }
        else if (primeInt == 101){
                 Char1name.text = "YOU";
-                Char1speech.text = "Wait, Pixeli./nIs that a small human?";
+                Char1speech.text = "Wait, Pixeli.\nIs that a small human?";
                 Char2name.text = "";
                 Char2speech.text = "";
 
@@ -149,7 +148,7 @@ public void talking(){         // main story function. Players hit next to progr
                  }
       else if (primeInt == 103){
                 Char1name.text = "YOU";
-                Char1speech.text = "I see./nI need to act fast.";
+                Char1speech.text = "I see. \nI need to act fast.";
                 Char2name.text = "";
                 Char2speech.text = "";
                 nextButton.SetActive(false);
@@ -293,7 +292,7 @@ public void talking(){         // main story function. Players hit next to progr
                  }
  else if (primeInt == 400){
       Char1name.text = "YOU";
-      Char1speech.text = "Hmph. .. You all refuse to listen./nI will find someone else who will heed my warning.";
+      Char1speech.text = "Hmph. .. You all refuse to listen.\nI will find someone else who will heed my warning.";
       Char2name.text = "";
       Char2speech.text = "";
       Char3name.text = "";
@@ -329,7 +328,7 @@ else if (primeInt == 402){
              }
 else if (primeInt == 403){
       Char1name.text = "YOU";
-      Char1speech.text = "(The police?)/n(Are those the authority figures of this world?)";
+      Char1speech.text = "(The police?)\n(Are those the authority figures of this world?)";
       Char2name.text = "";
       Char2speech.text = "";
       Char3name.text = "";
@@ -355,11 +354,18 @@ else if (primeInt == 403){
                           }
 else if (primeInt == 500){
       Char1name.text = "YOU";
-      Char1speech.text = "(All these human buildings look the same!/nWhere do I go?!)";
+      Char1speech.text = "(All these human buildings look the same!\n(Where do I go?!)";
       Char2name.text = "";
       Char2speech.text = "";
-      NextScene3Button.SetActive(true);
-      NextScene4Button.SetActive(true);
+                          }
+else if (primeInt == 501){
+      Char1name.text = "YOU";
+      Char1speech.text = "(Wait .. that's a small human in the distance!)\n(But .. should I go to it?)";
+      Char2name.text = "";
+      Char2speech.text = "";
+      NextScene5Button.SetActive(true);
+      NextScene6Button.SetActive(true);
+      nextButton.SetActive(false);
                           }
 }
 // FUNCTIONS FOR BUTTONS TO ACCESS (Choice #1 and switch scenes)
@@ -388,6 +394,12 @@ else if (primeInt == 500){
         Char1speech.text = "(The more the better. At least one of them has to believe me!)";
         Char2name.text = "";
         Char2speech.text = "";
+        Char3name.text = "";
+        Char3speech.text = "";
+        Char4name.text = "";
+        Char4speech.text = "";
+        Char5name.text = "";
+        Char5speech.text = "";
         primeInt = 399;
         Choice1a.SetActive(false);
         Choice1b.SetActive(false);
@@ -409,8 +421,10 @@ else if (primeInt == 500){
       ArtChar4.SetActive(true);
       NextScene1Button.SetActive(false);
       NextScene2Button.SetActive(false);
+      nextButton.SetActive(true);
+      allowSpace = true;
             Char1name.text = "YOU";
-            Char1speech.text = "Humans! I came here with a warning./nYou’re all in incredible danger!";
+            Char1speech.text = "Humans! I came here with a warning.\nYou’re all in incredible danger!";
             Char2name.text = "";
             Char2speech.text = "";
             Char3name.text = "";
@@ -427,10 +441,23 @@ else if (primeInt == 500){
     public void SceneChange4Funct(){
       ArtBG1.SetActive(false);
       ArtBG2.SetActive(true);
+      ArtChar1.SetActive(false);
+      ArtChar2.SetActive(false);
+      ArtChar3.SetActive(false);
+      ArtChar4.SetActive(false);
+      NextScene4Button.SetActive(false);
+      nextButton.SetActive(true);
+      allowSpace = true;
           Char1name.text = "YOU";
           Char1speech.text = "(I have to run..!)";
           Char2name.text = "";
           Char2speech.text = "";
+          Char3name.text = "";
+          Char3speech.text = "";
+          Char4name.text = "";
+          Char4speech.text = "";
+          Char5name.text = "";
+          Char5speech.text = "";
         primeInt=499;
     }
     public void SceneChange5Funct(){

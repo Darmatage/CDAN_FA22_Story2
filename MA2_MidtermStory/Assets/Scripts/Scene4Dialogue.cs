@@ -63,7 +63,6 @@ public void talking(){         // main story function. Players hit next to progr
                 // AudioSource.Play();
               }
         else if (primeInt == 2){
-          ArtChar1a.SetActive(true);
                 DialogueDisplay.SetActive(true);
                 Char1name.text = "YOU";
                 Char1speech.text = "(I’m not sure how well a conversation will go with this one, but I’ll try.)";
@@ -101,7 +100,7 @@ public void talking(){         // main story function. Players hit next to progr
               }
        else if (primeInt ==7){
                 Char1name.text = "YOU";
-                Char1speech.text = "(This must be a common gesture among humans.)\n(I should cooperate with this underdeveloped specimen so things go smoothly.)";
+                Char1speech.text = "(This must be a common gesture among humans.)\n(I should cooperate with this underdeveloped specimen.)";
                 Char2name.text = "";
                 Char2speech.text = "";
               }
@@ -129,19 +128,19 @@ public void talking(){         // main story function. Players hit next to progr
       ArtChar1b.SetActive(true);
                 Char1name.text = "";
                 Char1speech.text = "";
-                Char2name.text = "Small Human";
+                Char2name.text = "Matilda";
                 Char2speech.text = "You want to meet my dads? They’re pretty rad.";
               }
        else if (primeInt ==12){
                 Char1name.text = "";
                 Char1speech.text = "";
-                Char2name.text = "Small Human";
+                Char2name.text = "Matilda";
                 Char2speech.text = "They work in a big office where they beat bad guys and talk to people in neat suits.\nThey’re the coolest!";
               }
 		else if (primeInt ==13){
                 Char1name.text = "";
                 Char1speech.text = "";
-                Char2name.text = "Small Human";
+                Char2name.text = "Matilda";
                 Char2speech.text = "Do you wanna a jelly sandwich, by the way?";
                 nextButton.SetActive(false);
                 Choice1a.SetActive(true);
@@ -189,7 +188,7 @@ public void talking(){         // main story function. Players hit next to progr
               }
       else if (primeInt ==105){
                 Char1name.text = "YOU";
-                Char1speech.text = "How ... do you know that?/nHave humans discovered my planet already?";
+                Char1speech.text = "How ... do you know that?\nHave humans discovered my planet already?";
                 Char2name.text = "";
                 Char2speech.text = "";
 
@@ -216,10 +215,12 @@ public void talking(){         // main story function. Players hit next to progr
 
               }
       else if (primeInt ==109){
+        ArtChar1d.SetActive(false);
+        ArtChar1b.SetActive(true);
                 Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "Matilda";
-                Char2speech.text = "People’s heads have always talked to me./nTheir head voices are quieter, but I can hear them.";
+                Char2speech.text = "People’s heads have always talked to me.\nTheir head voices are quieter, but I can hear them.";
 
               }
       else if (primeInt ==110){
@@ -230,10 +231,12 @@ public void talking(){         // main story function. Players hit next to progr
 
               }
       else if (primeInt ==111){
+        ArtChar1b.SetActive(false);
+        ArtChar1d.SetActive(true);
                 Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "Matilda";
-                Char2speech.text = "Your friends are coming too?/nBut they’re not coming to visit right? They’re coming .. to fight?";
+                Char2speech.text = "Your friends are coming too?\nBut they’re not coming to visit right? They’re coming .. to fight?";
 
               }
       else if (primeInt ==112){
@@ -243,6 +246,8 @@ public void talking(){         // main story function. Players hit next to progr
                 Char2speech.text = "";
               }
       else if (primeInt ==113){
+        ArtChar1d.SetActive(false);
+        ArtChar1a.SetActive(true);
                 Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "Matilda";
@@ -265,7 +270,7 @@ public void talking(){         // main story function. Players hit next to progr
 
               }
       else if (primeInt ==202){
-        ArtChar1a.SetActive(false);
+        ArtChar1b.SetActive(false);
         ArtChar1d.SetActive(true);
                 Char1name.text = "";
                 Char1speech.text = "";
@@ -275,7 +280,7 @@ public void talking(){         // main story function. Players hit next to progr
               }
       else if (primeInt ==203){
                 Char1name.text = "YOU";
-                Char1speech.text = "How ... do you know that?/nHave humans discovered my planet already?";
+                Char1speech.text = "How ... do you know that?\nHave humans discovered my planet already?";
                 Char2name.text = "";
                 Char2speech.text = "";
 
@@ -302,6 +307,8 @@ public void talking(){         // main story function. Players hit next to progr
 
                        }
                else if (primeInt ==207){
+                 ArtChar1d.SetActive(false);
+                 ArtChar1b.SetActive(true);
                          Char1name.text = "";
                          Char1speech.text = "";
                          Char2name.text = "Matilda";
@@ -316,10 +323,12 @@ public void talking(){         // main story function. Players hit next to progr
 
                        }
                else if (primeInt ==209){
+                 ArtChar1b.SetActive(false);
+                 ArtChar1d.SetActive(true);
                          Char1name.text = "";
                          Char1speech.text = "";
                          Char2name.text = "Matilda";
-                         Char2speech.text = "Your friends are coming too?/nBut they’re not coming to visit right? They’re coming .. to fight?";
+                         Char2speech.text = "Your friends are coming too?\nBut they’re not coming to visit right? They’re coming .. to fight?";
 
                        }
                else if (primeInt ==210){
@@ -329,6 +338,8 @@ public void talking(){         // main story function. Players hit next to progr
                          Char2speech.text = "";
                        }
                else if (primeInt ==211){
+                 ArtChar1d.SetActive(false);
+                 ArtChar1a.SetActive(true);
                          Char1name.text = "";
                          Char1speech.text = "";
                          Char2name.text = "Matilda";

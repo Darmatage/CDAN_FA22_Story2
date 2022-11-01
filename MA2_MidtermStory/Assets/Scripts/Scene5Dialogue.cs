@@ -11,17 +11,23 @@ public class Scene5Dialogue : MonoBehaviour {
         public Text Char1speech;
         public Text Char2name;
         public Text Char2speech;
-		public Text Char3name;
-		public Text Char3speech;
-		public Text Char4name;
-		public Text Char4speech;
+		    public Text Char3name;
+		    public Text Char3speech;
+		    public Text Char4name;
+		    public Text Char4speech;
         public GameObject DialogueDisplay;
-        public GameObject ArtChar1;
+        public GameObject ArtChar1a;
         public GameObject ArtChar1b;
-        public GameObject ArtChar2;
-		public GameObject ArtChar2b;
-		public GameObject ArtChar3;
-		public GameObject ArtChar3b;
+        public GameObject ArtChar1c;
+        public GameObject ArtChar1d;
+        public GameObject ArtChar1e;
+        public GameObject ArtChar2a;
+        public GameObject ArtChar2b;
+        public GameObject ArtChar2c;
+        public GameObject ArtChar2d;
+        public GameObject ArtChar2e;
+        public GameObject ArtChar3a;
+        public GameObject ArtChar3b;
 		//public GameObject ArtChar4;
         public GameObject ArtBG1;
         //public GameObject Choice1a;
@@ -34,19 +40,36 @@ public class Scene5Dialogue : MonoBehaviour {
         private bool allowSpace = true;
 
 // initial visibility settings. Any new images or buttons need to also be SetActive(false);
-void Start(){  
+void Start(){
         DialogueDisplay.SetActive(false);
-        ArtChar1.SetActive(false);
+        ArtChar1a.SetActive(false);
+        ArtChar1b.SetActive(false);
+        ArtChar1c.SetActive(false);
+        ArtChar1d.SetActive(false);
+        ArtChar1e.SetActive(false);
+        ArtChar2a.SetActive(false);
+        ArtChar2b.SetActive(false);
+        ArtChar2c.SetActive(false);
+        ArtChar2d.SetActive(false);
+        ArtChar2e.SetActive(false);
+        ArtChar3a.SetActive(false);
+        ArtChar3b.SetActive(false);
         ArtBG1.SetActive(true);
-        //Choice1a.SetActive(false);
-        //Choice1b.SetActive(false);
         NextScene1Button.SetActive(false);
-        //NextScene2Button.SetActive(false);
         nextButton.SetActive(true);
-
-     // Find the gameHandler:
-     // gameHandler = GameObject.FindWithTag("GameHandler").GetComponent<GameHandler>();
-   }
+if (GameHandler.hasAi==true){
+    primeInt=1;
+    }
+    else if ((GameHandler.hasComm==true)||(GameHandler.hasProof==true)){
+               Char1name.text = "YOU";
+               Char1speech.text = "(I'm really here! Human containment units are so .. square.)";
+               Char2name.text = "";
+               Char2speech.text = "";
+               Char3name.text = "";
+               Char3speech.text = "";
+      primeInt=99;
+    }
+}
 
 void Update(){         // use spacebar as Next button
         if (allowSpace == true){
@@ -63,87 +86,244 @@ public void talking(){
                 // AudioSource.Play();
         }
         else if (primeInt == 2){
-               ArtChar1.SetActive(true);
+            ArtChar3a.SetActive(true);
                 DialogueDisplay.SetActive(true);
                 Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "Pixeli";
-                Char2speech.text = "Sir, we seem to have arrived in the living facilitate of this metropolitan city. How–ho–ho shou-should–o-we–!";
+                Char2speech.text = "Sir, we seem to have arrived in a living facility.";
+                Char3name.text = "";
+                Char3speech.text = "";
+                Char4name.text = "";
+				        Char4speech.text = "";
         }
-       else if (primeInt ==3){
-                Char1name.text = "YOU";
-                Char1speech.text = "Pixeli? Oh crap, the transition from the ship’s generator must’ve been too much. She’s broken and I don’t think I have the resources or the time to fix her. MAybe the humans can lend me some of their materials. But first,,,";
-                Char2name.text = "";
-                Char2speech.text = "";
-                //gameHandler.AddPlayerStat(1);
-        }
-       else if (primeInt == 4){
-                Char1name.text = "YOU";
-                Char1speech.text = "How do I get the attention of the humans in this containment unit? Perhaps this could work...BARK! BARK!";
-                Char2name.text = "";
-                Char2speech.text = "";
-        }
-       else if (primeInt == 5){
+       else if (primeInt == 3){
+            ArtChar3a.SetActive(false);
+            ArtChar3b.SetActive(true);
+                DialogueDisplay.SetActive(true);
                 Char1name.text = "";
-                Char1speech.text = "(Two men appear at the door, one looking surprised and ready to dote on the dog, the other more confused and perplexed.)";
+                Char1speech.text = "";
+                Char2name.text = "Pixeli";
+                Char2speech.text = "How–ho–ho shou-should–o-we–-!";
+        }
+       else if (primeInt ==4){
+         ArtChar3b.SetActive(false);
+                Char1name.text = "YOU";
+                Char1speech.text = "Pixeli?!/n(.. Snarglefart, the transition from the ship’s generator must’ve been too much.)";
                 Char2name.text = "";
                 Char2speech.text = "";
                 //gameHandler.AddPlayerStat(1);
         }
+      else if (primeInt ==5){
+                 Char1name.text = "YOU";
+                 Char1speech.text = "(She’s broken and I don’t think I have the resources or the time to fix her.)/n(Maybe the humans can lend me some of their materials.)";
+                 Char2name.text = "";
+                 Char2speech.text = "";
+                 //gameHandler.AddPlayerStat(1);
+         }
        else if (primeInt == 6){
-                Char1name.text = "";
-                Char1speech.text = "";
+                Char1name.text = "YOU";
+                Char1speech.text = "(How do I get the attention of the humans in this containment unit? Perhaps this could work.)";
                 Char2name.text = "";
                 Char2speech.text = "";
-				Char3name.text = "Evan";
-                Char3speech.text = "Oh my god. Chris, look! It's so cute!";
         }
-       else if (primeInt ==7){
+        else if (primeInt == 7){
+                 Char1name.text = "YOU";
+                 Char1speech.text = "BARK! BARK!";
+                 Char2name.text = "";
+                 Char2speech.text = "";
+         }
+       else if (primeInt == 8){
+         ArtChar1c.SetActive(true);
+         ArtChar2c.SetActive(true);
                 Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "";
                 Char2speech.text = "";
-				Char4name.text = "Chris";
-				Char4speech.text = "Yeah. He's a cute little guy alright. Wierd how we haven't seen him around before.";
+                Char3name.text = "";
+                Char3speech.text = "";
+                Char4name.text = "";
+				        Char4speech.text = "";
+                //gameHandler.AddPlayerStat(1);
+        }
+       else if (primeInt == 9){
+                Char1name.text = "";
+                Char1speech.text = "";
+                Char2name.text = "";
+                Char2speech.text = "";
+				        Char3name.text = "Evan";
+                Char3speech.text = "Oh my god. Chris, look! It's so cute!";
+                Char4name.text = "";
+				        Char4speech.text = "";
+        }
+       else if (primeInt ==10){
+                Char1name.text = "";
+                Char1speech.text = "";
+                Char2name.text = "";
+                Char2speech.text = "";
+                Char3name.text = "";
+                Char3speech.text = "";
+				        Char4name.text = "Chris";
+				        Char4speech.text = "Yeah. He's a cute little guy alright. Weird how we haven't seen him around before.";
         }
        else if (primeInt == 8){
                 Char1name.text = "";
                 Char1speech.text = "";
+                Char2name.text = "";
+                Char2speech.text = "";
                 Char3name.text = "Evan";
-                Char3speech.text = "It doesn’t look like he has a collar. ..And the poor thing looks like he’s starving!";
-	   }
+                Char3speech.text = "It doesn’t look like he has a collar. .. And the poor thing looks like he’s starving!";
+                Char4name.text = "";
+				        Char4speech.text = "";
+        }
+
        else if (primeInt == 9){
                 Char1name.text = "";
                 Char1speech.text = "";
+                Char2name.text = "";
+                Char2speech.text = "";
+                Char3name.text = "";
+                Char3speech.text = "";
                 Char4name.text = "Chris";
-                Char4speech.text = "…What if he hasn’t had his rabies shot?";
+                Char4speech.text = " ... What if he hasn’t had his rabies shot?";
 		}
 		else if (primeInt == 10){
+        Char1name.text = "";
+        Char1speech.text = "";
+        Char2name.text = "";
+        Char2speech.text = "";
 				Char3name.text = "Evan";
-				Char3speech.text = "Oh come on: the vet’s closed now and he needs to eat! We’ll take him in first thing in the morning. How about that?";
+				Char3speech.text = "Oh come on: the vet’s closed now and he needs to eat! We’ll take him in first thing in the morning.\nHow about that?";
+        Char4name.text = "";
+        Char4speech.text = "";
 		}
 		else if (primeInt == 11){
+        Char1name.text = "";
+        Char1speech.text = "";
+        Char2name.text = "";
+        Char2speech.text = "";
+        Char3name.text = "";
+        Char3speech.text = "";
 				Char4name.text = "Chris";
-				Char4speech.text = "Hm. .. Alright, sure.I bet Matilda will get a kick out of this too, hon.";
-		} 
+				Char4speech.text = "Hm. .. Alright, sure. I bet Matilda will get a kick out of this too, hon.";
+		}
 		else if (primeInt == 12) {
+        Char1name.text = "";
+        Char1speech.text = "";
+        Char2name.text = "";
+        Char2speech.text = "";
 				Char3name.text = "Evan";
 				Char3speech.text = "For sure! Come on, little buddy.";
+        Char4name.text = "";
+        Char4speech.text = "";
 				nextButton.SetActive(false);
                 allowSpace = false;
                 NextScene1Button.SetActive(true);
-		}
-				
-                // Turn off "Next" button, turn on "Choice" buttons
                 nextButton.SetActive(false);
-                allowSpace = false;
-                //Choice1a.SetActive(true); // function Choice1aFunct()
-                //Choice1b.SetActive(true); // function Choice1bFunct()
-        }
+		}
+    else if (primeInt ==100){
+      ArtChar3b.SetActive(false);
+             Char1name.text = "YOU";
+             Char1speech.text = "(Now, how do I get the attention of the humans here? Perhaps this could work.)";
+             Char2name.text = "";
+             Char2speech.text = "";
+}
+else if (primeInt == 101){
+         Char1name.text = "YOU";
+         Char1speech.text = "BARK! BARK!";
+         Char2name.text = "";
+         Char2speech.text = "";
+ }
+else if (primeInt == 102){
+        Char1name.text = "";
+        Char1speech.text = "";
+        Char2name.text = "";
+        Char2speech.text = "";
+        Char3name.text = "";
+        Char3speech.text = "";
+        Char4name.text = "";
+        Char4speech.text = "";
+        //gameHandler.AddPlayerStat(1);
+}
+else if (primeInt == 103){
+        Char1name.text = "";
+        Char1speech.text = "";
+        Char2name.text = "";
+        Char2speech.text = "";
+        Char3name.text = "Evan";
+        Char3speech.text = "Oh my god. Chris, look! It's so cute!";
+        Char4name.text = "";
+        Char4speech.text = "";
+}
+else if (primeInt ==104){
+        Char1name.text = "";
+        Char1speech.text = "";
+        Char2name.text = "";
+        Char2speech.text = "";
+        Char3name.text = "";
+        Char3speech.text = "";
+        Char4name.text = "Chris";
+        Char4speech.text = "Yeah. He's a cute little guy alright. Weird how we haven't seen him around before.";
+}
+else if (primeInt == 105){
+        Char1name.text = "";
+        Char1speech.text = "";
+        Char2name.text = "";
+        Char2speech.text = "";
+        Char3name.text = "Evan";
+        Char3speech.text = "It doesn’t look like he has a collar. .. And the poor thing looks like he’s starving!";
+        Char4name.text = "";
+        Char4speech.text = "";
+}
 
+else if (primeInt == 106){
+        Char1name.text = "";
+        Char1speech.text = "";
+        Char2name.text = "";
+        Char2speech.text = "";
+        Char3name.text = "";
+        Char3speech.text = "";
+        Char4name.text = "Chris";
+        Char4speech.text = " ... What if he hasn’t had his rabies shot?";
+}
+else if (primeInt == 107){
+Char1name.text = "";
+Char1speech.text = "";
+Char2name.text = "";
+Char2speech.text = "";
+Char3name.text = "Evan";
+Char3speech.text = "Oh come on: the vet’s closed now and he needs to eat! We’ll take him in first thing in the morning.\nHow about that?";
+Char4name.text = "";
+Char4speech.text = "";
+}
+else if (primeInt == 108){
+Char1name.text = "";
+Char1speech.text = "";
+Char2name.text = "";
+Char2speech.text = "";
+Char3name.text = "";
+Char3speech.text = "";
+Char4name.text = "Chris";
+Char4speech.text = "Hm. .. Alright, sure. I bet Matilda will get a kick out of this too, hon.";
+}
+else if (primeInt == 109) {
+Char1name.text = "";
+Char1speech.text = "";
+Char2name.text = "";
+Char2speech.text = "";
+Char3name.text = "Evan";
+Char3speech.text = "For sure! Come on, little buddy.";
+Char4name.text = "";
+Char4speech.text = "";
+nextButton.SetActive(false);
+        allowSpace = false;
+        NextScene1Button.SetActive(true);
+        nextButton.SetActive(false);
+}
+}
 
         public void SceneChange1(){
                SceneManager.LoadScene("Scene6");
         }
-        
+
 }
