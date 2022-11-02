@@ -63,7 +63,6 @@ public void talking(){         // main story function. Players hit next to progr
                 // AudioSource.Play();
               }
         else if (primeInt == 2){
-          ArtChar1a.SetActive(true);
                 DialogueDisplay.SetActive(true);
                 Char1name.text = "YOU";
                 Char1speech.text = "(I’m not sure how well a conversation will go with this one, but I’ll try.)";
@@ -95,73 +94,287 @@ public void talking(){         // main story function. Players hit next to progr
               }
        else if (primeInt == 6){
                 Char1name.text = "YOU";
-                Char1speech.text = "(She is .. touching my head?)/n(.. Huh. It’s strangely nice.)";
+                Char1speech.text = "(She is .. touching my head?)\n(.. Huh. It’s strangely nice.)";
                 Char2name.text = "";
 				        Char2speech.text = "";
               }
        else if (primeInt ==7){
                 Char1name.text = "YOU";
-                Char1speech.text = "(This must be a common gesture among humans.)/n(I should cooperate with this underdeveloped specimen so things go smoothly.)";
+                Char1speech.text = "(This must be a common gesture among humans.)\n(I should cooperate with this underdeveloped specimen.)";
                 Char2name.text = "";
                 Char2speech.text = "";
               }
-
-		   else if (primeInt == 8){
+       else if (primeInt == 8){
+                Char1name.text = "";
+                Char1speech.text = "";
+                Char2name.text = "Matilda";
+                Char2speech.text = "My name’s Matilda, doggy! Do you have a name?";
+              }
+		   else if (primeInt == 9){
                 Char1name.text = "YOU";
                 Char1speech.text = "It is a pleasure to meet you human, but time is of the essence and we don’t have the luxury of dawdling.";
                 Char2name.text = "";
                 Char2speech.text = "";
               }
-       else if (primeInt ==9){
+       else if (primeInt == 10){
                 Char1name.text = "YOU";
                 Char1speech.text = "Please take me to your leader.";
                 Char2name.text = "";
                 Char2speech.text = "";
               }
 
-		else if (primeInt == 10){
+		else if (primeInt == 11){
       ArtChar1c.SetActive(false);
       ArtChar1b.SetActive(true);
                 Char1name.text = "";
                 Char1speech.text = "";
-                Char2name.text = "Small Human";
+                Char2name.text = "Matilda";
                 Char2speech.text = "You want to meet my dads? They’re pretty rad.";
               }
-       else if (primeInt ==11){
+       else if (primeInt ==12){
                 Char1name.text = "";
                 Char1speech.text = "";
-                Char2name.text = "Small Human";
-                Char2speech.text = "They work in a big office where they beat bad guys and talk to people in neat suits./nThey’re the coolest!";
+                Char2name.text = "Matilda";
+                Char2speech.text = "They work in a big office where they beat bad guys and talk to people in neat suits.\nThey’re the coolest!";
               }
-		else if (primeInt ==12){
+		else if (primeInt ==13){
                 Char1name.text = "";
                 Char1speech.text = "";
-                Char2name.text = "Small Human";
+                Char2name.text = "Matilda";
                 Char2speech.text = "Do you wanna a jelly sandwich, by the way?";
                 nextButton.SetActive(false);
                 Choice1a.SetActive(true);
                 Choice1b.SetActive(true);
               }
-    else if (primeInt ==100){
-                Char1name.text = "YOU";
-                Char1speech.text = "";
-                Char2name.text = "";
-                Char2speech.text = "?";
 
-	             }
+     else if (primeInt ==100){
+                Char1name.text = "YOU";
+                Char1speech.text = "...";
+                Char2name.text = "";
+                Char2speech.text = "";
+
+           	  }
+     else if (primeInt ==101){
+                Char1name.text = "YOU";
+                Char1speech.text = "Mm! This is .. actually good, human.";
+                Char2name.text = "";
+                Char2speech.text = "";
+
+              }
+     else if (primeInt ==102){
+       ArtChar1b.SetActive(false);
+       ArtChar1a.SetActive(true);
+                Char1name.text = "";
+                Char1speech.text = "";
+                Char2name.text = "Matilda";
+                Char2speech.text = "Wow! An alien eating my sandwich.\nAnd liking it, too!";
+
+              }
+     else if (primeInt ==103){
+                Char1name.text = "";
+                Char1speech.text = "";
+                Char2name.text = "Matilda";
+                Char2speech.text = "Sooooo cool!";
+
+              }
+     else if (primeInt ==104){
+       ArtChar1a.SetActive(false);
+       ArtChar1d.SetActive(true);
+                Char1name.text = "";
+                Char1speech.text = "";
+                Char2name.text = "Matilda";
+                Char2speech.text = "Do they not have sandwiches on .. Geeneepeera?";
+
+              }
+      else if (primeInt ==105){
+                Char1name.text = "YOU";
+                Char1speech.text = "How ... do you know that?\nHave humans discovered my planet already?";
+                Char2name.text = "";
+                Char2speech.text = "";
+
+              }
+      else if (primeInt ==106){
+                Char1name.text = "YOU";
+                Char1speech.text = "I didn’t think you humans have advanced your technological expertise that far yet.";
+                Char2name.text = "";
+                Char2speech.text = "";
+
+              }
+      else if (primeInt ==107){
+                Char1name.text = "";
+                Char1speech.text = "";
+                Char2name.text = "Matilda";
+                Char2speech.text = "I don’t know what this 'tec-oh-ology' thing is. I just heard it from you.";
+
+              }
+      else if (primeInt ==108){
+                Char1name.text = "YOU";
+                Char1speech.text = "But I haven’t said anything about my home planet. How could you know?";
+                Char2name.text = "";
+                Char2speech.text = "";
+
+              }
+      else if (primeInt ==109){
+        ArtChar1d.SetActive(false);
+        ArtChar1b.SetActive(true);
+                Char1name.text = "";
+                Char1speech.text = "";
+                Char2name.text = "Matilda";
+                Char2speech.text = "People’s heads have always talked to me.\nTheir head voices are quieter, but I can hear them.";
+
+              }
+      else if (primeInt ==110){
+                Char1name.text = "";
+                Char1speech.text = "";
+                Char2name.text = "Matilda";
+                Char2speech.text = "No one else seems to be able to.";
+
+              }
+      else if (primeInt ==111){
+        ArtChar1b.SetActive(false);
+        ArtChar1d.SetActive(true);
+                Char1name.text = "";
+                Char1speech.text = "";
+                Char2name.text = "Matilda";
+                Char2speech.text = "Your friends are coming too?\nBut they’re not coming to visit right? They’re coming .. to fight?";
+
+              }
+      else if (primeInt ==112){
+                Char1name.text = "YOU";
+                Char1speech.text = "Yes, this planet is in danger.\nI need to talk to the person in charge of this planet.";
+                Char2name.text = "";
+                Char2speech.text = "";
+              }
+      else if (primeInt ==113){
+        ArtChar1d.SetActive(false);
+        ArtChar1a.SetActive(true);
+                Char1name.text = "";
+                Char1speech.text = "";
+                Char2name.text = "Matilda";
+                Char2speech.text = "Haha, off to go see Dad and Dad then!";
+                nextButton.SetActive(false);
+                NextScene1Button.SetActive(true);
+              }
+      else if (primeInt ==200){
+                Char1name.text = "YOU";
+                Char1speech.text = "Is it ... a weapon capable of disintegrating the cosmic fabric of this universe?!";
+                Char2name.text = "";
+                Char2speech.text = "";
+
+              }
+      else if (primeInt ==201){
+                Char1name.text = "";
+                Char1speech.text = "";
+                Char2name.text = "Matilda";
+                Char2speech.text = "No, you nincompoop. It’s a sandwich. You eat it like this.";
+
+              }
+      else if (primeInt ==202){
+        ArtChar1b.SetActive(false);
+        ArtChar1d.SetActive(true);
+                Char1name.text = "";
+                Char1speech.text = "";
+                Char2name.text = "Matilda";
+                Char2speech.text = "Do they not have sandwiches on .. Geeneepeera?";
+
+              }
+      else if (primeInt ==203){
+                Char1name.text = "YOU";
+                Char1speech.text = "How ... do you know that?\nHave humans discovered my planet already?";
+                Char2name.text = "";
+                Char2speech.text = "";
+
+              }
+      else if (primeInt ==204){
+                Char1name.text = "YOU";
+                Char1speech.text = "I didn’t think you humans have advanced your technological expertise that far yet.";
+                Char2name.text = "";
+                Char2speech.text = "";
+
+                       }
+               else if (primeInt ==205){
+                         Char1name.text = "";
+                         Char1speech.text = "";
+                         Char2name.text = "Matilda";
+                         Char2speech.text = "I don’t know what this 'tec-oh-ology' thing is. I just heard it from you.";
+
+                       }
+               else if (primeInt ==206){
+                         Char1name.text = "YOU";
+                         Char1speech.text = "But I haven’t said anything about my home planet. How could you know?";
+                         Char2name.text = "";
+                         Char2speech.text = "";
+
+                       }
+               else if (primeInt ==207){
+                 ArtChar1d.SetActive(false);
+                 ArtChar1b.SetActive(true);
+                         Char1name.text = "";
+                         Char1speech.text = "";
+                         Char2name.text = "Matilda";
+                         Char2speech.text = "People’s heads have always talked to me.\nTheir head voices are quieter, but I can hear them.";
+
+                       }
+               else if (primeInt ==208){
+                         Char1name.text = "";
+                         Char1speech.text = "";
+                         Char2name.text = "Matilda";
+                         Char2speech.text = "No one else seems to be able to.";
+
+                       }
+               else if (primeInt ==209){
+                 ArtChar1b.SetActive(false);
+                 ArtChar1d.SetActive(true);
+                         Char1name.text = "";
+                         Char1speech.text = "";
+                         Char2name.text = "Matilda";
+                         Char2speech.text = "Your friends are coming too?\nBut they’re not coming to visit right? They’re coming .. to fight?";
+
+                       }
+               else if (primeInt ==210){
+                         Char1name.text = "YOU";
+                         Char1speech.text = "Yes, this planet is in danger.\nI need to talk to the person in charge of this planet.";
+                         Char2name.text = "";
+                         Char2speech.text = "";
+                       }
+               else if (primeInt ==211){
+                 ArtChar1d.SetActive(false);
+                 ArtChar1a.SetActive(true);
+                         Char1name.text = "";
+                         Char1speech.text = "";
+                         Char2name.text = "Matilda";
+                         Char2speech.text = "Haha, off to go see Dad and Dad then!";
+                         nextButton.SetActive(false);
+                         NextScene1Button.SetActive(true);
+                       }
 }
 
 
 
         public void Choice1aFunct(){
           primeInt=99;
+          Char1name.text = "YOU";
+          Char1speech.text = "(I can’t help but be curious.)\n(I suppose this will help me bond with this human better, too.)";
+          Char2name.text = "";
+          Char2speech.text = "";
+          nextButton.SetActive(true);
+          Choice1a.SetActive(false);
+          Choice1b.SetActive(false);
+        }
+        public void Choice1bFunct(){
+          primeInt=199;
+          Char1name.text = "YOU";
+          Char1speech.text = "Your reply is astonishingly unhelpful.\nWhat is this 'sandwich' you are brandishing at me?";
+          Char2name.text = "";
+          Char2speech.text = "";
           nextButton.SetActive(true);
           Choice1a.SetActive(false);
           Choice1b.SetActive(false);
         }
 
         public void SceneChange1(){
-               SceneManager.LoadScene("Scene5");
+               SceneManager.LoadScene("Scene6");
+          GameHandler.metMatilda=true;
         }
         //public void SceneChange2(){
         //        SceneManager.LoadScene("Scene2b");

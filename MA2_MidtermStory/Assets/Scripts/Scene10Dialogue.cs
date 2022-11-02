@@ -453,7 +453,7 @@ public void talking(){  // main story function. Players hit next to progress to 
                     Char5speech.text = "";
                            //gameHandler.AddPlayerStat(1);
                    }
-                   else if (primeInt == 504){
+                   else if (primeInt == 701){
                      DialogueDisplay.SetActive(true);
                      DialogueDisplay.SetActive(true);
                      Char1name.text = "";
@@ -468,7 +468,7 @@ public void talking(){  // main story function. Players hit next to progress to 
                      Char5speech.text = "";
 
                     }
-                    else if (primeInt == 504){
+                    else if (primeInt == 702){
                       DialogueDisplay.SetActive(true);
                       DialogueDisplay.SetActive(true);
                       Char1name.text = "";
@@ -483,7 +483,7 @@ public void talking(){  // main story function. Players hit next to progress to 
                       Char5speech.text = "I'm sorry for being an asshole.";
 
                      }
-                     else if (primeInt == 504){
+                     else if (primeInt == 703){
                        DialogueDisplay.SetActive(true);
                        DialogueDisplay.SetActive(true);
                        Char1name.text = "";
@@ -516,7 +516,7 @@ public void talking(){  // main story function. Players hit next to progress to 
          Char5speech.text = "";
 
         }
-        else if (primeInt == 504){
+        else if (primeInt == 801){
           DialogueDisplay.SetActive(true);
           DialogueDisplay.SetActive(true);
           Char1name.text = "";
@@ -531,7 +531,7 @@ public void talking(){  // main story function. Players hit next to progress to 
           Char5speech.text = "";
 
          }
-         else if (primeInt == 504){
+         else if (primeInt == 802){
            DialogueDisplay.SetActive(true);
            DialogueDisplay.SetActive(true);
            Char1name.text = "YOU";
@@ -546,7 +546,7 @@ public void talking(){  // main story function. Players hit next to progress to 
            Char5speech.text = "";
 
           }
-          else if (primeInt == 504){
+          else if (primeInt == 803){
             DialogueDisplay.SetActive(true);
             DialogueDisplay.SetActive(true);
             Char1name.text = "";
@@ -561,7 +561,7 @@ public void talking(){  // main story function. Players hit next to progress to 
             Char5speech.text = "...";
 
            }
-           else if (primeInt == 504){
+           else if (primeInt == 804){
              DialogueDisplay.SetActive(true);
              DialogueDisplay.SetActive(true);
              Char1name.text = "";
@@ -576,7 +576,7 @@ public void talking(){  // main story function. Players hit next to progress to 
              Char5speech.text = "";
 
             }
-            else if (primeInt == 504){
+            else if (primeInt == 805){
               DialogueDisplay.SetActive(true);
               DialogueDisplay.SetActive(true);
               Char1name.text = "YOU";
@@ -591,7 +591,7 @@ public void talking(){  // main story function. Players hit next to progress to 
               Char5speech.text = "";
 
              }
-             else if (primeInt == 504){
+             else if (primeInt == 806){
                DialogueDisplay.SetActive(true);
                DialogueDisplay.SetActive(true);
                Char1name.text = "";
@@ -606,7 +606,7 @@ public void talking(){  // main story function. Players hit next to progress to 
                Char5speech.text = "";
 
               }
-              else if (primeInt == 504){
+              else if (primeInt == 807){
                 DialogueDisplay.SetActive(true);
                 DialogueDisplay.SetActive(true);
                 Char1name.text = "YOU";
@@ -621,7 +621,7 @@ public void talking(){  // main story function. Players hit next to progress to 
                 Char5speech.text = "";
 
                }
-               else if (primeInt == 504){
+               else if (primeInt == 808){
                  DialogueDisplay.SetActive(true);
                  DialogueDisplay.SetActive(true);
                  Char1name.text = "";
@@ -636,7 +636,7 @@ public void talking(){  // main story function. Players hit next to progress to 
                  Char5speech.text = "";
 
                 }
-                else if (primeInt == 504){
+                else if (primeInt == 809){
                   DialogueDisplay.SetActive(true);
                   DialogueDisplay.SetActive(true);
                   Char1name.text = "YOU";
@@ -651,7 +651,7 @@ public void talking(){  // main story function. Players hit next to progress to 
                   Char5speech.text = "";
 
                  }
-                 else if (primeInt == 504){
+                 else if (primeInt == 810){
                    DialogueDisplay.SetActive(true);
                    DialogueDisplay.SetActive(true);
                    Char1name.text = "";
@@ -666,7 +666,7 @@ public void talking(){  // main story function. Players hit next to progress to 
                    Char5speech.text = "";
 
                   }
-                  else if (primeInt == 504){
+                  else if (primeInt == 811){
                     DialogueDisplay.SetActive(true);
                     DialogueDisplay.SetActive(true);
                     Char1name.text = "YOU";
@@ -681,7 +681,7 @@ public void talking(){  // main story function. Players hit next to progress to 
                     Char5speech.text = "";
 
                    }
-                   else if (primeInt == 504){
+                   else if (primeInt == 812){
                      DialogueDisplay.SetActive(true);
                      DialogueDisplay.SetActive(true);
                      Char1name.text = "";
@@ -696,7 +696,7 @@ public void talking(){  // main story function. Players hit next to progress to 
                      Char5speech.text = "";
 
                     }
-                    else if (primeInt == 504){
+                    else if (primeInt == 813){
                       DialogueDisplay.SetActive(true);
                       DialogueDisplay.SetActive(true);
                       Char1name.text = "YOU";
@@ -711,7 +711,7 @@ public void talking(){  // main story function. Players hit next to progress to 
                       Char5speech.text = "";
 
                      }
-                     else if (primeInt == 504){
+                     else if (primeInt == 814){
                        DialogueDisplay.SetActive(true);
                        DialogueDisplay.SetActive(true);
                        Char1name.text = "";
@@ -726,7 +726,7 @@ public void talking(){  // main story function. Players hit next to progress to 
                        Char5speech.text = "";
 
                       }
-                      else if (primeInt == 504){
+                      else if (primeInt == 815){
                         DialogueDisplay.SetActive(true);
                         DialogueDisplay.SetActive(true);
                         Char1name.text = "";
@@ -743,7 +743,7 @@ public void talking(){  // main story function. Players hit next to progress to 
                         Char6speech.text = "You did it! You saved the Earth!";
 
                        }
-                       else if (primeInt == 504){
+                       else if (primeInt == 816){
                          DialogueDisplay.SetActive(true);
                          DialogueDisplay.SetActive(true);
                          Char1name.text = "YOU";
@@ -760,7 +760,7 @@ public void talking(){  // main story function. Players hit next to progress to 
                          Char6speech.text = "";
 
                         }
-                        else if (primeInt == 504){
+                        else if (primeInt == 817){
                           DialogueDisplay.SetActive(true);
                           DialogueDisplay.SetActive(true);
                           Char1name.text = "";
@@ -777,7 +777,7 @@ public void talking(){  // main story function. Players hit next to progress to 
                           Char6speech.text = "";
 
                          }
-                         else if (primeInt == 504){
+                         else if (primeInt == 818){
                            DialogueDisplay.SetActive(true);
                            DialogueDisplay.SetActive(true);
                            Char1name.text = "";
@@ -794,7 +794,7 @@ public void talking(){  // main story function. Players hit next to progress to 
                            Char6speech.text = "Will this mean you have to go back to Giniperia?";
 
                           }
-                          else if (primeInt == 504){
+                          else if (primeInt == 819){
                             DialogueDisplay.SetActive(true);
                             DialogueDisplay.SetActive(true);
                             Char1name.text = "YOU";
@@ -811,7 +811,7 @@ public void talking(){  // main story function. Players hit next to progress to 
                             Char6speech.text = "";
 
                            }
-                           else if (primeInt == 504){
+                           else if (primeInt == 820){
                              DialogueDisplay.SetActive(true);
                              DialogueDisplay.SetActive(true);
                              Char1name.text = "";
@@ -828,7 +828,7 @@ public void talking(){  // main story function. Players hit next to progress to 
                              Char6speech.text = "You have to stay then! I get to tell people I have a alien friend and they can’t even tell me lying! ";
 
                             }
-                            else if (primeInt == 504){
+                            else if (primeInt == 821){
                               DialogueDisplay.SetActive(true);
                               DialogueDisplay.SetActive(true);
                               Char1name.text = "YOU";
@@ -867,7 +867,7 @@ public void talking(){  // main story function. Players hit next to progress to 
                 Char6speech.text = "";
 
                          }
-                         else if (primeInt == 504){
+                         else if (primeInt == 901){
                          DialogueDisplay.SetActive(true);
                          DialogueDisplay.SetActive(true);
                          Char1name.text = "";
@@ -884,7 +884,7 @@ public void talking(){  // main story function. Players hit next to progress to 
                          Char6speech.text = "";
 
                                   }
-                                  else if (primeInt == 504){
+                                  else if (primeInt == 902){
                                   DialogueDisplay.SetActive(true);
                                   DialogueDisplay.SetActive(true);
                                   Char1name.text = "";
@@ -901,7 +901,7 @@ public void talking(){  // main story function. Players hit next to progress to 
                                   Char6speech.text = "";
 
                                   }
-                                  else if (primeInt == 504){
+                                  else if (primeInt == 903){
                                   DialogueDisplay.SetActive(true);
                                   DialogueDisplay.SetActive(true);
                                   Char1name.text = "";
@@ -918,7 +918,7 @@ public void talking(){  // main story function. Players hit next to progress to 
                                   Char6speech.text = "";
 
                                   }
-                                  else if (primeInt == 504){
+                                  else if (primeInt == 904){
                                   DialogueDisplay.SetActive(true);
                                   DialogueDisplay.SetActive(true);
                                   Char1name.text = "";
@@ -935,7 +935,7 @@ public void talking(){  // main story function. Players hit next to progress to 
                                   Char6speech.text = "";
 
                                 }
-                                else if (primeInt == 504){
+                                else if (primeInt == 905){
                                 DialogueDisplay.SetActive(true);
                                 DialogueDisplay.SetActive(true);
                                 Char1name.text = "";
@@ -952,7 +952,7 @@ public void talking(){  // main story function. Players hit next to progress to 
                                 Char6speech.text = "";
 
                               }
-                              else if (primeInt == 504){
+                              else if (primeInt == 906){
                               DialogueDisplay.SetActive(true);
                               DialogueDisplay.SetActive(true);
                               Char1name.text = "";
@@ -969,7 +969,7 @@ public void talking(){  // main story function. Players hit next to progress to 
                               Char6speech.text = "";
 
                             }
-                            else if (primeInt == 504){
+                            else if (primeInt == 907){
                             DialogueDisplay.SetActive(true);
                             DialogueDisplay.SetActive(true);
                             Char1name.text = "";
@@ -986,7 +986,7 @@ public void talking(){  // main story function. Players hit next to progress to 
                             Char6speech.text = "Aw man. I was hoping I could show off my powers.";
 
                           }
-                          else if (primeInt == 504){
+                          else if (primeInt == 908){
                           DialogueDisplay.SetActive(true);
                           DialogueDisplay.SetActive(true);
                           Char1name.text = "";
@@ -1003,7 +1003,7 @@ public void talking(){  // main story function. Players hit next to progress to 
                           Char6speech.text = "";
 
                         }
-                        else if (primeInt == 504){
+                        else if (primeInt == 909){
                         DialogueDisplay.SetActive(true);
                         DialogueDisplay.SetActive(true);
                         Char1name.text = "";
@@ -1020,7 +1020,7 @@ public void talking(){  // main story function. Players hit next to progress to 
                         Char6speech.text = "I guess.";
 
                       }
-                      else if (primeInt == 504){
+                      else if (primeInt == 910){
                       DialogueDisplay.SetActive(true);
                       DialogueDisplay.SetActive(true);
                       Char1name.text = "";
@@ -1037,7 +1037,7 @@ public void talking(){  // main story function. Players hit next to progress to 
                       Char6speech.text = "";
 
                     }
-                    else if (primeInt == 504){
+                    else if (primeInt == 911){
                     DialogueDisplay.SetActive(true);
                     DialogueDisplay.SetActive(true);
                     Char1name.text = "YOU";
@@ -1054,7 +1054,7 @@ public void talking(){  // main story function. Players hit next to progress to 
                     Char6speech.text = "";
 
                   }
-                  else if (primeInt == 504){
+                  else if (primeInt == 912){
                   DialogueDisplay.SetActive(true);
                   DialogueDisplay.SetActive(true);
                   Char1name.text = "";
@@ -1071,7 +1071,7 @@ public void talking(){  // main story function. Players hit next to progress to 
                   Char6speech.text = "";
 
                 }
-                else if (primeInt == 504){
+                else if (primeInt == 913){
                 DialogueDisplay.SetActive(true);
                 DialogueDisplay.SetActive(true);
                 Char1name.text = "YOU";
@@ -1088,7 +1088,7 @@ public void talking(){  // main story function. Players hit next to progress to 
                 Char6speech.text = "";
 
               }
-              else if (primeInt == 504){
+              else if (primeInt == 914){
               DialogueDisplay.SetActive(true);
               DialogueDisplay.SetActive(true);
               Char1name.text = "";
@@ -1105,7 +1105,7 @@ public void talking(){  // main story function. Players hit next to progress to 
               Char6speech.text = "";
 
             }
-            else if (primeInt == 504){
+            else if (primeInt == 915){
             DialogueDisplay.SetActive(true);
             DialogueDisplay.SetActive(true);
             Char1name.text = "YOU";
@@ -1122,7 +1122,7 @@ public void talking(){  // main story function. Players hit next to progress to 
             Char6speech.text = "";
 
           }
-          else if (primeInt == 504){
+          else if (primeInt == 916){
           DialogueDisplay.SetActive(true);
           DialogueDisplay.SetActive(true);
           Char1name.text = "";
@@ -1139,7 +1139,7 @@ public void talking(){  // main story function. Players hit next to progress to 
           Char6speech.text = "";
 
         }
-        else if (primeInt == 504){
+        else if (primeInt == 917){
         DialogueDisplay.SetActive(true);
         DialogueDisplay.SetActive(true);
         Char1name.text = "";
@@ -1156,7 +1156,7 @@ public void talking(){  // main story function. Players hit next to progress to 
         Char6speech.text = "";
 
       }
-      else if (primeInt == 504){
+      else if (primeInt == 918){
       DialogueDisplay.SetActive(true);
       DialogueDisplay.SetActive(true);
       Char1name.text = "";
@@ -1173,7 +1173,7 @@ public void talking(){  // main story function. Players hit next to progress to 
       Char6speech.text = "";
 
     }
-    else if (primeInt == 504){
+    else if (primeInt == 919){
     DialogueDisplay.SetActive(true);
     DialogueDisplay.SetActive(true);
     Char1name.text = "";
@@ -1190,7 +1190,7 @@ public void talking(){  // main story function. Players hit next to progress to 
     Char6speech.text = "";
 
   }
-  else if (primeInt == 504){
+  else if (primeInt == 920){
   DialogueDisplay.SetActive(true);
   DialogueDisplay.SetActive(true);
   Char1name.text = "YOU";
@@ -1207,7 +1207,7 @@ public void talking(){  // main story function. Players hit next to progress to 
   Char6speech.text = "";
 
 }
-else if (primeInt == 504){
+else if (primeInt == 921){
 DialogueDisplay.SetActive(true);
 DialogueDisplay.SetActive(true);
 Char1name.text = "";
