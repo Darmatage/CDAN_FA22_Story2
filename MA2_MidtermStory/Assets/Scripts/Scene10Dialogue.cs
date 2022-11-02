@@ -24,8 +24,14 @@ public class Scene10Dialogue : MonoBehaviour {
        //public Text Char3name;
        //public Text Char3speech;
         public GameObject DialogueDisplay;
-        public GameObject ArtChar1a;
+        public GameObject ArtChar1a;//Chris
         public GameObject ArtChar1b;
+		public GameObject ArtChar2a;//Evan
+		public GameObject ArtChar2b;
+		public GameObject ArtChar3a;//POTUS
+		public GameObject ArtChar3b;
+		public GameObject ArtChar4a;//GS
+		public GameObject ArtChar4b;
         public GameObject ArtBG1;
         public GameObject Choice1a;
         public GameObject Choice1b;
