@@ -39,22 +39,6 @@ void Start(){
       ArtBG1.SetActive(true);
       NextScene1Button.SetActive(false);
       nextButton.SetActive(true);
-
-    if (GameHandler.hasProof==true){
-      primeInt=299;
-      Char1name.text = "YOU";
-      Char1speech.text = "Woof, woof!";
-      Char2name.text = "";
-      Char2speech.text = "";
-    }
-     else if (GameHandler.hasComm==true){
-       primeInt=99;
-    ArtChar1a.SetActive(true);
-        Char1name.text = "YOU";
-        Char1speech.text = "Hello. You look familiar.";
-        Char2name.text = "";
-        Char2speech.text = "";
-     }
 }
 
 
@@ -82,6 +66,8 @@ void talking(){         // main story function. Players hit next to progress to 
                 Char1name.text = "YOU";
                 Char1speech.text = "(It’s that cat from before! So this creature resides here too?)";
                 Char2speech.text = "";
+                Char3name.text = "";
+                Char3speech.text = "";
 
           if (GameHandler.hasProof==true){
                   primeInt=199;
@@ -109,7 +95,7 @@ void talking(){         // main story function. Players hit next to progress to 
                     Char1name.text = "";
                     Char1speech.text = "";
                     Char2name.text = "Cat";
-                    Char2speech.text = "What the hell? Who are you?/nThere's no ways a dog can talk in meows.";
+                    Char2speech.text = "What the hell? Who are you?\nThere's no ways a dog can talk in meows.";
             }
             else if (primeInt == 101){
               ArtChar1a.SetActive(false);
@@ -124,7 +110,7 @@ void talking(){         // main story function. Players hit next to progress to 
                      Char1name.text = "";
                      Char1speech.text = "";
                      Char2name.text = "Cat";
-                     Char2speech.text = "... Wait a minute. I remember you./nI saw you earlier today.";
+                     Char2speech.text = "... Wait a minute. I remember you.\nI saw you earlier today.";
              }
              else if (primeInt == 103){
                      Char1name.text = "YOU";
@@ -136,17 +122,17 @@ void talking(){         // main story function. Players hit next to progress to 
                       Char1name.text = "";
                       Char1speech.text = "";
                       Char2name.text = "Cat";
-                      Char2speech.text = "I did, yes. I just didn’t wish to engage with you./nSo I played 'feral.'";
+                      Char2speech.text = "I did, yes. I just didn’t wish to engage with you.\nSo I played 'feral.'";
           }
            else if (primeInt == 105){
                     Char1name.text = "";
                     Char1speech.text = "";
                     Char2name.text = "Cat";
-                    Char2speech.text = "And you choose the form of the ugliest creature on this world./nTo each their own, I guess.";
+                    Char2speech.text = "And you choose the form of the ugliest creature on this world.\nTo each their own, I guess.";
           }
           else if (primeInt == 106){
                    Char1name.text = "YOU";
-                   Char1speech.text = "I didn't exactly have a lot of time to browse disguises. And I quite like this form actually./nBut that doesn't matter. I need help now.";
+                   Char1speech.text = "I didn't exactly have a lot of time to browse disguises. And I quite like this form actually.\nBut that doesn't matter. I need help now.";
                    Char2name.text = "";
                    Char2speech.text = "";
         }
@@ -170,7 +156,7 @@ void talking(){         // main story function. Players hit next to progress to 
   }
   else if (primeInt == 110){
            Char1name.text = "YOU";
-           Char1speech.text = "I wouldn't joke about something so serious./nI need your help in communicating with the humans of this household.";
+           Char1speech.text = "I wouldn't joke about something so serious.\nI need your help in communicating with the humans of this household.";
            Char2name.text = "";
            Char2speech.text = "";
 }
@@ -198,7 +184,7 @@ else if (primeInt == 113){
 }
 else if (primeInt == 114){
          Char1name.text = "YOU";
-         Char1speech.text = "Well that’s great./nIs there really no one on this planet that can communicate outside of their own species?";
+         Char1speech.text = "Well that’s great.\nIs there really no one on this planet that can communicate outside of their own species?";
          Char2name.text = "";
          Char2speech.text = "";
 }
@@ -245,7 +231,6 @@ else if (primeInt == 121){
          Char2speech.text = "She's at this placed called 'school' right now but she should be back soon.";
 }
 else if (primeInt == 122){
-  ArtChar1a.SetActive(false);
          Char1name.text = "YOU";
          Char1speech.text = "I see. Thank you for your assistance. Yout were surprisingly helpful.";
          Char2name.text = "";
@@ -303,7 +288,7 @@ else if (primeInt == 204){
       Char2name.text = "";
       Char2speech.text = "";
       Char3name.text = "Evan";
-      Char3speech.text = "Woah there new guy! Careful around Frank. He's a prickly one./nYou wouldn't want to lose an eye, would you?";
+      Char3speech.text = "Woah there new guy! Careful around Frank. He's a prickly one.\nYou wouldn't want to lose an eye, would you?";
 }
 else if (primeInt == 206){
     ArtChar1a.SetActive(false);
@@ -329,7 +314,7 @@ else if (primeInt == 207){
   }
 
 
-    void SceneChange1Funct(){
+    public void SceneChange1Funct(){
                          SceneManager.LoadScene("Scene9");
                   }
              }
