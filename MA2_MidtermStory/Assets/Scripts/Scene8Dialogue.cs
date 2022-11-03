@@ -86,6 +86,14 @@ void talking(){         // main story function. Players hit next to progress to 
                     Char2name.text = "";
                     Char2speech.text = "";
                  }
+			if (GameHandler.metMatilda==true){
+					primeInt=299;
+					ArtChar1a.SetActive(true);
+                    Char1name.text = "YOU";
+                    Char1speech.text = "Hello. You look familiar.";
+                    Char2name.text = "";
+                    Char2speech.text = "";
+			}
 }
             //scene 7a: with communication device
 
@@ -308,10 +316,154 @@ else if (primeInt == 207){
       NextScene1Button.SetActive(true); //scene 2
 
 }
-
-
-
+//if encounter with Matilda 
+else if (primeInt == 300){
+             ArtChar1a.SetActive(false);
+             ArtChar1b.SetActive(true);
+                    Char1name.text = "";
+                    Char1speech.text = "";
+                    Char2name.text = "Cat";
+                    Char2speech.text = "What the hell? Who are you?\nThere's no ways a dog can talk in meows.";
+            }
+            else if (primeInt == 301){
+              ArtChar1a.SetActive(false);
+                    Char1name.text = "YOU";
+                    Char1speech.text = "Well that's because I'm not a dog. I've just assumed a form of one to better integrate myself into this planet.";
+                    Char2name.text = "";
+                    Char2speech.text = "";
+            }
+            else if (primeInt == 302){
+              ArtChar1b.SetActive(false);
+              ArtChar1a.SetActive(true);
+                     Char1name.text = "";
+                     Char1speech.text = "";
+                     Char2name.text = "Cat";
+                     Char2speech.text = "... Wait a minute. I remember you.\nI saw you earlier today.";
+             }
+             else if (primeInt == 303){
+                     Char1name.text = "YOU";
+                     Char1speech.text = "So .. you understood me this entire time?";
+                     Char2name.text = "";
+                     Char2speech.text = "";
+             }
+             else if (primeInt == 304){
+                      Char1name.text = "";
+                      Char1speech.text = "";
+                      Char2name.text = "Cat";
+                      Char2speech.text = "I did, yes. I just didn’t wish to engage with you.\nSo I played 'feral.'";
+          }
+           else if (primeInt == 305){
+                    Char1name.text = "";
+                    Char1speech.text = "";
+                    Char2name.text = "Cat";
+                    Char2speech.text = "And you choose the form of the ugliest creature on this world.\nTo each their own, I guess.";
+          }
+          else if (primeInt == 306){
+                   Char1name.text = "YOU";
+                   Char1speech.text = "I didn't exactly have a lot of time to browse disguises. And I quite like this form actually.\nBut that doesn't matter. I need help now.";
+                   Char2name.text = "";
+                   Char2speech.text = "";
+        }
+        else if (primeInt == 307){
+                 Char1name.text = "";
+                 Char1speech.text = "";
+                 Char2name.text = "Cat";
+                 Char2speech.text = "What's it in for me?";
+      }
+      else if (primeInt == 308){
+               Char1name.text = "YOU";
+               Char1speech.text = "How about not being vaporized in the giant ball of fire this planet will soon become?";
+               Char2name.text = "";
+               Char2speech.text = "";
+    }
+    else if (primeInt == 309){
+             Char1name.text = "";
+             Char1speech.text = "";
+             Char2name.text = "Cat";
+             Char2speech.text = "Well, now you got my undivided attention. What makes you think that I'll believe you?";
   }
+  else if (primeInt == 310){
+           Char1name.text = "YOU";
+           Char1speech.text = "I wouldn't joke about something so serious.\nI need your help in communicating with the humans of this household.";
+           Char2name.text = "";
+           Char2speech.text = "";
+}
+else if (primeInt == 311){
+  ArtChar1a.SetActive(false);
+  ArtChar1b.SetActive(true);
+         Char1name.text = "";
+         Char1speech.text = "";
+         Char2name.text = "Cat";
+         Char2speech.text = "Ha! Sorry to break it to you bud, but you chose the wrong cat for that job.";
+}
+else if (primeInt == 312){
+         Char1name.text = "";
+         Char1speech.text = "";
+         Char2name.text = "Cat";
+         Char2speech.text = "You know, I thought aliens were smarter from what I've seen of your kind.";
+}
+else if (primeInt == 313){
+  ArtChar1b.SetActive(false);
+  ArtChar1a.SetActive(true);
+         Char1name.text = "";
+         Char1speech.text = "";
+         Char2name.text = "Cat";
+         Char2speech.text = "I have no way of communicating with those two besides biting or glaring at them.";
+}
+else if (primeInt == 314){
+         Char1name.text = "YOU";
+         Char1speech.text = "Well that’s great.\nIs there really no one on this planet that can communicate outside of their own species?";
+         Char2name.text = "";
+         Char2speech.text = "";
+}
+else if (primeInt == 315){
+         Char1name.text = "";
+         Char1speech.text = "";
+         Char2name.text = "Cat";
+         Char2speech.text = "I'm afraid not.";
+}
+else if (primeInt == 316){
+         Char1name.text = "";
+         Char1speech.text = "";
+         Char2name.text = "Cat";
+         Char2speech.text = "Well .. there's one exception.";
+}
+else if (primeInt == 317){
+         Char1name.text = "YOU";
+         Char1speech.text = "Is it Matilda?";
+         Char2name.text = "";
+         Char2speech.text = "";
+}
+
+else if (primeInt == 318){
+         Char1name.text = "";
+         Char1speech.text = "";
+         Char2name.text = "Cat";
+         Char2speech.text = "Oh, so you have met her already? What are you doing asking me for help then?";
+}
+
+else if (primeInt == 319){
+         Char1name.text = "YOU";
+         Char1speech.text = "I just thought it would help to have a different voice in the mfate of this planet.";
+         Char2name.text = "";
+         Char2speech.text = "";
+}
+
+else if (primeInt == 320){
+         Char1name.text = "";
+         Char1speech.text = "";
+         Char2name.text = "Cat";
+         Char2speech.text = "Well, I’m afraid I won’t be of any help. I don’t know if you noticed but cats can’t exactly communicate with humans directly.";
+}
+else if (primeInt == 321){
+		Char1name.text = "YOU";
+		Char1speech.text = "Well, thank you for your unhelpful advice. I guess it really is all up to Matilda right now then.";
+		nextButton.SetActive(false);
+        allowSpace = false;
+        NextScene1Button.SetActive(true); //scene 2
+}
+}
+ 
 
 
     public void SceneChange1Funct(){
