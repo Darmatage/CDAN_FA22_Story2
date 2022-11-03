@@ -296,6 +296,7 @@ public void talking(){
                 nextButton.SetActive(false);
                 allowSpace = false;
                 NextScene3Button.SetActive(true);
+            GameHandler.metEvan=true;
             }
        else if (primeInt == 300){
                 Char1name.text = "";

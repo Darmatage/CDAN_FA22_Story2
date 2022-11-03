@@ -7,31 +7,34 @@ using UnityEngine.Audio;
 
 public class Scene10Dialogue : MonoBehaviour {
         public int primeInt = 1;  // This integer drives game progress!
-        public Text Char1name;
+        public Text Char1name; // YOU
         public Text Char1speech;
-        public Text Char2name;
+        public Text Char2name; // POTUS
         public Text Char2speech;
-        public Text Char3name;
+        public Text Char3name; // Chris
         public Text Char3speech;
-        public Text Char4name;
+        public Text Char4name; // Evan
         public Text Char4speech;
-        public Text Char5name;
+        public Text Char5name; // General Sterling
         public Text Char5speech;
-        public Text Char6name;
+        public Text Char6name; // Matilda
         public Text Char6speech;
         public Text Char7name;
         public Text Char7speech;
        //public Text Char3name;
        //public Text Char3speech;
         public GameObject DialogueDisplay;
-        public GameObject ArtChar1a;//Chris
-        public GameObject ArtChar1b;
-		public GameObject ArtChar2a;//Evan
-		public GameObject ArtChar2b;
-		public GameObject ArtChar3a;//POTUS
-		public GameObject ArtChar3b;
-		public GameObject ArtChar4a;//GS
-		public GameObject ArtChar4b;
+        public GameObject ArtChar1a;//ChrisAngry
+        public GameObject ArtChar1b;//ChrisAnnoyed
+        public GameObject ArtChar1c;//ChrisNeutral
+		    public GameObject ArtChar2a;//EvanAmgry
+		    public GameObject ArtChar2b;//EvanAnnoyed
+        public GameObject ArtChar2c;//EvanNeutral
+		    public GameObject ArtChar3a;//POTUS
+		    public GameObject ArtChar3b;
+	      public GameObject ArtChar4a;//GS
+		    public GameObject ArtChar4b;
+        
         public GameObject ArtBG1;
         public GameObject Choice1a;
         public GameObject Choice1b;
@@ -47,6 +50,9 @@ public class Scene10Dialogue : MonoBehaviour {
         public static bool hasComm=true;
         public static bool hasAi=true;
         public static bool hasProof=true;
+        public static bool metEvan=true;
+        public static bool metChris=true;
+        public static bool metMatilda=true;
 
 
 void Start(){         // initial visibility settings
@@ -92,13 +98,12 @@ public void talking(){  // main story function. Players hit next to progress to 
 
         }
        else if (primeInt ==3){
-         DialogueDisplay.SetActive(true);
          Char1name.text = "";
          Char1speech.text = "";
          Char2name.text = "";
          Char2speech.text = "";
          Char3name.text = "Chris";
-         Char3speech.text = "Yes, sir. A, meet Presient Smithwell. President Smithwell, this is Am the foreign alien who brings valuable intel.";
+         Char3speech.text = "Yes, sir. Creature, meet Presient Smithwell. President Smithwell, this is the foreign alien who brings valuable intel.";
          Char4name.text = "";
          Char4speech.text = "";
                 //gameHandler.AddPlayerStat(1);
@@ -115,7 +120,7 @@ public void talking(){  // main story function. Players hit next to progress to 
          Char3speech.text = "";
          Char4name.text = "";
          Char4speech.text = "";
-         Char5name.text = "GS";
+         Char5name.text = "General Sterling";
          Char5speech.text = "Hmph! We'll be the judge of that, Agent Chris. Housing this foreign thins and arranging this meeting anyway? This thing could be a spy!";
         }
        else if (primeInt == 5){
@@ -194,7 +199,7 @@ public void talking(){  // main story function. Players hit next to progress to 
               Char3speech.text = "";
               Char4name.text = "";
               Char4speech.text = "";
-              Char5name.text = "GS";
+              Char5name.text = "General Sterling";
               Char5speech.text = "Then we should be preparing our defenses now! We need to notify every country and mobilize our army! The Navy, Homeland Security, everything sir!";
                      //gameHandler.AddPlayerStat(1);
              }
@@ -207,8 +212,8 @@ public void talking(){  // main story function. Players hit next to progress to 
                Char2speech.text = "";
                Char3name.text = "";
                Char3speech.text = "";
-               Char4name.text = "Evans";
-               Char4speech.text = "President Potus, with all due respect, do you really think trying to shore up our defenses is the best option? We would've needed days to prepare the army./nIn only a matter of time, the invasion will start.";
+               Char4name.text = "Evan";
+               Char4speech.text = "Mister President, with all due respect, do you really think trying to shore up our defenses is the best option? We would've needed days to prepare the army./nIn only a matter of time, the invasion will start.";
                Char5name.text = "";
                Char5speech.text = "";
                       //gameHandler.AddPlayerStat(1);
@@ -224,7 +229,7 @@ public void talking(){  // main story function. Players hit next to progress to 
                 Char3speech.text = "";
                 Char4name.text = "";
                 Char4speech.text = "";
-                Char5name.text = "GS";
+                Char5name.text = "General Sterling";
                 Char5speech.text = "They will be forced to face reality when they see the truth with their own eyes. Then they weill know that we were right!";
                        //gameHandler.AddPlayerStat(1);
                }
@@ -377,7 +382,7 @@ public void talking(){  // main story function. Players hit next to progress to 
                     Char1name.text = "";
                     Char1speech.text = "";
                     Char2name.text = "POTUS";
-                    Char2speech.text = "Alien, you are mistaken. This si the land of the free and if we die trying to protect that freedome, then so be it. Mobilize the army, General Smithwell!";
+                    Char2speech.text = "Alien, you are mistaken. This is the land of the free and if we die trying to protect that freedom, then so be it. Mobilize the army, General Sterling!";
                     Char3name.text = "";
                     Char3speech.text = "";
                     Char4name.text = "";
@@ -563,7 +568,7 @@ public void talking(){  // main story function. Players hit next to progress to 
             Char3speech.text = "";
             Char4name.text = "";
             Char4speech.text = "";
-            Char5name.text = "GS";
+            Char5name.text = "General Sterling";
             Char5speech.text = "...";
 
            }
@@ -586,7 +591,7 @@ public void talking(){  // main story function. Players hit next to progress to 
               DialogueDisplay.SetActive(true);
               DialogueDisplay.SetActive(true);
               Char1name.text = "YOU";
-              Char1speech.text = "Uh, yes, so I propose that you humans will write up a list of demands that I wlll/nbring back to my people and set up an formal meeting in which we can discuss this. I have confidence that the Giniperians will be reasonable and accept terms that aren’t outrageous";
+              Char1speech.text = "Uh, yes, so I propose that you humans will write up a list of demands that I wlll bring back to my people and set up an formal meeting in which we can discuss this. I have confidence that the Giniperians will be reasonable and accept terms that aren’t outrageous";
               Char2name.text = "";
               Char2speech.text = "";
               Char3name.text = "";
@@ -703,8 +708,6 @@ public void talking(){  // main story function. Players hit next to progress to 
 
                     }
                     else if (primeInt == 813){
-                      DialogueDisplay.SetActive(true);
-                      DialogueDisplay.SetActive(true);
                       Char1name.text = "YOU";
                       Char1speech.text = "Likewise, President.";
                       Char2name.text = "";
@@ -717,24 +720,7 @@ public void talking(){  // main story function. Players hit next to progress to 
                       Char5speech.text = "";
 
                      }
-                     else if (primeInt == 814){
-                       DialogueDisplay.SetActive(true);
-                       DialogueDisplay.SetActive(true);
-                       Char1name.text = "";
-                       Char1speech.text = "(President leaves along with General Stillwell)";
-                       Char2name.text = "";
-                       Char2speech.text = "";
-                       Char3name.text = "";
-                       Char3speech.text = "";
-                       Char4name.text = "";
-                       Char4speech.text = "";
-                       Char5name.text = "";
-                       Char5speech.text = "";
-
-                      }
-                      else if (primeInt == 815){
-                        DialogueDisplay.SetActive(true);
-                        DialogueDisplay.SetActive(true);
+                      else if (primeInt == 814){
                         Char1name.text = "";
                         Char1speech.text = "";
                         Char2name.text = "";
@@ -775,7 +761,7 @@ public void talking(){  // main story function. Players hit next to progress to 
                           Char2speech.text = "";
                           Char3name.text = "";
                           Char3speech.text = "";
-                          Char4name.text = "EVANS";
+                          Char4name.text = "Evan";
                           Char4speech.text = "Oh that’s just a formality. Choosing between certain death and a chance to progress our technology infinitely faster? That’s kinda a no brainer.";
                           Char5name.text = "";
                           Char5speech.text = "";
@@ -796,7 +782,7 @@ public void talking(){  // main story function. Players hit next to progress to 
                            Char4speech.text = "";
                            Char5name.text = "";
                            Char5speech.text = "";
-                           Char6name.text = "MATILDA";
+                           Char6name.text = "Matilda";
                            Char6speech.text = "Will this mean you have to go back to Giniperia?";
 
                           }
