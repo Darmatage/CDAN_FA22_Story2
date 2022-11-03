@@ -68,15 +68,31 @@ void Start(){
 
     if (GameHandler.metMatilda==false){
       primeInt=1;
+      ArtChar1b.SetActive(true);
+       DialogueDisplay.SetActive(true);
+       Char1name.text = "";
+       Char1speech.text = "";
+       Char2name.text = "Matilda";
+       Char2speech.text = "Hey, Dad!";
+       Char3name.text = "";
+       Char3speech.text = "";
+       Char4name.text = "";
+       Char4speech.text = "";
+       allowSpace=true;
     }
      else if (GameHandler.metMatilda==true){
        primeInt=699;
+       ArtChar1a.SetActive(true);
+        DialogueDisplay.SetActive(true);
+       Char1name.text = "";
+       Char1speech.text = "";
        Char2name.text = "Matilda";
        Char2speech.text = "Dads! I have a surprise!";
        Char3name.text = "";
        Char3speech.text = "";
        Char4name.text = "";
        Char4speech.text = "";
+       allowSpace=true;
      }
 
 
@@ -98,27 +114,20 @@ public void talking(){
         if (primeInt == 1){
                 // AudioSource.Play();
         }
-        else if (primeInt == 2){
-               ArtChar1b.SetActive(true);
-                DialogueDisplay.SetActive(true);
+
+       else if (primeInt ==2){
+         ArtChar2a.SetActive(true);
                 Char1name.text = "";
                 Char1speech.text = "";
-                Char2name.text = "Matilda";
-                Char2speech.text = "Hey, Dad!";
-                Char3name.text = "";
-                Char3speech.text = "";
-                Char4name.text = "";
-                Char4speech.text = "";
-        }
-       else if (primeInt ==3){
-         ArtChar2a.SetActive(true);
                 Char2name.text = "";
                 Char2speech.text = "";
                 Char3name.text = "Evan";
                 Char3speech.text = "Hey, honey how was school?";
+                Char4name.text = "";
+                Char4speech.text = "";
                 //gameHandler.AddPlayerStat(1);
         }
-       else if (primeInt == 4){
+       else if (primeInt == 3){
          ArtChar1b.SetActive(false);
          ArtChar1a.SetActive(true);
                 Char2name.text = "Matilda";
@@ -128,7 +137,7 @@ public void talking(){
                 Char4name.text = "";
                 Char4speech.text = "";
         }
-       else if (primeInt == 5){
+       else if (primeInt == 4){
          ArtChar3a.SetActive(true);
                 Char2name.text = "";
                 Char2speech.text = "";
@@ -138,7 +147,7 @@ public void talking(){
                 Char4speech.text = "Yeah? What did you see, Mat'?";
                 //gameHandler.AddPlayerStat(1);
         }
-       else if (primeInt == 6){
+       else if (primeInt == 5){
                 Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "Matilda";
@@ -148,7 +157,7 @@ public void talking(){
                 Char4name.text = "";
                 Char4speech.text = "";
         }
-        else if (primeInt == 7){
+        else if (primeInt == 6){
                  Char1name.text = "";
                  Char1speech.text = "";
                  Char2name.text = "Matilda";
@@ -158,7 +167,7 @@ public void talking(){
                  Char4name.text = "";
                  Char4speech.text = "";
          }
-       else if (primeInt ==8){
+       else if (primeInt ==7){
                 Char1name.text = "YOU";
                 Char1speech.text = "(Oh. I forgot about the wreckage of my ship. .. )";
                 Char2name.text = "";
@@ -168,13 +177,13 @@ public void talking(){
                 Char4name.text = "";
                 Char4speech.text = "";
         }
-       else if (primeInt == 9){
+       else if (primeInt == 8){
                 Char1name.text = "";
                 Char1speech.text = "";
                 Char3name.text = "Evan";
                 Char3speech.text = "Wow, I wonder what that coudld've been. Well, don't worry honey. I'm sure it's nothing.";
 	   }
-		else if (primeInt == 10){
+		else if (primeInt == 9){
                 Char2name.text = "Matilda";
                 Char2speech.text = "Oh hey doggy! .. Wait, when did we get a dog?";
                 Char3name.text = "";
@@ -182,13 +191,13 @@ public void talking(){
                 Char4name.text = "";
                 Char4speech.text = "";
 	   }
-		else if (primeInt == 11){
+		else if (primeInt == 10){
                 Char2name.text = "";
                 Char2speech.text = "";
                 Char4name.text = "Chris";
                 Char4speech.text = "Oh, Daddy and I found this little fella outside our door earlier. Wanna say hi?";
 	   }
-	   else if (primeInt == 12){
+	   else if (primeInt == 11){
        ArtChar1a.SetActive(false);
        ArtChar1c.SetActive(true);
                 Char2name.text = "Matilda";
@@ -196,13 +205,13 @@ public void talking(){
                 Char4name.text = "";
                 Char4speech.text = "";
 	   }
-		else if (primeInt == 13){
+		else if (primeInt == 12){
                 Char2name.text = "";
                 Char2speech.text = "";
                 Char4name.text = "Chris";
                 Char4speech.text = "Don't you have homework to do, Mat'? You can play with the doggy after you're done with that.";
 	   }
-		else if (primeInt == 14){
+		else if (primeInt == 13){
       ArtChar1c.SetActive(false);
       ArtChar1d.SetActive(true);
                 Char2name.text = "Matilda";
@@ -212,7 +221,7 @@ public void talking(){
                 Char4name.text = "";
                 Char4speech.text = "";
 	   }
-		else if (primeInt == 15){
+		else if (primeInt == 14){
       ArtChar2a.SetActive(false);
       ArtChar2b.SetActive(true);
                 Char2name.text = "";
@@ -220,7 +229,7 @@ public void talking(){
                 Char3name.text = "Evan";
                 Char3speech.text = "There’ll be plenty of time to play AFTER you’re done. Don’t worry, the doggy isn’t going anywhere.";
 	   }
-		else if (primeInt == 16){
+		else if (primeInt == 15){
                 Char2name.text = "Matilda";
                 Char2speech.text = "Hmph. Fine, fine.";
                 Char3name.text = "";
@@ -228,58 +237,86 @@ public void talking(){
                 Char4name.text = "";
                 Char4speech.text = "";
 	   }
-		else if (primeInt == 17){
+		else if (primeInt == 16){
                 Char2name.text = "";
                 Char2speech.text = "";
                 Char4name.text = "Chris";
                 Char4speech.text = "That’s the spirit. I‘m gonna help daddy finish up dinner now. You behave now. Don’t get into trouble.";
 	   }
-     else if (primeInt == 18){
+     else if (primeInt == 17){
+                  Char1name.text = "";
+                  Char1speech.text = "";
                   Char2name.text = "";
                   Char2speech.text = "";
+                  Char3name.text = "";
+                  Char3speech.text = "";
                   Char4name.text = "Chris";
                   Char4speech.text = "You behave now, boy. Don’t get into trouble.";
-      }
+    }
 
-			if (GameHandler.hasComm == true){
-        primeInt = 99;}
+    else if (primeInt == 18){
+      ArtChar2b.SetActive(false);
+      ArtChar3a.SetActive(false);
+      ArtChar1d.SetActive(false);
+      ArtChar1b.SetActive(true);
+      DialogueDisplay.SetActive(false);
+      Char1name.text = "";
+      Char1speech.text = "";
+      Char2name.text = "";
+      Char2speech.text = "";
+      Char3name.text = "";
+      Char3speech.text = "";
+      Char4name.text = "";
+      Char4speech.text = "";
+      allowSpace=true;
+      nextButton.SetActive(true);
+			if ((GameHandler.hasComm == true)||(GameHandler.hasAi==true)){
+        primeInt = 99;
+        DialogueDisplay.SetActive(true);
+               Char1name.text = "";
+               Char1speech.text = "";
+               Char2name.text = "Matilda";
+               Char2speech.text = "What should we do, doggy? You like playing catch?";
+               Char3name.text = "";
+               Char3speech.text = "";
+               Char4name.text = "";
+               Char4speech.text = "";
+             }
     else if (GameHandler.hasProof == true){
-        primeInt = 399;}
-
+      primeInt = 399;
+      DialogueDisplay.SetActive(true);
+        Char1name.text = "";
+        Char1speech.text = "";
+        Char2name.text = "Matilda";
+        Char2speech.text ="...";
+        Char3name.text = "";
+        Char3speech.text = "";
+        Char4name.text = "";
+        Char4speech.text = "";
+      }
+   }
 
 
 // ENCOUNTER AFTER CHOICE #1
-       else if (primeInt == 100){
-         ArtChar2b.SetActive(false);
-         ArtChar3a.SetActive(false);
-         ArtChar1d.SetActive(false);
-         ArtChar1b.SetActive(true);
-                Char1name.text = "";
-                Char1speech.text = "";
-                Char2name.text = "Matilda";
-                Char2speech.text = "What should we do, doggy? You like playing catch?";
-                Char4name.text = "";
-                Char4speech.text = "";
-	   }
-        else if (primeInt == 101){
+        else if (primeInt == 100){
                 Char1name.text = "YOU";
                 Char1speech.text = "I most certainly do not.";
                 Char2name.text = "";
                 Char2speech.text = "";
      }
-     else if (primeInt == 102){
+     else if (primeInt == 101){
              Char1name.text = "YOU";
              Char1speech.text = "I don’t think it’s appropriate for someone of my intellectual standing to be involved in such boorish activities.";
              Char2name.text = "";
              Char2speech.text = "";
   }
-  else if (primeInt == 103){
+  else if (primeInt == 102){
           Char1name.text = "YOU";
           Char1speech.text = "You should also most definitely not be disobeying your parental figues.";
           Char2name.text = "";
           Char2speech.text = "";
 }
-	  else if (primeInt == 104){
+	  else if (primeInt == 103){
       ArtChar1b.SetActive(false);
       ArtChar1a.SetActive(true);
                 Char1name.text = "";
@@ -287,7 +324,7 @@ public void talking(){
                 Char2name.text = "Matilda";
                 Char2speech.text = "Ohhh a talking doggy? I don’t see that every day.";
      }
-     else if (primeInt == 105){
+     else if (primeInt == 104){
        ArtChar1a.SetActive(false);
        ArtChar1d.SetActive(true);
                   Char1name.text = "";
@@ -295,25 +332,25 @@ public void talking(){
                   Char2name.text = "Matilda";
                   Char2speech.text = "Are there .. a lot of talking dogs on Ginipera?";
        }
-	 else if (primeInt == 106){
+	 else if (primeInt == 105){
                 Char1name.text = "YOU";
                 Char1speech.text = "How do you know that? Have humans discovered my planet already? I didn’t think you humans have advanced your technological expertise that far yet.";
                 Char2name.text = "";
                 Char2speech.text = "";
      }
-	 else if (primeInt == 107){
+	 else if (primeInt == 106){
                 Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "Matilda";
                 Char2speech.text ="I don’t know what this “tec-oh-ology” thing is. I just heard it from you.";
      }
-	 else if (primeInt == 108){
+	 else if (primeInt == 107){
                 Char1name.text = "YOU";
                 Char1speech.text ="But I haven’t said anything about my home planet. How could you know?";
                 Char2name.text = "";
                 Char2speech.text = "";
      }
-	 else if (primeInt == 109){
+	 else if (primeInt == 108){
      ArtChar1d.SetActive(false);
      ArtChar1b.SetActive(true);
                 Char1name.text = "";
@@ -321,23 +358,23 @@ public void talking(){
                 Char2name.text = "Matilda";
                 Char2speech.text ="I didn’t hear your mouth saying it. I heard it from your head.";
      }
-	 else if (primeInt == 110){
+	 else if (primeInt == 109){
                 Char1name.text = "YOU";
-                Char1speech.text ="A psychic? I’ve never heard of a human psychic.\nYour species shouldn’t have developed enough to possess that ability.";
+                Char1speech.text ="A psychic? I’ve never heard of a human psychic.\nYour species aren't that advanced. ..";
                 Char2name.text = "";
                 Char2speech.text = "";
      }
-	 else if (primeInt == 111){
+	 else if (primeInt == 110){
                 Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "Matilda";
                 Char2speech.text ="People’s heads have always talked to me. Their head voices are quieter, but I can hear them.";
      }
-     else if (primeInt == 112){
+     else if (primeInt == 111){
                 Char2name.text = "Matilda";
                 Char2speech.text ="No one else seems to be able to. .. Your friends are coming too?";
      }
-     else if (primeInt == 113){
+     else if (primeInt == 112){
        ArtChar1b.SetActive(false);
        ArtChar1d.SetActive(true);
                 Char1name.text = "";
@@ -345,12 +382,18 @@ public void talking(){
                 Char2name.text = "Matilda";
                 Char2speech.text ="But they’re not coming to visit right? They’re coming ... to fight?";
      }
-	 else if (primeInt == 114){
+	 else if (primeInt == 113){
 				        Char1name.text = "YOU";
-                Char1speech.text ="It’s a complicated situation but I’ve talked with your parental figures. They understand the situation.";
+                Char1speech.text ="It’s a complicated situation. Your fathers seem to have a level of authority here.";
                 Char2name.text = "";
                 Char2speech.text = "";
      }
+     else if (primeInt == 114){
+  				        Char1name.text = "YOU";
+                  Char1speech.text ="I plan to consult with them in more detail.";
+                  Char2name.text = "";
+                  Char2speech.text = "";
+       }
 	 	 else if (primeInt == 115){
                 Char1name.text = "";
                 Char1speech.text = "";
@@ -471,6 +514,8 @@ public void talking(){
      }
 	 else if (primeInt == 217){
      ArtChar2b.SetActive(true);
+                Char1name.text = "";
+                Char1speech.text = "";
                 Char2name.text = "";
                 Char2speech.text = "";
 				        Char3name.text = "Evan";
@@ -497,6 +542,8 @@ public void talking(){
      ArtChar2c.SetActive(true);
                 Char1name.text = "";
                 Char1speech.text = "";
+                Char2name.text = "";
+                Char2speech.text = "";
 				        Char3name.text = "Evan";
                 Char3speech.text = "You .. spoke in front of Matilda?!";
 	 }
@@ -516,7 +563,7 @@ public void talking(){
                 Char1name.text = "";
                 Char1speech.text = "";
 				        Char3name.text = "Evan";
-                Char3speech.text ="Tha--That’s not how that works! ... Whatever, it‘s okay. Everything’s fine. It’s fine.(turns to Matilda) So now you know Matilda.";
+                Char3speech.text ="Tha--That’s not how that works! ... Whatever, it‘s okay. Everything’s fine. It’s fine.";
 	 }
    else if (primeInt == 224){
      ArtChar2c.SetActive(false);
@@ -733,6 +780,8 @@ public void talking(){
     }
   else if (primeInt == 321){
     ArtChar2b.SetActive(true);
+               Char1name.text = "";
+               Char1speech.text = "";
                Char2name.text = "";
                Char2speech.text = "";
                Char3name.text = "Evan";
@@ -757,6 +806,8 @@ public void talking(){
     ArtChar2c.SetActive(true);
                Char1name.text = "";
                Char1speech.text = "";
+               Char2name.text = "";
+               Char2speech.text = "";
                Char3name.text = "Evan";
                Char3speech.text = "You .. spoke in front of Matilda?!";
   }
@@ -781,12 +832,8 @@ public void talking(){
                Char3speech.text ="Tha--That’s not how that works! ... Whatever, it‘s okay. Everything’s fine.";
   }
   else if (primeInt == 328){
-               Char1name.text = "";
-               Char1speech.text = "";
-               Char3name.text = "Evan";
-               Char3speech.text ="It’s fine. So now you know Matilda.";
-  }
-  else if (primeInt == 328){
+    ArtChar2d.SetActive(false);
+    ArtChar1a.SetActive(true);
                 Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "";
@@ -1563,6 +1610,8 @@ else if (primeInt == 644){
 }
 
 else if (primeInt==700){
+  ArtChar2a.SetActive(true);
+  ArtChar3b.SetActive(true);
 Char1name.text= "";
 Char1speech.text= "";
 Char2name.text = "";
@@ -1573,6 +1622,10 @@ Char4name.text = "Chris";
 Char4speech.text = "Oh? Could this be another one of your art--";
 }
 else if (primeInt==701){
+  ArtChar2a.SetActive(false);
+  ArtChar3b.SetActive(false);
+  ArtChar2c.SetActive(true);
+  ArtChar3c.SetActive(true);
 DialogueDisplay.SetActive(false);
 Char2name.text = "";
 Char2speech.text = "";
@@ -1591,6 +1644,8 @@ Char4name.text = "Chris";
 Char4speech.text = "Mat', is that .. a dog?";
 }
 else if (primeInt==703){
+  ArtChar2c.SetActive(false);
+  ArtChar2b.SetActive(true);
 Char2name.text = "";
 Char2speech.text = "";
 Char3name.text = "Evan";
@@ -1615,6 +1670,8 @@ Char4name.text = "";
 Char4speech.text = "";
 }
 else if (primeInt==706){
+  ArtChar3c.SetActive(false);
+  ArtChar3d.SetActive(true);
 Char2name.text = "";
 Char2speech.text = "";
 Char3name.text = "";
@@ -1623,10 +1680,12 @@ Char4name.text = "Chris";
 Char4speech.text = "... Won't be very sweet once it starts to foam at the mouth.";
 }
 else if (primeInt==707){
+  ArtChar2b.SetActive(false);
+  ArtChar2d.SetActive(true);
 Char2name.text = "";
 Char2speech.text = "";
 Char3name.text = "Evan";
-Char3speech.text = "Honestly honey how likely is that going to happen?";
+Char3speech.text = "Honestly honey, how likely is that going to happen?";
 Char4name.text = "";
 Char4speech.text = "";
 }
@@ -1639,6 +1698,8 @@ Char4name.text = "";
 Char4speech.text = "";
 }
 else if (primeInt==709){
+  ArtChar2d.SetActive(false);
+  ArtChar2a.SetActive(true);
 Char2name.text = "";
 Char2speech.text = "";
 Char3name.text = "Evan";
@@ -1647,6 +1708,8 @@ Char4name.text = "";
 Char4speech.text = "";
 }
 else if (primeInt==710){
+  ArtChar3d.SetActive(false);
+  ArtChar3a.SetActive(true);
 Char2name.text = "";
 Char2speech.text = "";
 Char3name.text = "";
@@ -1655,6 +1718,8 @@ Char4name.text = "Chris";
 Char4speech.text = " .. Fine, fine. Oh, and we need to start making dinner.";
 }
 else if (primeInt==711){
+Char1name.text= "";
+Char1speech.text= "";
 Char2name.text = "";
 Char2speech.text = "";
 Char3name.text = "";
@@ -1663,10 +1728,14 @@ Char4name.text = "Chris";
 Char4speech.text = " Behave well, you two. We'll tell you when it's ready!";
 }
 else if (primeInt==712){
+  ArtChar2a.SetActive(false);
+  ArtChar3a.SetActive(false);
           Char1name.text= "YOU";
           Char1speech.text= " .. So, those are your fathers.";
           Char2name.text = "";
           Char2speech.text = "";
+          Char4name.text = "";
+          Char4speech.text = "";
         }
       else if (primeInt==713){
         Char1name.text= "";
@@ -1793,6 +1862,6 @@ else if (primeInt==712){
 
 
         public void SceneChange1(){
-               SceneManager.LoadScene("End_GameEnd2");
+               SceneManager.LoadScene("End_GoodEnd2");
         }
 }

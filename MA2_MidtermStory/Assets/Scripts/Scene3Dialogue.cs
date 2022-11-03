@@ -338,7 +338,7 @@ else if (primeInt == 403){
       Char5name.text = "";
       Char5speech.text = "";
                           }
-else if (primeInt == 403){
+else if (primeInt == 404){
       Char1name.text = "YOU";
       Char1speech.text = "(Or .. could they become dangerous?)";
       Char2name.text = "";
@@ -461,7 +461,7 @@ else if (primeInt == 501){
         primeInt=499;
     }
     public void SceneChange5Funct(){
-      SceneManager.LoadScene("End_BadEnd1");
+      SceneManager.LoadScene("End_BadEnd4");
     }
     public void SceneChange6Funct(){
       SceneManager.LoadScene("Scene4");

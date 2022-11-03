@@ -65,6 +65,7 @@ void talking(){         // main story function. Players hit next to progress to 
                 DialogueDisplay.SetActive(true);
                 Char1name.text = "YOU";
                 Char1speech.text = "(It’s that cat from before! So this creature resides here too?)";
+                Char2name.text = "";
                 Char2speech.text = "";
                 Char3name.text = "";
                 Char3speech.text = "";
@@ -78,7 +79,7 @@ void talking(){         // main story function. Players hit next to progress to 
                   Char3name.text = "";
                   Char3speech.text = "";
                 }
-              else if (GameHandler.hasComm==true){
+              else if ((GameHandler.hasComm==true)||(GameHandler.hasAi==true)){
                    primeInt=99;
                 ArtChar1a.SetActive(true);
                     Char1name.text = "YOU";
@@ -241,7 +242,7 @@ else if (primeInt == 123){
          Char1name.text = "";
          Char1speech.text = "";
          Char2name.text = "Cat";
-         Char2speech.text = "Yeah, yeah. If we're done, can you go away now?/nI need my afternoon nap unless you want me to rip your tail off.";
+         Char2speech.text = "Yeah, yeah. If we're done, can you go away now? I need my afternoon nap unless you want me to rip your tail off.";
          nextButton.SetActive(false);
          allowSpace = false;
          NextScene1Button.SetActive(true); //scene 2

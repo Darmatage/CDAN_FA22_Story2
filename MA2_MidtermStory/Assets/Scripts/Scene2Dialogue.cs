@@ -346,7 +346,7 @@ public void talking(){  // main story function. Players hit next to progress to 
 }
           else if (primeInt == 315){
             Char1name.text = "YOU";
-            Char1speech.text = "(Hmph, that was a huge waste of time.)/n(I better come across a human soon.)";
+            Char1speech.text = "(Hmph, that was a huge waste of time. I better come across a human soon.)";
             Char3name.text = "";
             Char3speech.text = "";
             nextButton.SetActive(false);

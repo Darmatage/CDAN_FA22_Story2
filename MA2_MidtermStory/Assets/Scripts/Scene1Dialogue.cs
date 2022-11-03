@@ -168,15 +168,28 @@ public void talking(){         // main story function. Players hit next to progr
 		else if (primeInt ==16){
 			ArtChar2.SetActive(false);
                 Char1name.text = "YOU";
-                Char1speech.text = "(I could salvage my ship communicator– that takes a lot of time, but sure would help with speaking to humans \n I could focus on bringing proof of the coming invasion \n Or I could transfer the AI to my portable computer so she can help.)";
+                Char1speech.text = "(I could salvage my ship communicator which would help with speaking to humans, ...)";
                 Char2name.text = "";
                 Char2speech.text = "";
         }
+        else if (primeInt ==17){
+          ArtChar2.SetActive(false);
+                    Char1name.text = "YOU";
+                    Char1speech.text = "(I could bring my documents of proof so I'm believed, ..)";
+                    Char2name.text = "";
+                    Char2speech.text = "";
+            }
+            else if (primeInt ==18){
+              ArtChar2.SetActive(false);
+                        Char1name.text = "YOU";
+                        Char1speech.text = "( .. or I could transfer the AI to my portable computer so she can help.)";
+                        Char2name.text = "";
+                        Char2speech.text = "";
+                }
 
-
-       else if (primeInt == 17){
+       else if (primeInt == 19){
                 Char1name.text = "YOU";
-                Char1speech.text = "What do I do?";
+                Char1speech.text = "(What do I do?)";
                 Char2name.text = "";
                 Char2speech.text = "";
                 // Turn off "Next" button, turn on "Choice" buttons

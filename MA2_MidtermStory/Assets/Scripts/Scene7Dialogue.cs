@@ -317,7 +317,7 @@ public void talking(){         // main story function. Players hit next to progr
 
 // FUNCTIONS FOR BUTTONS TO ACCESS (Choice #1 and switch scenes)
         public void Choice1aFunct(){
-              SceneManager.LoadScene("End_GameEnd3");
+              SceneManager.LoadScene("End_BadEnd3");
 				//GameObject.FindWithTag("GameHandler").GetComponent<GameHandler>().hasComm = true;
         }
         public void SceneChange1Funct(){

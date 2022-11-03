@@ -112,7 +112,7 @@ public void talking(){
        else if (primeInt ==4){
          ArtChar3b.SetActive(false);
                 Char1name.text = "YOU";
-                Char1speech.text = "Pixeli?!\n(.. Snarglefart, the transition from the ship’s generator must’ve been too much.)";
+                Char1speech.text = "Pixeli?!\n(.. Snargleflat, the transition from the ship’s generator must’ve been too much.)";
                 Char2name.text = "";
                 Char2speech.text = "";
                 //gameHandler.AddPlayerStat(1);
