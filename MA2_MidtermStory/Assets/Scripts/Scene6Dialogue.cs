@@ -148,7 +148,7 @@ public void talking(){
                 Char1speech.text = "...";
                 Char2name.text = "";
                 Char2speech.text = "";
-  if(GameHandler.hasComm==true){
+  if((GameHandler.hasComm==true)||(GameHandler.hasAi==true)){
         Choice2a.SetActive(true);
 				Choice2b.SetActive(false);
 		}

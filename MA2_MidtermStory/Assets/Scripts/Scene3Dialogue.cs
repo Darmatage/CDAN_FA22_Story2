@@ -338,7 +338,7 @@ else if (primeInt == 403){
       Char5name.text = "";
       Char5speech.text = "";
                           }
-else if (primeInt == 403){
+else if (primeInt == 404){
       Char1name.text = "YOU";
       Char1speech.text = "(Or .. could they become dangerous?)";
       Char2name.text = "";
@@ -436,7 +436,7 @@ else if (primeInt == 501){
         primeInt=199;
       }
     public void SceneChange3Funct(){
-      SceneManager.LoadScene("Scene10");
+      SceneManager.LoadScene("End_BadEnd4");
     }
     public void SceneChange4Funct(){
       ArtBG1.SetActive(false);
@@ -445,6 +445,7 @@ else if (primeInt == 501){
       ArtChar2.SetActive(false);
       ArtChar3.SetActive(false);
       ArtChar4.SetActive(false);
+      NextScene3Button.SetActive(false);
       NextScene4Button.SetActive(false);
       nextButton.SetActive(true);
       allowSpace = true;

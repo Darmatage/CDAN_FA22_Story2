@@ -1350,10 +1350,10 @@ MonoBehaviour:
   primeInt: 1
   Char1name: {fileID: 2202874877094450639}
   Char1speech: {fileID: 2202874877094450638}
-  Char2name: {fileID: 2146611996}
-  Char2speech: {fileID: 627845296}
-  Char3name: {fileID: 2202874877094450637}
-  Char3speech: {fileID: 2202874877094450636}
+  Char2name: {fileID: 2202874877094450637}
+  Char2speech: {fileID: 2202874877094450636}
+  Char3name: {fileID: 2146611996}
+  Char3speech: {fileID: 627845296}
   DialogueDisplay: {fileID: 1194211659}
   ArtChar1a: {fileID: 750828626}
   ArtChar1b: {fileID: 1668712907}
