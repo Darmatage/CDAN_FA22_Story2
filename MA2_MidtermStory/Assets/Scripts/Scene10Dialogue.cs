@@ -27,14 +27,20 @@ public class Scene10Dialogue : MonoBehaviour {
         public GameObject ArtChar1a;//ChrisAngry
         public GameObject ArtChar1b;//ChrisAnnoyed
         public GameObject ArtChar1c;//ChrisNeutral
-		    public GameObject ArtChar2a;//EvanAmgry
-		    public GameObject ArtChar2b;//EvanAnnoyed
-        public GameObject ArtChar2c;//EvanNeutral
-		    public GameObject ArtChar3a;//POTUS
-		    public GameObject ArtChar3b;
-	      public GameObject ArtChar4a;//GS
-		    public GameObject ArtChar4b;
-        
+		    public GameObject ArtChar2a;//Potus
+		    public GameObject ArtChar2b;//
+        public GameObject ArtChar2c;//
+		    public GameObject ArtChar3a;//Chrisangry
+		    public GameObject ArtChar3b;//Chrisannoyed
+        public GameObject ArtChar3c;//Chrisneutral
+	      public GameObject ArtChar4a;//Evansangry
+		    public GameObject ArtChar4b;//Evansannoyed
+        public GameObject ArtChar4c;//Evansneutral
+        public GameObject ArtChar5a;//Gs
+         public GameObject ArtChar6a;//MATILDAneutral
+
+
+
         public GameObject ArtBG1;
         public GameObject Choice1a;
         public GameObject Choice1b;
