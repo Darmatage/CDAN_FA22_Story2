@@ -36,7 +36,6 @@ public class Scene9Dialogue : MonoBehaviour {
 		    public GameObject Choice2a;
         public GameObject Choice2b;
 		    public GameObject NextScene1Button;
-        public GameObject NextScene2Button;
         public GameObject nextButton;
        //public GameHandler gameHandler;
        //public AudioSource audioSource;
@@ -65,7 +64,6 @@ void Start(){
 		    Choice2a.SetActive(false);
         Choice2b.SetActive(false);
         NextScene1Button.SetActive(false);
-        NextScene2Button.SetActive(false);
         nextButton.SetActive(true);
 
     if (GameHandler.metMatilda==false){
