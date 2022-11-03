@@ -24,9 +24,9 @@ public class Scene7Dialogue : MonoBehaviour {
 	   //public GameObject ArtChar2b;
 	   //public GameObject ArtChar2c;
         public GameObject ArtBG1;
-        public GameObject Choice1a;
+        public GameObject Choice1a; // to bad end 3
         public GameObject Choice1b;
-        public GameObject NextScene1Button;
+        public GameObject NextScene1Button; // to scene 9
         //public GameObject NextScene2Button;
         public GameObject nextButton;
         public GameHandler gameHandler;
@@ -133,38 +133,15 @@ public void talking(){         // main story function. Players hit next to progr
            }
            else if (primeInt == 201){
                     Char1name.text = "";
-                    Char1speech.text = "Here! Have one of my meatballs. You must be hungry.";
-                    Char2name.text = "";
-                    Char2speech.text = "";
+                    Char1speech.text = "";
+                    Char2name.text = "Chris";
+                    Char2speech.text = "Here! Have one of my meatballs. You must be hungry.";
                     // Turn off "Next" button, turn on "Choice" buttons
                     nextButton.SetActive(false);
                     allowSpace = false;
                     Choice1a.SetActive(true); // function Choice1aFunct()
                     Choice1b.SetActive(true); // function Choice1bFunct()
             }
-
-        //scene 7a: with communication device
-        else if (primeInt == 300){
-                 Char1name.text = "YOU";
-                 Char1speech.text = "(Urk! What is the foul..!)";
-                 Char2name.text = "";
-                 Char2speech.text = "";
-                 SoundText.text = "";
-         }
-
-        else if (primeInt == 301){
-          ArtChar1a.SetActive(false);
-          ArtChar1c.SetActive(true);
-                 Char1name.text = "";
-                 Char1speech.text = "";
-                 Char2name.text = "";
-                 Char2speech.text = "";
-                 SoundText.text = "(THUD!)";
-         }
-         else if (primeInt == 302){
-           SceneManager.LoadScene("End_BadEnd3");
-      }
-
 
 
       //Encounter after choice2 to reject:
@@ -299,9 +276,6 @@ public void talking(){         // main story function. Players hit next to progr
              Char1speech.text = "";
              Char2name.text = "Chris";
              Char2speech.text = "Huh, I guess you weren't hungry.";
-             nextButton.SetActive(false);
-             allowSpace = false;
-             NextScene1Button.SetActive(true); //scene 2
     }
     else if (primeInt == 703){
       ArtChar1a.SetActive(false);
@@ -325,18 +299,6 @@ public void talking(){         // main story function. Players hit next to progr
     }
 }
     // FUNCTIONS FOR BUTTONS TO ACCESS (Choice #1 and switch scenes)
-            public void Choice1aFunct(){
-                    Char1name.text = "YOU";
-                    Char1speech.text = "I can't let down this human's favor.";
-                    Char2name.text = "";
-                    Char2speech.text = "";
-                    primeInt = 499;
-                    Choice1a.SetActive(false);
-                    Choice1b.SetActive(false);
-                    nextButton.SetActive(true);
-                    allowSpace = true;
-    				//GameObject.FindWithTag("GameHandler").GetComponent<GameHandler>().hasComm = true;
-            }
             public void Choice1bFunct(){
                     Char1name.text = "YOU";
                     Char1speech.text = "(I must stay viglant. Much of this planet is still a mystery to me.)";
@@ -354,32 +316,10 @@ public void talking(){         // main story function. Players hit next to progr
 
 
 // FUNCTIONS FOR BUTTONS TO ACCESS (Choice #1 and switch scenes)
-        public void Choice1cFunct(){
-                Char1name.text = "YOU";
-                Char1speech.text = "(I can't let down this human's favor.)";
-                Char2name.text = "";
-                Char2speech.text = "";
-                primeInt = 299;
-                Choice1a.SetActive(false);
-                Choice1b.SetActive(false);
-                nextButton.SetActive(true);
-                allowSpace = true;
+        public void Choice1aFunct(){
+              SceneManager.LoadScene("End_GameEnd3");
 				//GameObject.FindWithTag("GameHandler").GetComponent<GameHandler>().hasComm = true;
         }
-        public void Choice1dFunct(){
-                Char1name.text = "YOU";
-                Char1speech.text = "My apologies, but I must stay viglant. Much of this planet is still a mystery to me.";
-                Char2name.text = "";
-                Char2speech.text = "";
-                primeInt = 399;
-                Choice1a.SetActive(false);
-                Choice1b.SetActive(false);
-                nextButton.SetActive(true);
-                allowSpace = true;
-                //GameObject.FindWithTag("GameHandler").GetComponent<GameHandler>().hasComm = true;
-                //GameHandler.hasAi = true;
-        }
-
         public void SceneChange1Funct(){
                SceneManager.LoadScene("Scene9");
         }

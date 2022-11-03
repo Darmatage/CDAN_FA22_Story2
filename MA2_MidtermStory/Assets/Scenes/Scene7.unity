@@ -1946,8 +1946,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1413621987}
-        m_TargetAssemblyTypeName: Scene3bDialogue, Assembly-CSharp
-        m_MethodName: SceneChange1
+        m_TargetAssemblyTypeName: Scene7Dialogue, Assembly-CSharp
+        m_MethodName: SceneChange1Funct
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2181,7 +2181,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5177676122008167817, guid: 83817158434336240afdb54eae82a689, type: 3}
       propertyPath: m_RootOrder
-      value: 11
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 5177676122008167817, guid: 83817158434336240afdb54eae82a689, type: 3}
       propertyPath: m_AnchorMax.x

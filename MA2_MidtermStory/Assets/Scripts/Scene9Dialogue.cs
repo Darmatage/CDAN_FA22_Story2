@@ -839,8 +839,8 @@ public void talking(){
                Char3speech.text ="Honestly, so did I. The Preseident must know something.";
   }
   else if (primeInt == 336){
-    ArtChar1b.SetActive(false);
-    ArtChar1a.SetActive(true);
+    ArtChar2d.SetActive(false);
+    ArtChar2a.SetActive(true);
                 Char2name.text = "";
                 Char2speech.text = "";
                 Char3name.text = "Evan";
@@ -1048,10 +1048,12 @@ public void talking(){
                     Char2speech.text = "";
          }
    else if (primeInt == 512){
+     ArtChar1b.SetActive(false);
+     ArtChar1a.SetActive(true);
               Char1name.text = "";
               Char1speech.text = "";
               Char2name.text = "Matilda";
-              Char2speech.text ="Don’t worry. My dads will take you to work tomorrow. You’ll save the world!";
+              Char2speech.text ="Don’t worry. My dads will take you to work tomorrow and you’ll save the world!";
    }
    else if (primeInt == 513){
               Char1name.text = "YOU";
@@ -1060,6 +1062,8 @@ public void talking(){
               Char2speech.text = "";
    }
    else if (primeInt == 514){
+     ArtChar1a.SetActive(false);
+     ArtChar1b.SetActive(true);
               Char1name.text = "";
               Char1speech.text = "";
               Char2name.text = "Matilda";
@@ -1090,6 +1094,7 @@ public void talking(){
                 Char3speech.text ="Hey Mat', I told you to go get your homework done. The doggy is seriously not going to go anywhere I promise.";
      }
 	 else if (primeInt == 518){
+     ArtChar1b.SetActive(false);
      ArtChar1d.SetActive(true);
 				        Char2name.text = "Matilda";
                 Char2speech.text ="Actually Dad, there is something I wanna tell you. I can read minds.";
@@ -1100,7 +1105,7 @@ public void talking(){
                 Char2name.text = "";
                 Char2speech.text = "";
 				        Char3name.text = "Evan";
-                Char3speech.text ="Ha ha very funny. If you think saying something like that will get you out of doing homework then think again.";
+                Char3speech.text ="Haha very funny. If you think saying something like that will get you out of doing homework then think again.";
      }
 	 else if (primeInt == 520){
 				        Char2name.text = "Matilda";
@@ -1121,6 +1126,8 @@ public void talking(){
                       Char3speech.text = "";
            }
 	 else if (primeInt == 523){
+     ArtChar2d.SetActive(false);
+     ArtChar2c.SetActive(true);
                 Char2name.text = "";
                 Char2speech.text = "";
 				        Char3name.text = "Evan";
@@ -1135,6 +1142,8 @@ public void talking(){
 	 else if (primeInt == 524){
 				Char2name.text = "Matilda";
                 Char2speech.text ="Since I could remember.";
+                Char3name.text = "";
+                Char3speech.text = "";
      }
 	 else if (primeInt == 525){
      Char2name.text = "";
@@ -1142,155 +1151,415 @@ public void talking(){
 				Char3name.text = "Evan";
                 Char3speech.text ="So you’re telling me that you’ve always been able to read people’s minds? That you’ve always know what I was thinking about? ";
      }
-	 else if (primeInt == 526){
+     else if (primeInt == 526){
+        Char2name.text = "";
+        Char2speech.text = "";
+          Char3name.text = "Evan";
+                   Char3speech.text ="That you’ve always known what I was thinking about? ";
+        }
+	 else if (primeInt == 527){
 				Char2name.text = "Matilda";
                 Char2speech.text ="For the most part. It’s not like I’m ALWAYS listening to what your head has to say.";
                 Char3name.text = "";
                 Char3speech.text = "";
      }
-	 else if (primeInt == 517){
+	 else if (primeInt == 528){
+     Char2name.text = "";
+     Char2speech.text = "";
 				Char3name.text = "Evan";
-                Char3speech.text ="Wow… just wow. I can’t believe I’ve never noticed. My daughter is a freakin’ psychic.";
+                Char3speech.text ="Wow .. just wow. I can’t believe I’ve never noticed..";
      }
-	 else if (primeInt == 518){
+     else if (primeInt == 529){
+       Char2name.text = "";
+       Char2speech.text = "";
+          Char3name.text = "Evan";
+                   Char3speech.text ="My daughter's a freakin’ psychic.";
+        }
+        else if (primeInt == 530){
+          ArtChar3a.SetActive(true);
+          Char2name.text = "";
+          Char2speech.text = "";
+             Char3name.text = "";
+                      Char3speech.text ="";
+                      Char4name.text= "Chris";
+                      Char4speech.text="Eh, I always had a hunch.";
+           }
+           else if (primeInt == 531){
+             ArtChar3a.SetActive(false);
+             ArtChar2c.SetActive(false);
+             ArtChar2d.SetActive(true);
+             Char2name.text = "";
+             Char2speech.text = "";
+                Char3name.text = "Evan";
+                         Char3speech.text ="Not helping!";
+                         Char4name.text= "";
+                         Char4speech.text="";
+              }
+	 else if (primeInt == 532){
 				Char2name.text = "Matilda";
-                Char2speech.text ="That’s great and all that you’re freaked out, Dad because you’re about to hear something more freaky. We’re all going to die by this time tomorrow because of a alien invasion.";
+                Char2speech.text ="It's’s great that you’re freaked out and all, because you’re about to hear something freakier.";
+                Char3name.text = "";
+                Char3speech.text = "";
      }
-	 else if (primeInt == 519){
+     else if (primeInt == 533){
+          Char2name.text = "Matilda";
+                   Char2speech.text ="We’re all going to die by this time tomorrow .. because of an alien invasion!";
+                   Char3name.text = "";
+                   Char3speech.text = "";
+        }
+	 else if (primeInt == 534){
+     ArtChar2d.SetActive(false);
+     ArtChar2c.SetActive(true);
+     Char2name.text = "";
+     Char2speech.text = "";
 				Char3name.text = "Evan";
-                Char3speech.text ="Wait, wait…what?";
+                Char3speech.text ="Wait, wait ... what?";
      }
-	 else if (primeInt == 520){
+	 else if (primeInt == 535){
 				Char2name.text = "Matilda";
-                Char2speech.text ="Yeah, by tomorrow, our planet will be turned into a wasteland with every possible resource we have stripped and taken away. Everyone will either die immediately or starve to death.";
+                Char2speech.text ="Yeah. By tomorrow, our planet will be drained of life! People will get really hurt!";
+                Char3name.text = "";
+                Char3speech.text = "";
      }
-	 else if (primeInt == 521){
+     else if (primeInt == 536){
+          Char2name.text = "Matilda";
+                   Char2speech.text ="People might even... ";
+                   Char3name.text = "";
+                   Char3speech.text = "";
+        }
+	 else if (primeInt == 537){
+     Char2name.text = "";
+     Char2speech.text = "";
 				Char3name.text = "Evan";
                 Char3speech.text ="How is that even possible? How could you even know that such a thing will happen?";
      }
-	 else if (primeInt == 522){
+	 else if (primeInt == 538){
+     ArtChar1d.SetActive(false);
+     ArtChar1b.SetActive(true);
 				Char2name.text = "Matilda";
-                Char2speech.text ="Because of the doggie here, He’s not actually a doggie. He’s a alien from another planet. Say hi, A, (A raise a paw in a clumsy imitation of a wave).";
+                Char2speech.text ="Because of the doggy here. He’s not actually a doggy..";
+                Char3name.text = "";
+                Char3speech.text = "";
      }
-	 else if (primeInt == 523){
+     else if (primeInt == 539){
+        ArtChar1d.SetActive(false);
+        ArtChar1b.SetActive(true);
+          Char2name.text = "Matilda";
+                   Char2speech.text ="He’s a alien from another planet! Say hi, doggy-alien-thing!";
+                   Char3name.text = "";
+                   Char3speech.text = "";
+        }
+	 else if (primeInt == 540){
+     Char2name.text = "";
+     Char2speech.text = "";
 				Char3name.text = "Evan";
                 Char3speech.text ="Wait, the dog? What is even going on right now? Matilda. I’m gonna need you to explain everything.";
+        allowSpace=false;
+        nextButton.SetActive(false);
 				NextScene1Button.SetActive(true);
 	 }
 
 //CHOICE 2
-	 else if (primeInt == 600){
-				Char1name.text = "YOU";
-                Char1speech.text = "I don't think someone of your age would be able to comprehend it.";
-	 }
-	  else if (primeInt == 601){
-				Char2name.text = "Matilda";
-                Char2speech.text = "Ha! Try me, space doggy. I know more than you think.";
-	  }
-	   else if (primeInt == 602){
-				Char1name.text = "YOU";
-                Char1speech.text = "Hmm, I guess so. You could always just pull the information from my head, can’t you?";
-	  }
-	   else if (primeInt == 603){
-				Char2name.text = "Matilda";
-                Char2speech.text = "Exactly. It doesn't really work that way, but close enough ";
-	  }
-	 else if (primeInt == 604){
-				Char1name.text = "YOU";
-                Char1speech.text ="Well, Guinpera, in simple terms, is a rather vast planet, much larger than this one.Our civilization relies on organic resources to survive much like yours, but while your planet has an abundance of such materials, the environment on my planet is much less suited for such growth. We barely survive by using our technology to replicate poor copies of the little organisms that we have but now that has become too unsustainable. We need other resources outside of our planet. And your planet has been chosen as the target.";
+else if (primeInt == 600){
+            Char1name.text = "";
+            Char1speech.text = "";
+           Char2name.text = "Matilda";
+            Char2speech.text = "Ha! Try me, space doggy. I know more than you think.";
+}
+else if (primeInt == 601){
+           Char1name.text = "YOU";
+            Char1speech.text = "Hmm, I guess so. You could always just pull the information from my head, can’t you?";
+            Char2name.text = "";
+            Char2speech.text = "";
+}
+else if (primeInt == 602){
+            Char1name.text = "";
+            Char1speech.text = "";
+           Char2name.text = "Matilda";
+            Char2speech.text = "Exactly. It doesn't really work that way .. but close enough!";
+}
+else if (primeInt == 603){
+           Char1name.text = "YOU";
+            Char1speech.text ="Our civilization relies on organic resources to survive much like yours.";
+            Char2name.text = "";
+            Char2speech.text = "";
+ }
+ else if (primeInt == 604){
+            Char1name.text = "YOU";
+             Char1speech.text ="Our planet's landscape is .. not suitable for growth, though.";
+             Char2name.text = "";
+             Char2speech.text = "";
+  }
+ else if (primeInt == 605){
+            Char1name.text = "YOU";
+             Char1speech.text ="We barely survive on technology to replicate poor copies of the little organisms that we have but now that has become too unsustainable.";
+  }
+  else if (primeInt == 606){
+             Char1name.text = "YOU";
+              Char1speech.text ="We need other resources outside of our planet. And your planet has been chosen as the target.";
+              Char2name.text = "";
+              Char2speech.text = "";
+   }
+else if (primeInt == 607){
+           Char1name.text = "";
+           Char1speech.text = "";
+           Char2name.text = "Matilda";
+           Char2speech.text ="Ohh. I see. So .. why are you here? Why do you want to warn us?";
+}
+else if (primeInt == 608){
+           Char1name.text = "YOU";
+           Char1speech.text ="I’ve always been fascinated with you humans. Your culture is so rich and diverse.";
+           Char2name.text = "";
+           Char2speech.text = "";
+}
+else if (primeInt == 609){
+              Char1name.text = "YOU";
+              Char1speech.text ="I just .. want to preserve that. I also believe cooperation is better than complete domination";
+              Char2name.text = "";
+              Char2speech.text = "";
+   }
+else if (primeInt == 610){
+ArtChar1d.SetActive(false);
+ArtChar1b.SetActive(true);
+           Char1name.text = "";
+           Char1speech.text = "";
+           Char2name.text = "Matilda";
+           Char2speech.text ="Hmmm, I think it’s also good to have peace rather than fight for things too!";
+}
+else if (primeInt == 611){
+              Char2name.text = "Matilda";
+              Char2speech.text ="Dad has always told me that peace is always the first option we should go for.";
+   }
+else if (primeInt == 612){
+           Char1name.text = "YOU";
+           Char1speech.text ="Your parental figures are very wise. I agree wholeheartedly with them.";
+           Char2name.text = "";
+           Char2speech.text = "";
+}
+else if (primeInt == 613){
+             Char1name.text = "YOU";
+              Char1speech.text ="Unfortunately, some of my people believe that there's no other choice but to take what we need by force.";
+              Char2name.text = "";
+              Char2speech.text = "";
+   }
+   else if (primeInt == 614){
+                Char1name.text = "YOU";
+                 Char1speech.text ="That is why I’m here to prevent that.";
+                 Char2name.text = "";
+                 Char2speech.text = "";
+      }
+else if (primeInt == 615){
+  ArtChar1b.SetActive(false);
+  ArtChar1a.SetActive(true);
+           Char1name.text = "";
+           Char1speech.text = "";
+           Char2name.text = "Matilda";
+           Char2speech.text ="Don’t worry. My dads will take you to work tomorrow and you’ll save the world!";
+}
+else if (primeInt == 616){
+           Char1name.text = "YOU";
+           Char1speech.text ="Your parents seem like very capable people. I hope your government understands how urgent this is.";
+           Char2name.text = "";
+           Char2speech.text = "";
+}
+else if (primeInt == 617){
+  ArtChar1a.SetActive(false);
+  ArtChar1b.SetActive(true);
+           Char1name.text = "";
+           Char1speech.text = "";
+           Char2name.text = "Matilda";
+           Char2speech.text ="We’ll make them understand. No matter how thick-headed they can be!";
+}
+else if (primeInt == 618){
+             Char1name.text = "";
+             Char1speech.text = "";
+             Char2name.text = "Matilda";
+             Char2speech.text ="They can't ignore something this big, right?";
+   }
+else if (primeInt == 619){
+           Char1name.text = "YOU";
+           Char1speech.text ="Like I said, I hope so.";
+           Char2name.text = "";
+           Char2speech.text = "";
+           Char3name.text = "";
+           Char3speech.text = "";
+}
+
+else if (primeInt == 620){
+  ArtChar2d.SetActive(true);
+             Char1name.text = "";
+             Char1speech.text = "";
+             Char2name.text = "";
+             Char2speech.text = "";
+             Char3name.text = "Evan";
+             Char3speech.text ="Hey Mat', I told you to go get your homework done. The doggy is seriously not going to go anywhere I promise.";
+  }
+else if (primeInt == 621){
+  ArtChar1b.SetActive(false);
+  ArtChar1d.SetActive(true);
+             Char2name.text = "Matilda";
+             Char2speech.text ="Actually Dad, there is something I wanna tell you. I can read minds.";
+             Char3name.text = "";
+             Char3speech.text = "";
+  }
+else if (primeInt == 622){
+             Char2name.text = "";
+             Char2speech.text = "";
+             Char3name.text = "Evan";
+             Char3speech.text ="Haha very funny. If you think saying something like that will get you out of doing homework then think again.";
+  }
+else if (primeInt == 623){
+             Char2name.text = "Matilda";
+             Char2speech.text ="Dad, I’m serious. I can read what you’re thinking.";
+             Char3name.text = "";
+             Char3speech.text = "";
+  }
+  else if (primeInt == 624){
+               Char2name.text = "Matilda";
+                Char2speech.text ="Like right now, you’re thinking about how much paperwork you and Dad have to do because of the damage that was caused during drug farm raid.";
+                Char3name.text = "";
+                Char3speech.text = "";
      }
-	 else if (primeInt == 605){
-				Char2name.text = "Matilda";
-                Char2speech.text ="Ohh. I see. So .. why are you here? Why do you .. want to warn us?";
+     else if (primeInt == 625){
+                  Char2name.text = "Matilda";
+                   Char2speech.text =" .. And now you’re thinking about how cute Dad looked while he was shoo--";
+                   Char3name.text = "";
+                   Char3speech.text = "";
+        }
+else if (primeInt == 626){
+  ArtChar2d.SetActive(false);
+  ArtChar2c.SetActive(true);
+             Char2name.text = "";
+             Char2speech.text = "";
+             Char3name.text = "Evan";
+             Char3speech.text ="Woah woah, that is .. more than enough, thank you very much!";
+  }
+  else if (primeInt == 627){
+                Char2name.text = "";
+                Char2speech.text = "";
+               Char3name.text = "Evan";
+                Char3speech.text ="Jesus, you really weren’t lying. How long have you been able to do that?";
      }
-	 else if (primeInt == 606){
-				Char1name.text = "YOU";
-                Char1speech.text =" I’ve always been fascinated with you humans.Your culture is so rich and diverse. I just .. want to preserve that. I also believe that it is much more prudent to cooperate than try to dominate and take from other societies. ";
+else if (primeInt == 628){
+     Char2name.text = "Matilda";
+             Char2speech.text ="Since I could remember.";
+             Char3name.text = "";
+             Char3speech.text = "";
+  }
+else if (primeInt == 629){
+  Char2name.text = "";
+  Char2speech.text = "";
+     Char3name.text = "Evan";
+             Char3speech.text ="So you’re telling me that you’ve always been able to read people’s minds? That you’ve always know what I was thinking about? ";
+  }
+  else if (primeInt == 630){
+     Char2name.text = "";
+     Char2speech.text = "";
+       Char3name.text = "Evan";
+                Char3speech.text ="That you’ve always known what I was thinking about? ";
      }
-	 else if (primeInt == 607){
-				Char2name.text = "Matilda";
-                Char2speech.text =" Hmmm, I think it’s also good to have peace rather than fight for things too!Dad has always told me that peace is always the first option we should go for. We should only fight when we absolutely have to and when there are no other choice.";
+else if (primeInt == 631){
+     Char2name.text = "Matilda";
+             Char2speech.text ="For the most part. It’s not like I’m ALWAYS listening to what your head has to say.";
+             Char3name.text = "";
+             Char3speech.text = "";
+  }
+else if (primeInt == 632){
+  Char2name.text = "";
+  Char2speech.text = "";
+     Char3name.text = "Evan";
+             Char3speech.text ="Wow .. just wow. I can’t believe I’ve never noticed..";
+  }
+  else if (primeInt == 633){
+    Char2name.text = "";
+    Char2speech.text = "";
+       Char3name.text = "Evan";
+                Char3speech.text ="My daughter's a freakin’ psychic.";
+                Char4name.text= "";
+                Char4speech.text="";
      }
-	 else if (primeInt == 608){
-				Char1name.text = "YOU";
-                Char1speech.text ="Your parental figures are very wise. I agree wholeheartedly with them. Unfortunately, some of my people, the loudest and most vocal ones believe that there are no other choice but to take what we need by force. That is why I’m here to prevent that.";
+     else if (primeInt == 634){
+       ArtChar3a.SetActive(true);
+       Char2name.text = "";
+       Char2speech.text = "";
+          Char3name.text = "";
+                   Char3speech.text ="";
+                   Char4name.text= "Chris";
+                   Char4speech.text="Eh, I always had a hunch.";
+        }
+        else if (primeInt == 635){
+          ArtChar3a.SetActive(false);
+          ArtChar2c.SetActive(false);
+          ArtChar2d.SetActive(true);
+          Char2name.text = "";
+          Char2speech.text = "";
+             Char3name.text = "Evan";
+                      Char3speech.text ="Not helping!";
+                      Char4name.text= "";
+                      Char4speech.text="";
+           }
+else if (primeInt == 636){
+     Char2name.text = "Matilda";
+             Char2speech.text ="It's’s great that you’re freaked out and all, because you’re about to hear something freakier.";
+             Char3name.text = "";
+             Char3speech.text = "";
+  }
+  else if (primeInt == 637){
+       Char2name.text = "Matilda";
+                Char2speech.text ="We’re all going to die by this time tomorrow .. because of an alien invasion!";
+                Char3name.text = "";
+                Char3speech.text = "";
      }
-	 else if (primeInt == 609){
-				Char2name.text = "Matilda";
-                Char2speech.text ="Don’t worry. My dads will take you to work tomorrow.You’ll save the world!";
+else if (primeInt == 638){
+  ArtChar2d.SetActive(false);
+  ArtChar2c.SetActive(true);
+  Char2name.text = "";
+  Char2speech.text = "";
+     Char3name.text = "Evan";
+             Char3speech.text ="Wait, wait ... what?";
+  }
+else if (primeInt == 639){
+     Char2name.text = "Matilda";
+             Char2speech.text ="Yeah. By tomorrow, our planet will be drained of life! People will get really hurt!";
+             Char3name.text = "";
+             Char3speech.text = "";
+  }
+  else if (primeInt == 640){
+       Char2name.text = "Matilda";
+                Char2speech.text ="People might even... ";
+                Char3name.text = "";
+                Char3speech.text = "";
      }
-	 else if (primeInt == 610){
-				Char1name.text = "YOU";
-                Char1speech.text ="Your parents seem like very capable people. I just hope your government understands how urgent this situation is.";
+else if (primeInt == 641){
+  Char2name.text = "";
+  Char2speech.text = "";
+     Char3name.text = "Evan";
+             Char3speech.text ="How is that even possible? How could you even know that such a thing will happen?";
+  }
+else if (primeInt == 642){
+  ArtChar1d.SetActive(false);
+  ArtChar1b.SetActive(true);
+     Char2name.text = "Matilda";
+             Char2speech.text ="Because of the doggy here. He’s not actually a doggy..";
+             Char3name.text = "";
+             Char3speech.text = "";
+  }
+  else if (primeInt == 643){
+     ArtChar1d.SetActive(false);
+     ArtChar1b.SetActive(true);
+       Char2name.text = "Matilda";
+                Char2speech.text ="He’s a alien from another planet! Say hi, doggy-alien-thing!";
+                Char3name.text = "";
+                Char3speech.text = "";
      }
-	 else if (primeInt == 611){
-				Char2name.text = "Matilda";
-                Char2speech.text ="We’ll make them understand. No matter how thick-headed they can be, they can’t ignore an issue as big as this right?";
-     }
-	 else if (primeInt == 612){
-				Char1name.text = "YOU";
-                Char1speech.text ="Like I said, I hope so.";
-	 }
-	else if (primeInt == 613){
-				Char3name.text = "Evan";
-                Char3speech.text ="Hey Matilda, I told you to go get your homework down. The doggie is seriously not going to go anywhere I promise. (Matilda looks at A with a questioning glance and A nods)";
-     }
-	 else if (primeInt == 614){
-				Char2name.text = "Matilda";
-                Char2speech.text ="Actually, Dad there is something i want to tell you. I can read minds.";
-     }
-	 else if (primeInt == 615){
-				Char3name.text = "Evan";
-                Char3speech.text ="Hah very funny. If you think saying something like that will get you out of doing homework then think again.";
-     }
-	 else if (primeInt == 616){
-				Char2name.text = "Matilda";
-                Char2speech.text ="Dad, I’m serious. I can read what you’re thinking. Like right now, you’re thinking about how much paperwork you and Dad have to do because of the damage that was caused during the raid on the drug farm you guys raided yesterday in Southwick… And now you’re thinking about how cute Dad looked while he was shoo-";
-     }
-	 else if (primeInt == 617){
-				Char3name.text = "Evan";
-                Char3speech.text ="WOAH WOAH, that is more than enough thank you very much, missy. Jesus, you really weren’t lying. How long have you been able to do that?";
-     }
-	 else if (primeInt == 618){
-				Char2name.text = "Matilda";
-                Char2speech.text ="Since I could remember.";
-     }
-	 else if (primeInt == 619){
-				Char3name.text = "Evan";
-                Char3speech.text ="So you’re telling me that you’ve always been able to read people’s minds? That you’ve always know what I was thinking about? ";
-     }
-	 else if (primeInt == 620){
-				Char2name.text = "Matilda";
-                Char2speech.text ="For the most part. It’s not like I’m ALWAYS listening to what your head has to say.";
-     }
-	 else if (primeInt == 621){
-				Char3name.text = "Evan";
-                Char3speech.text ="Wow… just wow. I can’t believe I’ve never noticed. My daughter is a freakin’ psychic.";
-     }
-	 else if (primeInt == 622){
-				Char2name.text = "Matilda";
-                Char2speech.text ="That’s great and all that you’re freaked out, Dad because you’re about to hear something more freaky. We’re all going to die by this time tomorrow because of a alien invasion.";
-     }
-	 else if (primeInt == 623){
-				Char3name.text = "Evan";
-                Char3speech.text ="Wait, wait…what?";
-     }
-	 else if (primeInt == 624){
-				Char2name.text = "Matilda";
-                Char2speech.text ="Yeah, by tomorrow, our planet will be turned into a wasteland with every possible resource we have stripped and taken away. Everyone will either die immediately or starve to death.";
-     }
-	 else if (primeInt == 625){
-				Char3name.text = "Evan";
-                Char3speech.text ="How is that even possible? How could you even know that such a thing will happen?";
-     }
-	 else if (primeInt == 626){
-				Char2name.text = "Matilda";
-                Char2speech.text ="Because of the doggie here, He’s not actually a doggie. He’s a alien from another planet. Say hi, A, (A raise a paw in a clumsy imitation of a wave).";
-     }
-	 else if (primeInt == 627){
-				Char3name.text = "Evan";
-                Char3speech.text ="Wait, the dog? What is even going on right now? Matilda. I’m gonna need you to explain everything.";
-				NextScene1Button.SetActive(true);
+else if (primeInt == 644){
+  Char2name.text = "";
+  Char2speech.text = "";
+     Char3name.text = "Evan";
+             Char3speech.text ="Wait, the dog? What is even going on right now? Matilda. I’m gonna need you to explain everything.";
+     allowSpace=false;
+     nextButton.SetActive(false);
+     NextScene1Button.SetActive(true);
 }
 
 else if (primeInt==700){
@@ -1511,8 +1780,8 @@ else if (primeInt==712){
 		}
 
 		public void Choice2bFunct(){
-                Char1name.text = "";
-                Char1speech.text = "";
+              Char1name.text = "YOU";
+              Char1speech.text = "I don't think someone of your age would be able to comprehend it.";
                 Char2name.text = "";
                 Char2speech.text = "";
                 primeInt = 599;

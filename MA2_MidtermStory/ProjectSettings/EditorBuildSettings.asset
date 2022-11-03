@@ -11,9 +11,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Credits.unity
     guid: d7127b684df614ca58961e9c3a41e1c9
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/End_GoodEnd.unity
     guid: 9cb8642bf061446d0be7a1455b7794b3
+  - enabled: 1
+    path: Assets/Scenes/End_GoodEnd2.unity
+    guid: 17ecb05712c954dc99a03741c99351d1
   - enabled: 1
     path: Assets/Scenes/End_BadEnd1.unity
     guid: 2b7f0b78915ef3d4096a75682a0564a7
@@ -47,7 +50,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Scene9.unity
     guid: 97ef1f14af928429784b03163acf02e1
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Scene10.unity
     guid: e36067ceeebd7475b90fd43f043fba5f
   m_configObjects: {}
