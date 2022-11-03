@@ -834,6 +834,7 @@ public void talking(){
   else if (primeInt == 328){
     ArtChar2d.SetActive(false);
     ArtChar1a.SetActive(true);
+    ArtChar1b.SetActive(false);
                 Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "";
@@ -894,8 +895,8 @@ public void talking(){
                 Char3speech.text ="Anyway that’s enough talking, we need to head for Fort MacHeath. It’ll be about a three hour drive.";
   }
   else if (primeInt == 337){
-    ArtChar1b.SetActive(false);
-    ArtChar1a.SetActive(true);
+    ArtChar1a.SetActive(false);
+    ArtChar1b.SetActive(true);
                Char2name.text = "Matilda";
                Char2speech.text ="Ohhh, can I come?";
                Char3name.text = "";
