@@ -36,7 +36,6 @@ public class Scene9Dialogue : MonoBehaviour {
 		    public GameObject Choice2a;
         public GameObject Choice2b;
 		    public GameObject NextScene1Button;
-        public GameObject NextScene2Button;
         public GameObject nextButton;
        //public GameHandler gameHandler;
        //public AudioSource audioSource;
@@ -65,7 +64,6 @@ void Start(){
 		    Choice2a.SetActive(false);
         Choice2b.SetActive(false);
         NextScene1Button.SetActive(false);
-        NextScene2Button.SetActive(false);
         nextButton.SetActive(true);
 
     if (GameHandler.metMatilda==false){
@@ -95,7 +93,7 @@ public void talking(){
                 // AudioSource.Play();
         }
         else if (primeInt == 2){
-               ArtChar1.SetActive(true);
+               ArtChar1a.SetActive(true);
                 DialogueDisplay.SetActive(true);
                 Char1name.text = "";
                 Char1speech.text = "";
@@ -616,71 +614,71 @@ public void talking(){
                Char2name.text = "Matilda";
                Char2speech.text ="Ohh. I see. So .. why are you here? Why do you want to warn us?";
     }
-    else if (primeInt == 205){
+    else if (primeInt == 309){
                Char1name.text = "YOU";
                Char1speech.text ="I’ve always been fascinated with you humans. Your culture is so rich and diverse.";
                Char2name.text = "";
                Char2speech.text = "";
     }
-    else if (primeInt == 206){
+    else if (primeInt == 310){
                   Char1name.text = "YOU";
                   Char1speech.text ="I just .. want to preserve that. I also believe cooperation is better than complete domination";
                   Char2name.text = "";
                   Char2speech.text = "";
        }
-  else if (primeInt == 207){
+  else if (primeInt == 311){
                Char1name.text = "";
                Char1speech.text = "";
                Char2name.text = "Matilda";
                Char2speech.text ="Hmmm, I think it’s also good to have peace rather than fight for things too!";
     }
-    else if (primeInt == 208){
+    else if (primeInt == 312){
                   Char2name.text = "Matilda";
                   Char2speech.text ="Dad has always told me that peace is always the first option we should go for.";
        }
-   else if (primeInt == 209){
+   else if (primeInt == 313){
                Char1name.text = "YOU";
                Char1speech.text ="Your parental figures are very wise. I agree wholeheartedly with them.";
                Char2name.text = "";
                Char2speech.text = "";
     }
-    else if (primeInt == 210){
+    else if (primeInt == 314){
                  Char1name.text = "YOU";
                   Char1speech.text ="Unfortunately, some of my people believe that there's no other choice but to take what we need by force.";
                   Char2name.text = "";
                   Char2speech.text = "";
        }
-       else if (primeInt == 211){
+       else if (primeInt == 315){
                     Char1name.text = "YOU";
                      Char1speech.text ="That is why I’m here to prevent that.";
                      Char2name.text = "";
                      Char2speech.text = "";
           }
-  else if (primeInt == 212){
+  else if (primeInt == 316){
                Char1name.text = "";
                Char1speech.text = "";
                Char2name.text = "Matilda";
                Char2speech.text ="Don’t worry. My dads will take you to work tomorrow.You’ll save the world!";
     }
-  else if (primeInt == 213){
+  else if (primeInt == 317){
                Char1name.text = "YOU";
                Char1speech.text ="Your parents seem like very capable people. I hope your government understands how urgent this is.";
                Char2name.text = "";
                Char2speech.text = "";
     }
-  else if (primeInt == 214){
+  else if (primeInt == 318){
                Char1name.text = "";
                Char1speech.text = "";
                Char2name.text = "Matilda";
                Char2speech.text ="We’ll make them understand. No matter how thick-headed they can be!";
     }
-    else if (primeInt == 215){
+    else if (primeInt == 319){
                  Char1name.text = "";
                  Char1speech.text = "";
                  Char2name.text = "Matilda";
                  Char2speech.text ="They can't ignore something this big, right?";
        }
-  else if (primeInt == 216){
+  else if (primeInt == 320){
                Char1name.text = "YOU";
                Char1speech.text ="Like I said, I hope so.";
                Char2name.text = "";
@@ -688,49 +686,49 @@ public void talking(){
                Char3name.text = "";
                Char3speech.text = "";
     }
-  else if (primeInt == 217){
+  else if (primeInt == 321){
                Char2name.text = "";
                Char2speech.text = "";
                Char3name.text = "Evan";
                Char3speech.text ="Hey, I got good news! The President--";
     }
-    else if (primeInt == 218){
+    else if (primeInt == 322){
                   Char2name.text = "";
                   Char2speech.text = "";
                   Char3name.text = "Evan";
                   Char3speech.text ="... Matilda. I thought I told you to do your homework.";
        }
-  else if (primeInt == 219){
+  else if (primeInt == 323){
                Char2name.text = "Matilda";
                Char2speech.text ="Well the doggy started talking! Way cooler than doing some boring old math problems.";
                Char3name.text = "";
                Char3speech.text = "";
   }
-  else if (primeInt == 220){
+  else if (primeInt == 324){
                Char1name.text = "";
                Char1speech.text = "";
                Char3name.text = "Evan";
                Char3speech.text = "You .. spoke in front of Matilda?!";
   }
-  else if (primeInt == 221){
+  else if (primeInt == 325){
                Char1name.text = "YOU";
                Char1speech.text ="I .. was not aware that it was supposed to be a secret that I could talk.";
                Char3name.text = "";
                Char3speech.text = "";
   }
-  else if (primeInt == 222){
+  else if (primeInt == 326){
                 Char1name.text = "YOU";
                 Char1speech.text ="I assumed that, if you were seemingly unfazed by my oherworldly origins, your child would be as well.";
                 Char3name.text = "";
                 Char3speech.text = "";
   }
-  else if (primeInt == 223){
+  else if (primeInt == 327){
                Char1name.text = "";
                Char1speech.text = "";
                Char3name.text = "Evan";
                Char3speech.text ="Tha--That’s not how that works! ... Whatever, it‘s okay. Everything’s fine. It’s fine.(turns to Matilda) So now you know Matilda.";
   }
-  else if (primeInt == 224){
+  else if (primeInt == 328){
                 Char1name.text = "";
                 Char1speech.text = "";
                 Char2name.text = "";
@@ -738,13 +736,13 @@ public void talking(){
                 Char3name.text = "Evan";
                 Char3speech.text ="So. Now you know, sweetie.";
   }
-   else if (primeInt == 225){
+   else if (primeInt == 329){
                Char2name.text = "Matilda";
                Char2speech.text ="Yep. And I want to help!";
                Char3name.text = "";
                Char3speech.text = "";
   }
-  else if (primeInt == 226){
+  else if (primeInt == 330){
                Char1name.text = "";
                Char1speech.text = "";
                Char2name.text = "";
@@ -752,55 +750,55 @@ public void talking(){
                Char3name.text = "Evan";
                Char3speech.text ="Of course you do. Well, as I was saying, the President has agreed to meeting you, boy.";
   }
-  else if (primeInt == 226){
+  else if (primeInt == 331){
                 Char1name.text = "";
                 Char1speech.text = "";
                 Char3name.text = "Evan";
                 Char3speech.text ="I know you've probably had a long day and need to rest, but to meet him we'd need to leave now.";
   }
-  else if (primeInt == 227){
+  else if (primeInt == 332){
                Char1name.text = "YOU";
                Char1speech.text ="Where are we going exactly?";
                Char3name.text = "";
                Char3speech.text = "";
   }
-  else if (primeInt == 228){
+  else if (primeInt == 333){
                Char1name.text = "";
                Char1speech.text = "";
                Char3name.text = "Evan";
                Char3speech.text ="To the nearest military encampment: Fort MacHeath.";
   }
-  else if (primeInt == 229){
+  else if (primeInt == 334){
                Char1name.text = "YOU";
                Char1speech.text ="Huh. I assumed it would’ve been more of a hassle to convince your government to agree to a meeting.";
                Char3name.text = "";
                Char3speech.text = "";
   }
-  else if (primeInt == 230){
+  else if (primeInt == 335){
                Char1name.text = "";
                Char1speech.text = "";
                Char3name.text = "Evan";
                Char3speech.text ="Honestly, so did I. The Preseident must know something.";
   }
-  else if (primeInt == 231){
+  else if (primeInt == 336){
                 Char2name.text = "";
                 Char2speech.text = "";
                 Char3name.text = "Evan";
                 Char3speech.text ="Anyway that’s enough talking, we need to head for Fort MacHeath. It’ll be about a three hour drive.";
   }
-  else if (primeInt == 232){
+  else if (primeInt == 337){
                Char2name.text = "Matilda";
                Char2speech.text ="Ohhh, can I come?";
                Char3name.text = "";
                Char3speech.text = "";
   }
-  else if (primeInt == 233){
+  else if (primeInt == 338){
                Char2name.text = "";
                Char2speech.text = "";
                Char3name.text = "Evan";
                Char3speech.text ="Well .. it's not like we have a choice. You can't be left alone in the house by yourself.";
   }
-  else if (primeInt == 234){
+  else if (primeInt == 339){
                Char2name.text = "Matilda";
                Char2speech.text ="Yay! Off to save the world! This is way better than math homework!";
                Char3name.text = "";
@@ -812,54 +810,76 @@ public void talking(){
 
 //SCENE 9: NO COMM DEVICE
 	 else if (primeInt == 400){
-				Char2name.text = "Matilda";
+                Char1name.text = "";
+                Char1speech.text = "";
+				        Char2name.text = "Matilda";
                 Char2speech.text ="You're not acutally a dog, are you?";
 	 }
 	 else if (primeInt == 401){
-				Char1name.text = "YOU";
-                Char1speech.text ="Huh? How..how does this human know?";
+				        Char1name.text = "YOU";
+                Char1speech.text ="(Huh? How .. how does this human know?)";
+                Char2name.text = "";
+                Char2speech.text = "";
 	 }
 	 else if (primeInt == 402){
-				Char2name.text = "Matilda";
+                Char1name.text = "";
+                Char1speech.text = "";
+				        Char2name.text = "Matilda";
                 Char2speech.text ="How? Your head told me. I can hear your head voice!";
 	 }
 	 else if (primeInt == 403){
-				Char1name.text = "YOU";
-                Char1speech.text ="A psychic? I’ve never heard of a human psychic. Your species shouldn’t have developed enough to possess that ability. ";
+				        Char1name.text = "YOU";
+                Char1speech.text ="A psychic? I’ve never heard of a human psychic.\nYour species shouldn’t have developed enough to possess that ability.";
+                Char2name.text = "";
+                Char2speech.text = "";
 	 }
 	 else if (primeInt == 404){
-				Char2name.text = "Matilda";
+                Char1name.text = "";
+                Char1speech.text = "";
+				        Char2name.text = "Matilda";
                 Char2speech.text ="People’s heads have always talked to me. Their heads’ voices are quieter but I can hear them.  No one else seems to be able to. But don’t tell anyone. Nobody knows about it and I want to keep it that way until something big comes by where I get to surprise the heck out of everyone.";
 	 }
 	 else if (primeInt == 405){
-				Char1name.text = "YOU";
-                Char1speech.text ="What a strange human...";
+        				Char1name.text = "YOU";
+                Char1speech.text ="What a strange human. ..";
+                Char2name.text = "";
+                Char2speech.text = "";
 	 }
 	 else if (primeInt == 406){
-				Char2name.text = "Matilda";
-                Char2speech.text ="You might think I’m strange but I prefer the word unique Now let’s see what’s going on in that noggin of yours. Your friends are coming too? But they’re not coming to visit right? They’re coming… to fight?";
+                Char1name.text = "";
+                Char1speech.text = "";
+				        Char2name.text = "Matilda";
+                Char2speech.text ="You might think I’m strange, but I prefer the word cooky like this! Now let’s see what’s going on in that noggin of yours. Your friends are coming too? But they’re not coming to visit right? They’re coming… to fight?";
 	 }
 	 else if (primeInt == 407){
-				Char1name.text = "YOU";
-                Char1speech.text ="It’s complicated, but yes this planet is in danger. I need to talk to the person in charge. ";
+				        Char1name.text = "YOU";
+                Char1speech.text ="It’s complicated, but yes this planet is in danger. I need to talk to the person in charge.";
+                Char2name.text = "";
+                Char2speech.text = "";
 	 }
 	 else if (primeInt == 408){
-				Char2name.text = "Matilda";
+                Char1name.text = "";
+                Char1speech.text = "";
+				        Char2name.text = "Matilda";
                 Char2speech.text ="Hmm, that would probably be my dads. They work in a big office where they beat bad guys and talk to people in neat suits. They’re the coolest! Though not as cool as me. They can’t read brains. ";
 	 }
 	 else if (primeInt == 409){
-				Char1name.text = "YOU";
+				        Char1name.text = "YOU";
                 Char1speech.text ="I figured at much. What can I do to convince them?";
+                Char2name.text = "";
+                Char2speech.text = "";
 	 }
 	 else if (primeInt == 410){
-				Char2name.text = "Matilda";
+                Char1name.text = "";
+                Char1speech.text = "";
+				        Char2name.text = "Matilda";
                 Char2speech.text ="I could translate for you but first you have to tell me a bit more about yourself. Like, what’s Ginipera is like?";
 				Choice2a.SetActive(true);
 				Choice2b.SetActive(true);
 	 }
 
 	 else if (primeInt == 500){
-				Char1name.text = "YOU";
+				        Char1name.text = "YOU";
                 Char1speech.text =" Well, Guinpera, in simple terms, is a rather vast planet, much larger than this one.Our civilization relies on organic resources to survive much like yours, but while your planet has an abundance of such materials, the environment on my planet is much less suited for such growth. We barely survive by using our technology to replicate poor copies of the little organisms that we have but now that has become too unsustainable. We need other resources outside of our planet. And your planet has been chosen as the target.";
      }
 	 else if (primeInt == 501){
@@ -1102,10 +1122,10 @@ public void talking(){
 		}
 
 		public void Choice2aFunct(){
-                Char1name.text = "";
-                Char1speech.text = "";
-                Char2name.text = "";
-                Char2speech.text = "";
+      Char1name.text = "YOU";
+      Char1speech.text ="Well, Ginipera, in simple terms, is a rather vast planet, much larger than this one.";
+      Char2name.text = "";
+      Char2speech.text = "";
                 primeInt = 499;
                 Choice2a.SetActive(false);
                 Choice2b.SetActive(false);
