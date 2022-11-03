@@ -1738,6 +1738,8 @@ else if (primeInt==712){
           Char4speech.text = "";
         }
       else if (primeInt==713){
+        ArtChar1a.SetActive(false);
+        ArtChar1b.SetActive(true);
         Char1name.text= "";
         Char1speech.text= "";
         Char2name.text = "Matilda";
@@ -1772,12 +1774,6 @@ else if (primeInt==712){
           Char1speech.text= "";
           Char2name.text = "Matilda";
           Char2speech.text = "It's like, super top secret too.";
-          }
-    else if (primeInt==719){
-          Char1name.text= "";
-          Char1speech.text= "";
-          Char2name.text = "";
-          Char2speech.text = "";
           }
     else if (primeInt==720){
           Char1name.text= "YOU";
